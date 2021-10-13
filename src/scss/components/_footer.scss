@@ -1,0 +1,121 @@
+.footer {
+
+  &__nav {
+    @include flex-s-sb;
+    padding: 40px 0;
+  }
+
+  &__navbar {
+    padding: 0;
+
+    .navbar__list {
+      display: block;
+      column-count: 2;
+    }
+
+    .navbar__item {
+      margin-bottom: 24px;
+      margin-right: 90px;
+    }
+  }
+
+  &__wrapper {
+    @include flex-all-sb
+  }
+
+  &__list {
+    @include flex-v-center;
+
+    &.messanger {
+      color: var(--color-black);
+
+      .footer__item {
+        &:not(:last-child) {
+          margin-right: 20px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            height: 6px;
+            width: 6px;
+            background-color: var(--color-black);
+            right: -12px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: var(--color-gray-500);
+        right: -10px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 40px 0;
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .address {
+    @include flex;
+
+    &__inner {
+      max-width: 200px;
+      width: 100%;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border: 1px solid var(--color-orange-200);
+        border-radius: $border-radius;
+        left: -65px;
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+      }
+
+      &--tel {
+        &:before {
+          background-image: url('../img/sprite.svg#phone');
+        }
+      }
+
+      &--pin {
+        &:before {
+          background-image: url('../img/sprite.svg#map-pin');
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 150px;
+      }
+    }
+
+    .slogan {
+      display: block;
+      line-height: 2;
+    }
+
+    &__link {
+      font-weight: $weight-600;
+    }
+  }
+}
