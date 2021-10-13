@@ -67,11 +67,11 @@
     top: 90px;
   }
 
-
   .swiper-pagination {
     height: 4px;
     background-color: transparent;
-    width: 100%;
+    left: 0;
+    right: 0;
 
     .swiper-pagination-progressbar-fill {
       background: linear-gradient(270deg, #F9AF31 0%, rgba(249, 175, 49, 0) 100%);
