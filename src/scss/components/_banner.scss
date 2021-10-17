@@ -1,0 +1,57 @@
+.banner {
+  @include flex-all-sb;
+  border-radius: 0 0 $border-radius-20px $border-radius-20px;
+  background-color: var(--color-orange-100);
+  padding: 90px 0 30px 80px;
+  position: relative;
+
+  &__content {
+    max-width: 380px;
+    width: 100%;
+    padding-top: 50px;
+
+    h2 {
+      color: var(--color-orange);
+
+      span {
+        display: inline-block;
+        color: var(--color-black);
+        font-size: inherit;
+        padding: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 65px;
+    }
+
+    span {
+      padding-left: 15px;
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: var(--color-orange);
+      border-radius: 5px 5px 0 0;
+      width: 2px;
+      left: 80px;
+      bottom: 0;
+    }
+
+    &:after {
+      height: 80px;
+      background-color: var(--color-orange);
+      opacity: 0.2;
+    }
+
+    &:before {
+      height: 40px;
+    }
+  }
+
+  &__picture {
+    max-width: 790px;
+  }
+}

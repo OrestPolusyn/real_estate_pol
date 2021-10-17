@@ -6,8 +6,22 @@
 
 // CUSTOM COMPONENTS STYLES
 @import "components/header";
-@import "components/home/style";
+@import "components/banner";
+@import "components/item";
+@import "components/numbers";
 @import "components/form";
+@import "components/articles";
+@import "components/filter";
+@import "components/pagination";
+@import "components/single";
+
+
+@import "components/home/style";
+@import "components/about/style";
+@import "components/services/style";
+@import "components/poland/style";
+@import "components/contact/contact-page";
+
 @import "components/footer";
 
 

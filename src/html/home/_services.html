@@ -1,71 +1,38 @@
 <section class="services">
 
-  <h2 class="title-second">
+  <h2>
     Услуги
   </h2>
 
-  <p class="slogan">
+  <p>
     Мы готовы вам помочь с любым типом объекта
   </p>
 
-  <ul class="services__list">
-    <li class="services__item services__item--build services__item--active">
-      <h3 class="services__title title-third">
-        Квартира
-      </h3>
-
-      <p class="services__text text">
-        Доступный и быстрый способ превратить свои активы в пассивный доход.
-      </p>
-
-      <a class="services__link" href="#">
-
-        <svg class="services__icon sprite">
-          <use xlink:href="img/sprite.svg#arrow-right"></use>
-        </svg>
-
-        Подробнее
-      </a>
-    </li>
-
-    <li class="services__item services__item--house services__item--active">
-      <h3 class="services__title title-third">
-        Дом
-      </h3>
-
-      <p class="services__text text">
-        Владение целым зданием дает вам больше контроля и независимости.
-      </p>
-
-      <a class="services__link" href="#">
-
-        <svg class="services__icon sprite">
-          <use xlink:href="img/sprite.svg#arrow-right"></use>
-        </svg>
-
-        Подробнее
-      </a>
-    </li>
-
-    <li class="services__item services__item--plug services__item--active">
-      <h3 class="services__title title-third">
-        Проект
-      </h3>
-
-      <p class="services__text text">
-        Покупка недвижимости на этапе котлована быстрее окупит ваши вложения.
-      </p>
-
-      <a class="services__link" href="#">
-
-        <svg class="services__icon sprite">
-          <use xlink:href="img/sprite.svg#arrow-right"></use>
-        </svg>
-
-        Подробнее
-      </a>
-    </li>
-
+  <ul class="services__list items">
+    @loop("../_item.html",[{
+    tag:"li",
+    titleIcon:"квартира в доме",
+    icon:"build.svg",
+    title:"Квартира",
+    text:"Доступный и быстрый способ превратить свои активы в пассивный доход.",
+    textBtn:"Подробнее"
+    },
+    {
+    tag:"li",
+    titleIcon:"дом с територией",
+    icon:"house.svg",
+    title:"Дом",
+    text:"Владение целым зданием дает вам больше контроля и независимости.",
+    textBtn:"Подробнее"
+    },
+    {
+    tag:"li",
+    titleIcon:"дом в проекте",
+    icon:"plug.svg",
+    title:"Проект",
+    text:"Покупка недвижимости на этапе котлована быстрее окупит ваши вложения.",
+    textBtn:"Подробнее"
+    }])
   </ul>
 
 </section>

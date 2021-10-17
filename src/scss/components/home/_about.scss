@@ -2,76 +2,42 @@
   @include flex-all-sb;
 
   &__inner {
-    margin-right: 50px;
+    max-width: 570px;
+    width: 100%;
   }
 
-  &__text {
-    max-width: 510px;
-    width: 100%;
+  p {
+    padding-right: 65px;
+    font-size: 16px;
     line-height: 1.7;
     margin-bottom: 60px;
   }
 
-  &__list {
-    @include flex-all-sb;
-    color: var(--color-black);
-    font-size: 16px;
-    font-weight: $weight-600;
-    margin-bottom: 55px;
-
-    span {
-      color: var(--color-orange);
-      display: block;
-      font-size: 44px;
-      margin-bottom: 20px;
-    }
-  }
-
-  &__item {
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 90px;
-
-      &:after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        right: -45px;
-        top: 0;
-        width: 1px;
-        background-color: var(--color-gray-100);
-      }
-    }
-  }
-
-  &__founder {
-   @include flex-v-center;
- 
-    h3{
-      margin-bottom: 5px;
-    }
-  }
-
-  &__founder-img {
-    width: 60px;
-    height: 60px;
-    border-radius: $border-radius;
-    display: inline-block;
-    margin-right: 15px;
-  }
-
-  &__image {
-    border: 1px solid rgba(249, 175, 49, 0.3);
-    border-radius: $border-radius-service;
-    background: var(--color-orange-linear);
+  &__picture {
     max-width: 460px;
+    border-radius: $border-radius-20px;
     width: 100%;
     overflow: hidden;
-    padding-top: 35px;
+    background: var(--color-orange-linear);
+    padding-top: 40px;
+    border: 2px solid var(--color-border);
+  }
+
+  &__ceo {
+    @include flex-v-center;
 
     img {
-      max-width: 530px;
+      max-width: 60px;
+      width: 100%;
+      margin-right: 15px;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-size: 14px;
     }
   }
 }

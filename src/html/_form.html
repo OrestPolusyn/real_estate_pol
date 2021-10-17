@@ -1,40 +1,47 @@
- <form class="form" action="#">
+<div class="contact-form">
+  <h2>
+    Свяжитесь с нами
+  </h2>
 
-   <label class="form__label" for="name">
-     <span class="sr-only">
-       Имя
-     </span>
-   </label>
+  <p>
+    Мы готовы ответить на все ваши вопросы или сразу предложить вам объект, который вас заинтересует.
+  </p>
 
-   <input class="form__area" type="text" id="name" placeholder="Имя">
+  <form class="form" action="#">
 
+    <label class="form__label" for="name">
+      <span class="sr-only">
+        Имя
+      </span>
 
-   <label class="form__label" for="mail">
-     <span class="sr-only">
-       Email
-     </span>
-   </label>
+      <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+    </label>
 
-   <input class="form__area" type="text" id="mail" placeholder="Email">
+    <label class="form__label" for="email">
+      <span class="sr-only">
+        Електронная почта
+      </span>
+      <input class="form__area" name="email" id="email" type="text" placeholder="Email">
+    </label>
 
+    <label class="form__label" for="phone">
+      <span class="sr-only">
+        Телефон
+      </span>
+      <input class="form__area" name="phone" id="phone" type="text" placeholder="Телефон">
+    </label>
 
-   <label class="form__label" for="tel">
-     <span class="sr-only">
-       Телефон
-     </span>
-   </label>
+    <label class="form__label" for="message">
+      <span class="sr-only">
+        Сообщение
+      </span>
 
-   <input class="form__area" type="text" id="tel" placeholder="Телефон">
+      <textarea class="form__area form__area--text" name="message" id="message" placeholder="Сообщение"></textarea>
+    </label>
 
-   <label class="form__label" for="message">
-     <span class="sr-only">
-       Сообщение
-     </span>
-   </label>
-   <textarea class="form__area form__area--text" type="text" id="message" placeholder="Сообщение"></textarea>
+    <button class="form__btn btn" type="submit">
+      Отправить
+    </button>
 
-
-   <button class="form__btn btn" type="submit">
-     Отправить
-   </button>
- </form>
+  </form>
+</div>

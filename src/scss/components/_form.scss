@@ -1,17 +1,26 @@
+.contact-form {
+  max-width: 460px;
+  width: 100%;
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
 .form {
   width: 100%;
 
   &__area {
-    display: block;
     width: 100%;
-    padding: 15px;
-    border-radius: $border-radius;
     margin-bottom: 15px;
-    font-size: $font-body;
+    padding: 15px;
+    border-radius: $border-radius-10px;
+    border: 1px solid var(--color-gray-100);
+    font-size: 14px;
     line-height: 1.7;
-    border: 1px solid transparent;
+    color: var(--color-gray-800);
 
-    &--text{
+    &--text {
       min-height: 150px;
       resize: none;
     }

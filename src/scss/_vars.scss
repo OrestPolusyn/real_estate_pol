@@ -1,6 +1,7 @@
 // COLORS
 :root {
   --color-black: #100d0d;
+  --color-black-800: #323232;
   --color-white: #fff;
   --color-orange: #f9af31;
   --color-orange-200: #ffe4b7;
@@ -9,12 +10,16 @@
   --color-gray-500: #b2b2b2;
   --color-gray-200: #f7f7f7;
   --color-gray-100: #eaeaea;
+  --color-disabled: #d8d8d8;
   --color-red: #cf1515;
   --color-green: #269c47;
   --color-orange-linear: linear-gradient(278.62deg, #fce4bb 1.35%, #fef7ea 113.81%);
+  --color-border: rgba(249, 175, 49, 0.3);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+
 
 $font-h1: 42px;
 $font-h2: 32px;
@@ -23,10 +28,7 @@ $font-subtitle: 16px;
 $font-body: 14px;
 
 
-$weight-400: 400;
-$weight-600: 600;
-
-
 $border-radius:5px;
-$border-radius-service:20px;
+$border-radius-10px:10px;
+$border-radius-20px:20px;
 $border-story-radius:0px 0px 20px 20px;

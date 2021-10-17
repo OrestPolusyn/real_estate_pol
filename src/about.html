@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>Gremi Invest | О нас</title>
+  <link rel="stylesheet" href="css/vendor.min.css">
+
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -18,13 +20,18 @@
 
     <main class="main">
       <div class="wrapper">
-        <!-- @include('html/home/_story.html') -->
+        @include('html/about/_adv.html')
       </div>
 
       <div class="container">
+        @include('html/about/_process.html')
+
+        @include('html/about/_work.html')
         
+        @include('html/about/_team.html')
 
       </div>
+
     </main>
 
     @include('html/_footer.html')

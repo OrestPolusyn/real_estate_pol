@@ -1,24 +1,20 @@
-.header{
-  border-bottom: 1px solid rgba(249, 175, 49, 0.3);
-}
-.navbar {
+.header {
+  border-bottom: 1px solid var(--color-border);
   padding: 20px 0;
-  @include flex-all-sb;
-  font-weight: $weight-600;
 
-  &__list {
+  &__nav {
     @include flex-all-sb;
   }
+}
+
+.nav-list {
+  @include flex-all-sb;
 
   &__item {
+    font-weight: 600;
+
     &:not(:last-child) {
       margin-right: 50px;
     }
   }
-
-  &__link {
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-  }
-
 }

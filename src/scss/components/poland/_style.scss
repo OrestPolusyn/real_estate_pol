@@ -1,0 +1,20 @@
+.adv {
+  &--poland {
+    margin-bottom: 60px;
+
+    .adv__picture {
+      max-width: 430px;
+      margin-right: 75px;
+    }
+  }
+}
+
+.poland {
+  &__news {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px 24px;
+  }
+}

@@ -1,121 +1,125 @@
 .footer {
-
-  &__nav {
+  &__inner {
     @include flex-s-sb;
-    padding: 40px 0;
-  }
+    margin-bottom: 40px;
 
-  &__navbar {
-    padding: 0;
-
-    .navbar__list {
-      display: block;
-      column-count: 2;
-    }
-
-    .navbar__item {
-      margin-bottom: 24px;
-      margin-right: 90px;
+    &--bottom {
+      border-top: 1px solid var(--color-gray-100);
+      padding-top: 40px;
     }
   }
 
-  &__wrapper {
-    @include flex-all-sb
+  .nav-list {
+    display: block;
+    column-count: 2;
+
+    &__item {
+      margin-bottom: 30px;
+    }
   }
 
-  &__list {
-    @include flex-v-center;
+  &__rights {
+    @include flex-s-sb;
 
-    &.messanger {
-      color: var(--color-black);
+    .footer__list {
+      @include flex-s-sb;
+      font-size: 12px;
+      color: var(--color-gray-500)
+    }
 
-      .footer__item {
-        &:not(:last-child) {
-          margin-right: 20px;
+    .footer__item {
+      position: relative;
 
-          &:before {
-            content: "";
-            position: absolute;
-            height: 6px;
-            width: 6px;
-            background-color: var(--color-black);
-            right: -12px;
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-          }
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          right: -10px;
+          height: 100%;
+          width: 1px;
+          background-color: var(--color-gray-500);
         }
       }
     }
+  }
+
+  .messangers {
+    font-size: 14px;
+    color: var(--color-black);
+    font-weight: 600;
+    text-transform: capitalize;
+
+    .footer__item {
+      &:not(:last-child) {
+        &:before {
+          content: "";
+          position: absolute;
+          right: -10px;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          background-color: var(--color-black);
+          transform: translateY(100%);
+        }
+      }
+
+    }
+  }
+}
+
+.address {
+  &__list {
+    @include flex-s-sb;
+  }
+
+  span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.7;
   }
 
   &__item {
+    padding-left: 65px;
     position: relative;
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid var(--color-border);
+      border-radius: $border-radius;
+    }
+
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 90px;
+    }
 
+    &--phone {
       &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 1px;
-        background-color: var(--color-gray-500);
-        right: -10px;
+        background-image: url('../img/sprite.svg#phone');
       }
     }
-  }
 
-  &__bottom {
-    padding: 40px 0;
-    border-top: 1px solid var(--color-gray-100);
-  }
-
-  .address {
-    @include flex;
-
-    &__inner {
-      max-width: 200px;
+    &--location {
+      max-width: 255px;
       width: 100%;
-      position: relative;
 
       &:before {
-        content: "";
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        border: 1px solid var(--color-orange-200);
-        border-radius: $border-radius;
-        left: -65px;
-        background-position: center;
-        background-size: 20px;
-        background-repeat: no-repeat;
-      }
+        background-image: url('../img/sprite.svg#map-pin');
 
-      &--tel {
-        &:before {
-          background-image: url('../img/sprite.svg#phone');
-        }
-      }
-
-      &--pin {
-        &:before {
-          background-image: url('../img/sprite.svg#map-pin');
-        }
-      }
-
-      &:not(:last-child) {
-        margin-right: 150px;
       }
     }
+  }
 
-    .slogan {
-      display: block;
-      line-height: 2;
-    }
-
-    &__link {
-      font-weight: $weight-600;
-    }
+  &__text {
+    color: var(--color-black);
+    font-weight: 600;
   }
 }
