@@ -49,6 +49,7 @@
     height: 24px;
     stroke: var(--color-black);
     transition: all 0.3s linear;
+    fill: transparent;
     stroke-width: 2px;
 
     &--rotate {

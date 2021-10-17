@@ -38,6 +38,11 @@
 
 
     }
+
+    .services__list {
+      @include flex-all-sb;
+      text-align: center;
+    }
   }
 
   &__inner {
@@ -63,9 +68,5 @@
     }
   }
 
-  &__list {
-    @include flex-all-sb;
-    text-align: center;
-    margin-left: 170px;
-  }
+
 }

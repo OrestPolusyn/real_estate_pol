@@ -3,7 +3,7 @@ export default {
   $document: document,
   $html: document.documentElement,
   $body: document.body,
-  $storySlider: document.querySelector('.story__wrapper'),
+  $storySlider: document.querySelector('.story'),
   $storySliderSlide: document.querySelectorAll('.swiper-slide'),
   $newsSlider: document.querySelectorAll('.news__slider'),
 }
