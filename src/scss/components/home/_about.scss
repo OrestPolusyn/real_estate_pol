@@ -1,9 +1,17 @@
 .about {
   @include flex-all-sb;
+  position: relative;
 
   &__inner {
     max-width: 570px;
     width: 100%;
+    margin-right: 20px;
+
+    @include mobile-l {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
   }
 
   p {
@@ -11,6 +19,15 @@
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 60px;
+
+    @include mobile-l {
+      max-width: 60%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      padding-right: 0;
+    }
   }
 
   &__picture {
@@ -21,10 +38,30 @@
     background: var(--color-orange-linear);
     padding-top: 40px;
     border: 2px solid var(--color-border);
+
+    @include mobile-l {
+      position: absolute;
+      right: 0;
+      max-width: 40%;
+      top: 0;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__ceo {
     @include flex-v-center;
+
+    @include mobile-l {
+      order: 3;
+      margin-bottom: 30px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 0;
+    }
 
     img {
       max-width: 60px;

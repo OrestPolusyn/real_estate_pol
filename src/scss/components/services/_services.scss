@@ -3,10 +3,25 @@
   &__wrapper {
     @include flex-all-sb;
 
+    @include tablet {
+      display: block;
+    }
+
+    .numbers {
+      @include tablet {
+        display: flex;
+      }
+
+      li {
+        margin-right: 0;
+      }
+    }
+
     &--num {
       align-items: baseline;
       margin-bottom: 40px;
     }
+
   }
 
   &__project {
@@ -15,6 +30,10 @@
       border: 1px solid var(--color-border);
       border-radius: $border-radius-20px;
       padding: 45px;
+
+      @include mobile-l {
+        padding: 20px;
+      }
 
       h2 {
         max-width: 250px;
@@ -68,5 +87,10 @@
     }
   }
 
+  .video {
+    @include mobile-l {
+      margin-right: 0;
+    }
+  }
 
 }

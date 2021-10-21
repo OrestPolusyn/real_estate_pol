@@ -33,6 +33,13 @@
     padding-left: 80px;
     font-size: 16px;
     letter-spacing: 0.03em;
+
+    @include tablet {
+      padding-left: 40px;
+    }
+     @include mobile-l {
+       padding: 30px;
+     }
   }
 
   h2 {
@@ -47,5 +54,9 @@
     padding-top: 10px;
     max-width: 580px;
     width: 100%;
+
+    @include mobile-l {
+      display: none;
+    }
   }
 }

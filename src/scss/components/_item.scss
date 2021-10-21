@@ -11,8 +11,27 @@
     z-index: 0;
     cursor: default;
 
+    @include tablet {
+      padding: 20px;
+    }
+
+    @include mobile-l {
+      margin: 0 auto 30px;
+
+    }
+
+    &:last-child {
+      @include mobile {
+        margin-bottom: 0;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 20px;
+
+      @include mobile-l {
+        margin-right: auto;
+      }
     }
 
     a {

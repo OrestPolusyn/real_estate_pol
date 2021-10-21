@@ -5,6 +5,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
+
+      @include mobile-s {
+        margin-right: 5px;
+      }
     }
   }
 
@@ -25,5 +29,9 @@
   &__link {
     padding: 8px 10px;
     display: block;
+
+    @include mobile-s {
+     padding: 5px;
+    }
   }
 }

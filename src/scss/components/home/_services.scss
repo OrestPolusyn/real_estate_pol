@@ -4,6 +4,10 @@
   }
 
   &__list {
+    @include mobile-l {
+      display: block;
+    }
+
     p {
       line-height: 1.7;
       min-height: 80px;

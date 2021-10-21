@@ -1,9 +1,14 @@
 .contact-form {
   max-width: 460px;
   width: 100%;
+  z-index: 5;
 
   p {
     margin-bottom: 40px;
+  }
+
+  @include mobile-l {
+    max-width: 100%;
   }
 }
 

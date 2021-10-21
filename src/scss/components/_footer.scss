@@ -3,9 +3,24 @@
     @include flex-s-sb;
     margin-bottom: 40px;
 
+    @include mobile {
+      display: block;
+    }
+
     &--bottom {
       border-top: 1px solid var(--color-gray-100);
       padding-top: 40px;
+    }
+
+    .logo {
+      @include mobile-l {
+        margin-right: 10px;
+      }
+
+      @include mobile {
+        display: block;
+        margin: 0 0 30px 0;
+      }
     }
   }
 
@@ -13,18 +28,57 @@
     display: block;
     column-count: 2;
 
+    @include tablet {
+      column-count: 1;
+    }
+
+    @include mobile {
+      display: flex;
+    }
+
+    @include mobile-s {
+      column-count: 2;
+      display: block;
+      max-width: 250px;
+      margin: 0 auto 30px;
+    }
+
     &__item {
       margin-bottom: 30px;
+    }
+
+    &__link {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-orange);
     }
   }
 
   &__rights {
     @include flex-s-sb;
 
+    @include mobile {
+      display: block;
+    }
+
     .footer__list {
       @include flex-s-sb;
       font-size: 12px;
-      color: var(--color-gray-500)
+      color: var(--color-gray-500);
+
+      @include mobile {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
     }
 
     .footer__item {
@@ -80,9 +134,19 @@
     line-height: 1.7;
   }
 
+  &__list {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__item {
     padding-left: 65px;
     position: relative;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
 
     &::before {
       content: "";

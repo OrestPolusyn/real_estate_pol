@@ -1,5 +1,7 @@
 import './vendor/focus-visible.min.js';
 import './components/story-slider';
+import './components/news';
+ import vars from '../js/_vars';
 
 // import './components/catalog-slider';
 // import './components/marketing';
@@ -12,7 +14,7 @@ import './components/story-slider';
 // import './components/products';
 // import './components/burger';
 // import './components/mobile-filter';
-// import vars from '../js/_vars';
+
 // import {resizeContent} from './functions/resize';
 // import {scrollTo} from './functions/smooth-scroll';
 // import {disableScroll, enableScroll} from './functions/stop-scroll';
@@ -31,3 +33,6 @@ import './components/story-slider';
 //   });
 // }
 
+vars.$menuBtn.addEventListener('click', () => {
+  document.querySelector('.header__list').classList.toggle('open')
+});

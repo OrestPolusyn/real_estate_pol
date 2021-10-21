@@ -5,5 +5,6 @@ export default {
   $body: document.body,
   $storySlider: document.querySelector('.story'),
   $storySliderSlide: document.querySelectorAll('.swiper-slide'),
-  $newsSlider: document.querySelectorAll('.news__slider'),
+  $newsSlider: document.querySelector('.news__slider'),
+  $menuBtn: document.querySelector('.nav-list__menu')
 }

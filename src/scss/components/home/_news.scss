@@ -12,6 +12,7 @@
     margin-bottom: 55px;
   }
 
+
   h2 {
     margin-bottom: 40px;
   }
@@ -22,6 +23,7 @@
     width: 44px;
     border-radius: $border-radius;
     transition: all 0.3s linear;
+    @include flex-all-center;
 
     &:hover {
       border-color: var(--color-orange);
@@ -38,6 +40,10 @@
         stroke: var(--color-disabled);
       }
     }
+  }
+
+  &__slider-btns {
+    @include flex-v-center;
   }
 
   &__prev {

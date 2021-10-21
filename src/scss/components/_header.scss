@@ -1,20 +1,136 @@
 .header {
   border-bottom: 1px solid var(--color-border);
   padding: 20px 0;
+  position: relative;
 
   &__nav {
     @include flex-all-sb;
+  }
+
+  &__list {
+    &.nav-list {
+      @include mobile-l {
+        position: absolute;
+        right: -30px;
+        display: block;
+        top: 90px;
+        background-color: var(--color-white);
+        z-index: 10;
+        max-width: 300px;
+        padding: 20px 0;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    & .nav-list {
+      &__item {
+        &:not(:last-child) {
+          @include mobile-l {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &__link {
+        @include mobile-l {
+          padding: 10px;
+          display: block;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+
+    }
   }
 }
 
 .nav-list {
   @include flex-all-sb;
+  margin-left: auto;
+  margin-right: 30px;
+
+  &__menu {
+    display: none;
+
+    @include mobile-l {
+      display: block;
+    }
+  }
 
   &__item {
     font-weight: 600;
 
+    @include mobile-l {
+      text-align: center;
+    }
+
     &:not(:last-child) {
       margin-right: 50px;
+
+      @include tablet {
+        margin-right: 30px;
+      }
+
+      @include mobile-l {
+        margin-right: 0;
+      }
     }
+  }
+
+  &__link {
+    position: relative;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-orange);
+
+      &:before {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 5px;
+      background-color: var(--color-orange);
+      bottom: -38px;
+      border-radius: 10px 10px 0 0;
+      margin: 0 auto;
+      transform: translateY(10px);
+      left: 0;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s linear, visibility 0.3s linear, transform 0.2s linear;
+    }
+  }
+
+  &__btn {
+    @include mobile-l {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
+    @include mobile-s {
+      margin: 0 15px;
+      padding: 15px 5px;
+    }
+  }
+
+  &__menu {
+    max-width: 60px;
+    padding: 15px 5px;
   }
 }

@@ -1,9 +1,17 @@
 .story {
-  height: 530px !important;
   overflow: hidden;
+  background-color: var(--color-orange-100);
 
   &__item {
     height: 530px !important;
+
+    @include tablet {
+      height: 480px !important;
+    }
+
+    @include mobile-l {
+      height: 500px !important;
+    }
   }
 
   .swiper-pagination-progressbar {
@@ -12,6 +20,5 @@
 
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: linear-gradient(270deg, #F9AF31 0%, rgba(249, 175, 49, 0) 100%);
-
   }
 }

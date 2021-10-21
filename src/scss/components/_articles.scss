@@ -4,6 +4,10 @@
   cursor: pointer;
   position: relative;
 
+  @include mobile {
+    margin: 0 auto;
+  }
+
   &:hover {
 
     h3 {

@@ -7,6 +7,16 @@
 
   &__list {
     @include flex-s-sb;
+
+    @include mobile-l {
+      display: block;
+      column-count: 2;
+      margin: 0 auto;
+    }
+
+    @include mobile-s {
+      column-count: 1;
+    }
   }
 
   &__item {
@@ -15,6 +25,20 @@
 
     &:not(:last-child) {
       margin-right: 15px;
+
+      @include mobile-l {
+        margin-right: auto;
+      }
+    }
+
+    @include mobile-l {
+      margin: 0 auto 30px;
+    }
+
+    h3 {
+      @include mobile-s {
+        min-height: 40px;
+      }
     }
   }
 }

@@ -2,8 +2,17 @@
   @include flex-all-sb;
   border-radius: 0 0 $border-radius-20px $border-radius-20px;
   background-color: var(--color-orange-100);
-  padding: 90px 0 30px 80px;
+  padding: 80px 0 30px 80px;
   position: relative;
+  align-items: flex-start;
+
+  @include tablet {
+    padding: 40px;
+  }
+
+  @include mobile {
+    padding: 20px;
+  }
 
   &__content {
     max-width: 380px;
@@ -38,6 +47,10 @@
       width: 2px;
       left: 80px;
       bottom: 0;
+
+      @include tablet {
+        left: 40px;
+      }
     }
 
     &:after {
@@ -49,9 +62,150 @@
     &:before {
       height: 40px;
     }
+
+    &--last {
+      padding: 0;
+      max-width: 615px;
+
+      h2 {
+        font-size: $font-h1;
+        color: var(--color-black);
+      }
+
+      p {
+        max-width: 420px;
+        margin-bottom: 15px;
+      }
+
+      .btn {
+        margin-bottom: 70px;
+      }
+
+      &+.banner__picture {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
   }
 
   &__picture {
     max-width: 790px;
+
+    @include desktop {
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  &__problem {
+    max-width: 570px;
+    padding-top: 0;
+
+    h2 {
+      font-size: 24px;
+      color: inherit;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 18px;
+      color: inherit;
+      margin-bottom: 0;
+      padding-left: 75px;
+      position: relative;
+      min-height: 50px;
+      @include flex-v-center;
+      margin-bottom: 15px;
+
+      &:last-of-type {
+        margin-bottom: 50px;
+
+        @include mobile-l {
+          margin-bottom: 20px;
+        }
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &:before {
+        height: 50px;
+        width: 50px;
+        background-color: var(--color-white);
+        border-radius: $border-radius-20px;
+      }
+
+      &:after {
+        background-image: url('../img/sprite.svg#double-arrow-red');
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: translate(50%, 50%);
+      }
+    }
+
+    &+.banner__picture {
+      margin: 0 auto;
+    }
+
+    &--colored {
+      color: var(--color-red);
+
+      &+.banner__picture {
+        transform: translateY(-15%);
+      }
+    }
+
+    &--video {
+      max-width: 640px;
+
+      p {
+        &:last-of-type {
+          margin-bottom: 30px;
+
+          @include mobile-l {
+            margin-bottom: 10px;
+          }
+        }
+
+        &:after {
+          background-image: url('../img/sprite.svg#double-arrow');
+          transform: translate(50%, 50%);
+        }
+      }
+
+      &+.banner__picture {
+        position: relative;
+
+        @include desktop {
+          position: absolute;
+          right: 0;
+          z-index: -1;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 5px;
+          background-color: var(--color-orange-100);
+          width: 100%;
+        }
+      }
+    }
   }
 }
