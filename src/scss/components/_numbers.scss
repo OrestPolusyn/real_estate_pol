@@ -1,25 +1,11 @@
 .numbers {
-  @include flex-all-sb;
+  @include flex-v-center;
   margin-bottom: 60px;
 
-  @include mobile-l {
-    order: 4;
-    margin-bottom: 0;
-  }
-
-  @include tablet {
+  @include mobile-s {
     display: block;
   }
 
-  @include mobile-l {
-    display: flex;
-  }
-
-  @include mobile-s {
-    flex-wrap: wrap;
-    order: 3;
-    margin-bottom: 30px;
-  }
 
   li {
     font-weight: 600;
@@ -27,27 +13,22 @@
     line-height: 22px;
     color: var(--color-black);
     position: relative;
-
-    @include tablet {
-      margin-bottom: 20px;
-      max-width: 150px;
-      text-align: center;
-      width: 100%;
-    }
-
-    @include mobile-l {
-      max-width: 100%;
-    }
+    white-space: nowrap;
 
     &:not(:last-child) {
       margin-right: 90px;
 
-      @include desktop {
-        margin-right: 30px;
+      @include tablet {
+        margin-right: 50px;
       }
 
       @include mobile {
-        margin-right: 0;
+        margin-right: 25px;
+      }
+
+      @include mobile-s {
+        margin: 0 0 20px 0;
+        text-align: center;
       }
 
       &:before {
@@ -59,33 +40,33 @@
         height: 80px;
         background-color: var(--color-gray-100);
 
-        @include desktop {
-          right: -30px;
+        @include tablet {
+          right: -25px;
         }
 
-        @include tablet {
-          height: 1px;
+        @include mobile {
+          right: -15px;
+        }
+
+        @include mobile-s {
           width: 100%;
+          height: 1px;
+          bottom: -10px;
           top: auto;
-          bottom: 0;
           left: 0;
         }
 
-        @include mobile-l {
-          display: none;
-        }
       }
     }
 
-    &:nth-child(2n) {
-      @include tablet {
-        margin: 0 auto 20px;
-      }
+    &:first-child {
+      text-align: left;
     }
 
     &:last-child {
-      @include tablet {
-        margin-left: auto;
+      @include mobile-s {
+        text-align: right;
+
       }
     }
 
@@ -94,14 +75,11 @@
       font-size: 44px;
       line-height: 1.2;
       color: var(--color-orange);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
 
-      @include mobile {
-        font-size: 34px;
-      }
-
-      @include mobile-s {
-        font-size: 28px;
+      @include tablet {
+        margin-bottom: 15px;
+        font-size: 37px;
       }
     }
   }

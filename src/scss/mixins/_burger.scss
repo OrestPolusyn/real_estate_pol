@@ -20,6 +20,7 @@
 		content: "";
 		position: absolute;
 		left: 0;
+    color: var(--color-gray-800);
 		width: 100%;
 		height: var(--burger-line-height);
 		background-color: currentColor;
@@ -44,12 +45,15 @@
 			transform: rotate(45deg);
 			top: 50%;
 			transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      background-color: var(--color-orange);
 		}
 
 		&::after {
 			transform: rotate(-45deg);
 			top: 50%;
-			transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      background-color: var(--color-orange);
+      transition: transform 0.3s ease-in-out,
+      top 0.3s ease-in-out;
 		}
 	}
 }

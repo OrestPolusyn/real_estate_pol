@@ -24,8 +24,25 @@
       </div>
 
       <div class="container">
-        @include('html/_filter.html')
-
+        <ul class="filter">
+          @loop('html/_filter.html',[
+          {
+          classActive:"filter__link--active",
+          text:"все"
+          },
+          {
+          classActive:"",
+          text:"законы"
+          },
+          {
+          classActive:"",
+          text:"культура"
+          },
+          {
+          classActive:"",
+          text:"бизнес"
+          }])
+        </ul>
         @include('html/poland/_news-grid.html')
 
         @include('html/_pagination.html')

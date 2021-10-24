@@ -1,4 +1,9 @@
 .team {
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
   &>p {
     max-width: 500px;
     width: 100%;
@@ -8,7 +13,7 @@
   &__list {
     @include flex-s-sb;
 
-    @include mobile-l {
+    @include tablet {
       display: block;
       column-count: 2;
       margin: 0 auto;
@@ -20,24 +25,18 @@
   }
 
   &__item {
-    max-width: 260px;
+    max-width: 255px;
     width: 100%;
+
+    @include tablet {
+      margin: 0 auto 30px;
+    }
 
     &:not(:last-child) {
       margin-right: 15px;
 
-      @include mobile-l {
-        margin-right: auto;
-      }
-    }
-
-    @include mobile-l {
-      margin: 0 auto 30px;
-    }
-
-    h3 {
-      @include mobile-s {
-        min-height: 40px;
+      @include tablet {
+        margin: 0 auto 30px;
       }
     }
   }

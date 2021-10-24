@@ -5,10 +5,15 @@
   z-index: 0;
   overflow: hidden;
 
+  @include tablet {
+    padding: 50px 0;
+  }
+
   &.background {
 
     &:before {
       opacity: 1;
+      border-radius: 0 0 $border-radius-20px $border-radius-20px;
     }
   }
 
@@ -20,7 +25,7 @@
     background-position: bottom left;
     background-size: cover;
     height: 100%;
-    width: 100%;
+    width: 85%;
     opacity: 0.3;
     z-index: -1;
     left: 0;
@@ -28,18 +33,19 @@
   }
 
   &__content {
-    max-width: 490px;
+    max-width: 555px;
     width: 100%;
     padding-left: 80px;
     font-size: 16px;
-    letter-spacing: 0.03em;
+    padding-top: 20px;
 
     @include tablet {
-      padding-left: 40px;
+      padding: 0 0 0 40px;
     }
-     @include mobile-l {
-       padding: 30px;
-     }
+
+    @include mobile {
+     padding-left: 20px;
+    }
   }
 
   h2 {
@@ -48,15 +54,28 @@
 
   p {
     margin-bottom: 15px;
+
+    &:last-child {
+      width: 70%;
+    }
   }
 
   &__picture {
     padding-top: 10px;
-    max-width: 580px;
+    max-width: 565px;
     width: 100%;
 
     @include mobile-l {
-      display: none;
+      position: absolute;
+      width: 45%;
+      right: -15%;
+      bottom: 0;
+    }
+  }
+
+  &.contact-page {
+    p {
+      margin-bottom: 45px;
     }
   }
 }

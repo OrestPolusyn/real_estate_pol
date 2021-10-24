@@ -1,0 +1,16 @@
+@mixin active-action {
+    &:hover {
+      background-color: var(--color-orange-100);
+      color: var(--color-orange);
+    }
+
+    &:focus {
+      background-color: var(--color-orange-100);
+      color: var(--color-orange);
+    }
+
+    &:active {
+      background-color: var(--color-orange);
+      color: var(--color-white);
+    }
+}

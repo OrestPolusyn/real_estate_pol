@@ -53,7 +53,7 @@ body {
 
 .container,
 .wrapper {
-  max-width: 1140px;
+  max-width: 1130px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -63,11 +63,15 @@ body {
   max-width: 1290px;
 }
 
+.logo {
+  display: block;
+}
+
 .btn {
   display: block;
   background-color: var(--color-black);
   color: var(--color-white);
-  border-radius: $border-radius;
+  border-radius: $border-radius-10px;
   padding: 15px 30px;
   font-weight: 600;
   position: relative;
@@ -124,15 +128,20 @@ body {
 section {
   margin-bottom: 150px;
 
-  @include mobile-l {
+  @include tablet {
     margin-bottom: 100px;
   }
 
-  @include mobile {
+  @include mobile-l {
     margin-bottom: 70px;
+  }
+
+  @include mobile {
+    margin-bottom: 50px;
   }
 }
 
+h1,
 h2 {
   font-size: 42px;
   line-height: 1.2;
@@ -151,21 +160,19 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.4;
   color: var(--color-black-800)
 }
 
 p,
 span {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.8;
   color: var(--color-gray-800);
-  letter-spacing: 0.3px;
 }
 
 span {
   font-size: 16px;
-
 }
 
 .background {
@@ -186,14 +193,9 @@ span {
   }
 }
 
-.items {
-  @include flex-all-sb;
-}
-
 .video {
-  max-width: 520px;
+  max-width: 750px;
   width: 100%;
-  margin-right: 30px;
   position: relative;
 
   @include tablet {
@@ -216,15 +218,20 @@ span {
   border-radius: 50%;
   z-index: 1;
   overflow: hidden;
+  @include flex-all-center;
 
   &::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    z-index: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/sprite.svg#ellipce");
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
     height: 100%;
     width: 100%;
   }
@@ -242,11 +249,52 @@ span {
     z-index: 2;
   }
 
+  &:active {
+    &:before {
+      background-color: var(--color-orange-100);
+    }
+
+    .icon {
+      fill: var(--color-orange);
+    }
+  }
+
   &__icon {
     position: relative;
     max-width: 15px;
     width: 100%;
     height: 15px;
     z-index: 2;
+    stroke: var(--color-white);
+    fill: var(--color-white);
+
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-black);
+  transition: all 0.3s linear;
+  fill: transparent;
+  stroke-width: 2px;
+
+  &--rotate {
+    transform: rotate(180deg)
+  }
+}
+
+.burger {
+  --burger-width: 30px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+  display: none;
+  position: absolute;
+  right: 10px;
+
+  @include burger;
+
+  @include mobile-l {
+    display: block;
   }
 }

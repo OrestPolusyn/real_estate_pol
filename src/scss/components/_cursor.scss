@@ -1,0 +1,67 @@
+.cursor {
+  opacity: 0;
+  visibility: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--color-orange);
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  cursor: none;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 10;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    mask-image: url('../img/sprite.svg#arrow-slider');
+    background-color: var(--color-orange);
+    height: 15px;
+    width: 15px;
+    top: 45%;
+    transform: translateY(-50%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+  }
+
+  &:before {
+    left: -45px;
+
+  }
+
+  &::after {
+    right: -45px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.cursor-click {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.cursor-click--active {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background-color: var(--color-orange);
+}

@@ -55,15 +55,19 @@
           </a>
         </li>
 
+        <li class="nav-list__item">
+          <button class="nav-list__btn btn" type="button">
+            Связаться
+          </button>
+        </li>
+
       </ul>
 
-      <button class="nav-list__btn btn" type="button">
-        Связаться
-      </button>
-
-      <button class="nav-list__menu btn btn--reverse" type="button">
-        Меню
-      </button>
+     <button class="burger">
+       <span class="burger__line"></span>
+       <span class="burger__line"></span>
+       <span class="burger__line"></span>
+     </button>
     </nav>
   </div>
 
@@ -77,31 +81,33 @@
 
   <ul class="story__list swiper-wrapper">
 
-    <li class="story__item banner swiper-slide">
+    <li class="story__item banner banner--first swiper-slide">
 
-  <div class="banner__content">
+  <div class="banner__content" data-aos="fade-right">
     <h2>
       Инвестиционная недвижимость
       <span>в Польше</span>
     </h2>
 
     <p>
-     Помогаем подобрать инвестиционную недвижимость в Польше и берём её в комплексное сопровождение
+      Помогаем подобрать инвестиционную недвижимость в Польше и берём её в комплексное сопровождение
     </p>
 
-    <span>
-      Листай дальше
-    </span>
-  </div>
 
-  <div class="banner__picture">
-    <img src="img/home-slider/story-builder.png" alt="Недвижимость в Польше"width="790">
+  </div>
+  
+  <span class="banner__next">
+    Листай дальше
+  </span>
+
+  <div class="banner__picture " data-aos="flip-up">
+    <img src="img/home-slider/story-builder.png" alt="Недвижимость в Польше" width="790">
   </div>
 </li>
 
     <li class="story__item banner swiper-slide">
 
-  <div class="banner__content banner__problem banner__problem--colored">
+  <div class="banner__content banner__list banner__list--colored">
     <h2>
       Проблемы с которыми сталкивается инвестор при самостоятельной покупке
     </h2>
@@ -123,7 +129,7 @@
     </p>
 
 
-    <span>
+    <span class="banner__next">
       Листай дальше
     </span>
   </div>
@@ -135,7 +141,7 @@
 
     <li class="story__item banner swiper-slide">
 
-  <div class="banner__content  banner__problem banner__problem--video">
+  <div class="banner__content  banner__list banner__list--video" data-aos="flip-down">
     <h2>
       Но Вы можете быть спокойны. Мы поможем выбрать лучший объект недвижимости
     </h2>
@@ -156,15 +162,14 @@
       Окажем информационную поддержку после инвестирования </p>
 
 
-    <span>
+    <span class="banner__next">
       Листай дальше
     </span>
   </div>
 
   <div class="banner__picture">
-    <video autoplay loop muted width="390" height="455">
-      <source type="video/mp4"
-        src="animation.mp4">
+    <video autoplay loop muted width="390">
+      <source type="video/mp4" src="animation.mp4">
     </video>
   </div>
 </li>
@@ -185,7 +190,7 @@
       Написать
     </button>
 
-    <span>
+    <span class="banner__next">
       Листай дальше
     </span>
   </div>
@@ -212,15 +217,13 @@
   </p>
 
   <ul class="services__list items">
-    <li class="background @classIcon">
-
-  <div class="items__box">
-    <img src="img/build.svg" alt="квартира в доме" height="45" width="45">
-
+    <li class="background">
+  <div class="items__icon items__icon--flat">
     <h3>
       Квартира
     </h3>
   </div>
+
   <p>
     Доступный и быстрый способ превратить свои активы в пассивный доход.
   </p>
@@ -229,15 +232,13 @@
     Подробнее
   </a>
 
-</li><li class="background @classIcon">
-
-  <div class="items__box">
-    <img src="img/house.svg" alt="дом с територией" height="45" width="45">
-
+</li><li class="background">
+  <div class="items__icon items__icon--house">
     <h3>
       Дом
     </h3>
   </div>
+
   <p>
     Владение целым зданием дает вам больше контроля и независимости.
   </p>
@@ -246,15 +247,13 @@
     Подробнее
   </a>
 
-</li><li class="background @classIcon">
-
-  <div class="items__box">
-    <img src="img/plug.svg" alt="дом в проекте" height="45" width="45">
-
+</li><li class="background">
+  <div class="items__icon items__icon--project">
     <h3>
       Проект
     </h3>
   </div>
+
   <p>
     Покупка недвижимости на этапе котлована быстрее окупит ваши вложения.
   </p>
@@ -335,9 +334,7 @@
 
 
   <ul class="clients__list items background">
-    <li class="classIcon">
-
-
+    <li>
   <p>
     Благодаря Gremi Invest я смог увеличить свой доход. При этом не отвлекаясь от моего основного бизнеса. Но главное на сколько проще это было с вами. 
   </p>
@@ -350,9 +347,7 @@
     Основатель сети кондитерских
   </span>
 
-</li><li class="classIcon">
-
-
+</li><li>
   <p>
     Спасибо вам за доступность и понимание. Я рада что есть такой сервис, вы упростили этот процесс для меня и его почти не заметила.
   </p>
@@ -365,9 +360,7 @@
     Топ менеджер IT компании
   </span>
 
-</li><li class="classIcon">
-
-
+</li><li>
   <p>
     Мне было проще купить недвижимость в Польше с вами, чем в Украине, Спасибо за то что сэкономили мне время и продолжаете экономить его.
   </p>
@@ -395,13 +388,13 @@
     <div class="news__slider-btns">
 
       <button class="news__prev news__btn" type="button">
-        <svg class="news__icon news__icon--rotate">
+        <svg class="icon icon--rotate">
           <use xlink:href="img/sprite.svg#arrow-right"></use>
         </svg>
       </button>
 
       <button class="news__next news__btn" type="button">
-        <svg class="news__icon ">
+        <svg class="icon ">
           <use xlink:href="img/sprite.svg#arrow-right"></use>
         </svg>
       </button>
@@ -415,7 +408,7 @@
       <li class="news__item swiper-slide">
 
   <article class="article">
-    <img src="img/news/wood-house.jpg" alt="news/wood-house.jpgDesc">
+    <img src="img/news/wood-house.jpg" alt="news/wood-house.jpgDesc" height="@height">
 
     <h3>
       <a href="#">
@@ -430,7 +423,7 @@
 </li><li class="news__item swiper-slide">
 
   <article class="article">
-    <img src="img/news/peoples.jpg" alt="news/peoples.jpgDesc">
+    <img src="img/news/peoples.jpg" alt="news/peoples.jpgDesc" height="@height">
 
     <h3>
       <a href="#">
@@ -445,7 +438,7 @@
 </li><li class="news__item swiper-slide">
 
   <article class="article">
-    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc">
+    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc" height="@height">
 
     <h3>
       <a href="#">
@@ -460,7 +453,7 @@
 </li><li class="news__item swiper-slide">
 
   <article class="article">
-    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc">
+    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc" height="@height">
 
     <h3>
       <a href="#">
@@ -475,7 +468,7 @@
 </li><li class="news__item swiper-slide">
 
   <article class="article">
-    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc">
+    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc" height="@height">
 
     <h3>
       <a href="#">
@@ -570,67 +563,68 @@
         <img src="img/logo.svg" alt="Gremi Invest" width="150" height="35">
       </a>
 
-      <ul class="footer__list nav-list">
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            О нас
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            Услуги
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            О Польше
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            Контакты
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            FAQ
-          </a>
-        </li>
-
-      </ul>
-
-      <address class="address">
-
-        <ul class="address__list">
-
-          <li class="address__item address__item--phone">
-            <span class="slogan ">
-              Телефон
-            </span>
-            <a class="address__text" href="tel:+43634564537">
-              +43634564537
+      <div class="footer__wrapper">
+        <ul class="footer__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              О нас
             </a>
           </li>
 
-          <li class="address__item address__item--location">
-            <span class="slogan">
-              Локация
-            </span>
-
-            <p class="address__text">
-              43/A Spooner Street,
-              St laurence, Virginia,
-              Texas
-            </p>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              Услуги
+            </a>
           </li>
-        </ul>
-      </address>
-    </div>
 
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              блог
+            </a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              Контакты
+            </a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              FAQ
+            </a>
+          </li>
+
+        </ul>
+
+        <address class="address">
+
+          <ul class="address__list">
+
+            <li class="address__item address__item--phone">
+              <span class="slogan ">
+                Телефон
+              </span>
+              <a class="address__text" href="tel:+43634564537">
+                +43634564537
+              </a>
+            </li>
+
+            <li class="address__item address__item--location">
+              <span class="slogan">
+                Локация
+              </span>
+
+              <p class="address__text">
+                43/A Spooner Street,
+                St laurence, Virginia,
+                Texas
+              </p>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </div>
   </div>
 
   <div class="footer__inner footer__inner--bottom">
@@ -678,6 +672,8 @@
 </footer>
 
   </div>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+
   <script src="js/main.js"></script>
 </body>
 

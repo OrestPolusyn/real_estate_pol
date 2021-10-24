@@ -5,6 +5,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 15px;
+
+      @include mobile-s {
+        margin-right: 10px;
+      }
     }
   }
 
@@ -15,10 +19,20 @@
     text-transform: capitalize;
     letter-spacing: 0.03em;
     color: var(--color-gray-500);
-    border-radius: $border-radius;
     max-width: 44px;
     width: 100%;
     text-align: center;
+  }
+
+  &__link {
+    padding: 12px 10px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    border-radius: $border-radius;
+
+    @include mobile-s {
+      padding: 10px 5px;
+    }
 
     &--active {
       background-color: var(--color-orange);
@@ -27,20 +41,18 @@
       .pagination__icon {
         stroke: #fff;
       }
-
     }
-  }
 
-  &__link {
-    padding: 12px 10px;
-    display: block;
+    &:not(.pagination__link--active) {
+      @include active-action;
+    }
   }
 
   &__icon {
     max-width: 8px;
     width: 100%;
     height: 12px;
-    fill:transparent;
+    fill: transparent;
     stroke: currentColor;
     stroke-width: 2px;
 

@@ -56,15 +56,19 @@
           </a>
         </li>
 
+        <li class="nav-list__item">
+          <button class="nav-list__btn btn" type="button">
+            Связаться
+          </button>
+        </li>
+
       </ul>
 
-      <button class="nav-list__btn btn" type="button">
-        Связаться
-      </button>
-
-      <button class="nav-list__menu btn btn--reverse" type="button">
-        Меню
-      </button>
+     <button class="burger">
+       <span class="burger__line"></span>
+       <span class="burger__line"></span>
+       <span class="burger__line"></span>
+     </button>
     </nav>
   </div>
 
@@ -74,9 +78,9 @@
       <div class="wrapper">
         <section class="adv background">
   <div class="adv__content">
-  <h2>
+  <h1>
     О нас
-  </h2>
+  </h1>
 
   <p>
     Более 7 лет мы занимаемся покупкой недвижимости в Польше. За это время мы изучили все детали от выбора объекта  до финального оформления сделки.
@@ -93,7 +97,7 @@
 </div>
 
 <div class="adv__picture">
-  <img src="img/about/about-page.png" alt="Недвижимость в Польше" height="520" width="580">
+  <img src="img/about/about-page.png" alt="Недвижимость в Польше" height="" width="580">
 </div>
 </section>
       </div>
@@ -109,15 +113,13 @@
   </p>
 
    <ul class="process__list items">
-     <li class="background @classIcon">
-
-  <div class="items__box">
-    <img src="img/about/location-pin.png" alt="найти дом" height="45" width="45">
-
+     <li class="background">
+  <div class="items__icon items__icon--location">
     <h3>
       Поиск объекта
     </h3>
   </div>
+
   <p>
     Мы поможем вам найти привлекательный с точки зрения инвестиций объект
   </p>
@@ -126,15 +128,13 @@
     
   </a>
 
-</li><li class="background @classIcon">
-
-  <div class="items__box">
-    <img src="img/about/clipboard.png" alt="Заполнение бумаг" height="45" width="45">
-
+</li><li class="background">
+  <div class="items__icon items__icon--clipboard">
     <h3>
       Минимум бюрократии
     </h3>
   </div>
+
   <p>
     Практически всю бумажную работу по оформелнию мы берем на себя
   </p>
@@ -143,15 +143,13 @@
     
   </a>
 
-</li><li class="background @classIcon">
-
-  <div class="items__box">
-    <img src="img/about/drawing.png" alt="обслуживание обьекта" height="45" width="45">
-
+</li><li class="background">
+  <div class="items__icon items__icon--drawing">
     <h3>
       Операционное управление
     </h3>
   </div>
+
   <p>
     После самой сделки мы поможем вам с обслуживанием вашего объекта
   </p>
@@ -166,7 +164,7 @@
 
 </section>
 
-        <section class="work">
+        <section class="work background">
 
   <h2>
     Как мы работаем
@@ -179,7 +177,7 @@
         <span class="sr-only">
           включить видео
         </span>
-        <svg class="play__icon icon">
+        <svg class="play__icon">
           <use xlink:href="img/sprite.svg#play"></use>
         </svg>
       </button>
@@ -255,7 +253,7 @@
     <li class="team__item">
 
   <article class="article">
-    <img src="img/about/kate.jpg" alt="Юрист">
+    <img src="img/about/kate.jpg" alt="Юрист" height="">
 
     <h3>
       <a href="#">
@@ -270,7 +268,7 @@
 </li><li class="team__item">
 
   <article class="article">
-    <img src="img/about/anton.jpg" alt="Юрист">
+    <img src="img/about/anton.jpg" alt="Юрист" height="">
 
     <h3>
       <a href="#">
@@ -285,7 +283,7 @@
 </li><li class="team__item">
 
   <article class="article">
-    <img src="img/about/alena.jpg" alt="Бухгалтер">
+    <img src="img/about/alena.jpg" alt="Бухгалтер" height="">
 
     <h3>
       <a href="#">
@@ -300,7 +298,7 @@
 </li><li class="team__item">
 
   <article class="article">
-    <img src="img/about/stas.jpg" alt="Аналитик">
+    <img src="img/about/stas.jpg" alt="Аналитик" height="">
 
     <h3>
       <a href="#">
@@ -330,67 +328,68 @@
         <img src="img/logo.svg" alt="Gremi Invest" width="150" height="35">
       </a>
 
-      <ul class="footer__list nav-list">
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            О нас
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            Услуги
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            О Польше
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            Контакты
-          </a>
-        </li>
-
-        <li class="nav-list__item">
-          <a class="nav-list__link" href="#">
-            FAQ
-          </a>
-        </li>
-
-      </ul>
-
-      <address class="address">
-
-        <ul class="address__list">
-
-          <li class="address__item address__item--phone">
-            <span class="slogan ">
-              Телефон
-            </span>
-            <a class="address__text" href="tel:+43634564537">
-              +43634564537
+      <div class="footer__wrapper">
+        <ul class="footer__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              О нас
             </a>
           </li>
 
-          <li class="address__item address__item--location">
-            <span class="slogan">
-              Локация
-            </span>
-
-            <p class="address__text">
-              43/A Spooner Street,
-              St laurence, Virginia,
-              Texas
-            </p>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              Услуги
+            </a>
           </li>
-        </ul>
-      </address>
-    </div>
 
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              блог
+            </a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              Контакты
+            </a>
+          </li>
+
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              FAQ
+            </a>
+          </li>
+
+        </ul>
+
+        <address class="address">
+
+          <ul class="address__list">
+
+            <li class="address__item address__item--phone">
+              <span class="slogan ">
+                Телефон
+              </span>
+              <a class="address__text" href="tel:+43634564537">
+                +43634564537
+              </a>
+            </li>
+
+            <li class="address__item address__item--location">
+              <span class="slogan">
+                Локация
+              </span>
+
+              <p class="address__text">
+                43/A Spooner Street,
+                St laurence, Virginia,
+                Texas
+              </p>
+            </li>
+          </ul>
+        </address>
+      </div>
+    </div>
   </div>
 
   <div class="footer__inner footer__inner--bottom">

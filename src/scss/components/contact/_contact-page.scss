@@ -3,6 +3,20 @@
   border-radius: $border-radius-20px $border-radius-20px 0 0;
   padding: 60px;
 
+  @include tablet {
+    padding: 40px;
+  }
+
+  @include mobile-l {
+    padding: 30px;
+    display: block;
+  }
+
+  @include mobile {
+    padding: 15px;
+    display: block;
+  }
+
   &.background {
     &:before {
       transform: scale(-1, -1);
@@ -13,6 +27,11 @@
   &__list {
     max-width: 400px;
     width: 100%;
+    margin-right: 30px;
+
+    @include mobile-l {
+      margin: 0 auto 30px;
+    }
   }
 
   &__item {
@@ -26,13 +45,14 @@
     color: var(--color-black);
 
     &:not(:last-child) {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
   }
 
   &__link {
     display: block;
     margin-top: 10px;
+    font-size: 18px;
     color: var(--color-orange);
   }
 
@@ -53,5 +73,9 @@
     height: 25px;
     width: 25px;
     fill: var(--color-orange);
+  }
+
+  .contact-form {
+    margin: 0 auto;
   }
 }

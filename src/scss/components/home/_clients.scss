@@ -1,45 +1,43 @@
 .clients {
 
-
   h2 {
     margin-bottom: 40px;
   }
 
   p {
-    line-height: 1.7;
     margin-bottom: 25px;
     min-height: 125px;
+    font-size: 14px;
 
-    @include desktop {
-      min-height: 140px;
-      margin-bottom: 10px;
-    }
-
-    @include mobile-l {
-      min-height: 80px;
+    @include tablet {
+      min-height: 30px;
     }
   }
 
-
   &__list {
-    padding: 60px;
+    padding: 60px 55px;
     border-radius: $border-radius-20px;
     overflow: hidden;
     border: 1px solid var(--color-border);
     position: relative;
     z-index: 0;
+    align-items: flex-start;
 
     @include desktop {
-      padding: 30px;
+      padding: 40px 20px;
     }
 
     @include tablet {
-      flex-wrap: wrap;
-      justify-content: space-around;
+      padding: 60px;
+      display: block;
+    }
+
+    @include mobile-l {
+      padding: 40px;
     }
 
     @include mobile {
-      padding: 10px;
+      padding: 20px;
     }
 
     &::before {
@@ -59,21 +57,19 @@
     li {
       padding: 20px;
 
+      @include tablet {
+        max-width: 100%;
+      }
 
       &:not(:last-child) {
         @include tablet {
           margin-bottom: 20px;
         }
       }
+    }
 
-      @include mobile-l {
-        max-width: 100%;
-        padding: 30px;
-      }
-
-      @include mobile {
-        padding: 20px;
-      }
+    span {
+      font-size: 14px;
     }
 
     &.background {
@@ -81,13 +77,6 @@
 
       &:before {
         opacity: 1;
-      }
-    }
-
-    span {
-      @include desktop {
-        display: block;
-        min-height: 55px;
       }
     }
   }
