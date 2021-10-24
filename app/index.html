@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -7,1616 +7,673 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>P R I V I L E G E | Home page</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
+  <title>Gremi Invest | Главная страница</title>
+  <link rel="stylesheet" href="css/vendor.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
+  <div class="site-container">
 
-  <header class="header">
-
-  <div class="header-adv">
-    <p class="header-adv__text">Shop with up to 50% off</p>
-
-    <button class="header-adv__close" type="button">
-      <span class="sr-only">
-        Close tooltip
-      </span>
-
-      <svg class="header-adv__close-icon">
-        <use xlink:href="img/sprite.svg#close"></use>
-      </svg>
-
-    </button>
-  </div>
+    <header class="header">
 
   <div class="container">
     <nav class="header__nav">
 
       <a class="logo" href="#">
-        <img class="logo__img" src="img/logo.svg" alt="Privilege designers website" width="163" height="26">
+        <img src="img/logo.svg" alt="Gremi Invest" width="150" height="35">
       </a>
 
-      <button class="burger" type="button">
-        <span class="sr-only">
-          Menu
-        </span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
-
-      <ul class="header__menu">
-
-        <li class="header__item" data-menu-id="1">
-          <a class="header__link" href="#">
-            Designers
+      <ul class="header__list nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">
+            О нас
           </a>
         </li>
 
-        <li class="header__item" data-menu-id="2">
-          <a class="header__link" href="#">
-            Clothing
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">
+            Услуги
           </a>
         </li>
 
-        <li class="header__item" data-menu-id="3">
-          <a class="header__link" href="#">
-            Shoes
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">
+            О Польше
           </a>
         </li>
 
-        <li class="header__item" data-menu-id="4">
-          <a class="header__link" href="#">
-            Accessories
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">
+            Контакты
           </a>
         </li>
 
-        <li class="header__item" data-menu-id="5">
-          <a class="header__link" href="#">
-            Sport
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">
+            FAQ
           </a>
         </li>
 
-        <li class="header__item" data-menu-id="6">
-          <a class="header__link" href="#">
-            Gifts
-          </a>
+        <li class="nav-list__item">
+          <button class="nav-list__btn btn" type="button">
+            Связаться
+          </button>
         </li>
 
-        <li class="header__item" data-menu-id="7">
-          <a class="header__link" href="#">
-            Interior
-          </a>
-        </li>
       </ul>
 
-
-
-      <ul class="header__action">
-
-        <li class="header__action-item header__action-item--search">
-          <form class="search" action="#">
-
-            <label class="sr-only" for="search__field">Search on site </label>
-
-<svg class="search__icon search__icon--search">
-  <use xlink:href="img/sprite.svg#search"></use>
-</svg>
-
-<input class="search__header search__field" id="search__field" type="search" placeholder="Search..." name="search">
-
-<button class="search__close" type="button">
-  <span class="sr-only">
-    Close search field
-  </span>
-</button>
-
-
-
-          </form>
-        </li>
-
-        <li class="header__action-item">
-
-          <a class="header__action-link" href="#">
-            <span class="sr-only">Cart</span>
-
-            <svg class="header__action-icon">
-              <use xlink:href="img/sprite.svg#shopping-cart"></use>
-            </svg>
-          </a>
-        </li>
-
-        <li class="header__action-item">
-
-          <a class="header__action-link" href="#">
-            <span class="sr-only">Personal Account</span>
-
-            <svg class="header__action-icon">
-              <use xlink:href="img/sprite.svg#user"></use>
-            </svg>
-          </a>
-        </li>
-
-
-      </ul>
+     <button class="burger">
+       <span class="burger__line"></span>
+       <span class="burger__line"></span>
+       <span class="burger__line"></span>
+     </button>
     </nav>
   </div>
-   <div class="header__dropdown" data-dropdown-id="1">
-   <div class="container">
-     <div class="header__dropdown-wrap">
-       <div class="header__dropdown-inner" >
-         <div class="header__dropdown-box">
-           <p class="header__dropdown-title">
-             Shop by Category
-           </p>
-
-           <a class="header__dropdown-link" href="#">
-             See all
-           </a>
-         </div>
-
-         <ul class="header__dropdown-list">
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               New in
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Coats
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Jackets
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Jeans
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Overshirts
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Gilets
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Blazers
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Shirts
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Trousers
-             </a>
-           </li>
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Suits
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Underwear
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Knitwear
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Sweatshirts
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               T-shirts
-             </a>
-           </li>
-
-           <li class="header__dropdown-item">
-             <a href="#" class="header__dropdown-link">
-               Polo Shirts
-             </a>
-           </li>
-         </ul>
-       </div>
-
-       <div class="header__dropdown-inner" >
-
-         <div class="header__dropdown-box">
-           <p class="header__dropdown-title">
-             Special Price
-           </p>
-
-           <a class="header__dropdown-link" href="#">
-             See all
-           </a>
-         </div>
-
-         <div class="header__dropdown-image">
-
-           <img class="header__dropdown-img" src="img/glasses.jpg" alt="Sale glasses" width="456" height="116">
-
-           <span class="header__dropdown-special">
-             20% off <br> on GLASSES
-           </span>
-         </div>
-
-       </div>
-     </div>
-   </div>
- </div>
 
 </header>
 
-  <main class="main">
-
-    <h1 class="sr-only main-title">PRIVILEGE -
-      premium designer items</h1>
-
-    <section class="hero">
-
-  <div class="swiper-container swiper-slider swiper-nav">
-
-    <ul class="swiper-wrapper">
-      <li class="swiper-slide">
-        <div class="swiper-slide__inner container">
-
-  <h2 class="swiper-slide__title">New Winter Collection</h2>
-
-  <p class="swiper-slide__text">Free delivery from £30 and free returns - Returns extended to 60 days</p>
-
-  <a class="swiper-slide__btn btn-shop" href="#">
-    Shop now
-  </a>
-
-   <div class="swiper-btns">
-
-   <div class="swiper-btn swiper-button-next">
-
-     <span class="sr-only">Next</span>
-
-     <svg class="swiper-btn__icon icon">
-       <use xlink:href="img/sprite.svg#arrow"></use>
-     </svg>
-
-   </div>
-
-   <div class="swiper-btn swiper-button-prev">
-
-     <span class="sr-only">Prev</span>
-
-     <svg class="swiper-btn__icon icon">
-       <use xlink:href="img/sprite.svg#arrow"></use>
-     </svg>
-
-   </div>
- </div>
-</div>
-
-<div class="swiper-slide__inner ">
-  <article class="slider-article">
-
-    <picture>
-      <source media="(max-width: 576px)" srcset="img/hero/girl-cardigan-576w.jpg">
-      <source media="(min-width: 577px)" srcset="img/hero/girl-cardigan.jpg">
-      <img class="slider-article__img" src="img/hero/girl-cardigan.jpg" alt="Check knitted cardigan" width="644" height="725">
-    </picture>
-
-    <div class="slider-article__content">
-      <h3 class="slider-article__title">
-        Check knitted cardigan
-      </h3>
-
-      <span class="slider-article__price">
-        $49.99
-      </span>
-
-      <a class="slider-article__link" href="#">
-        buy now
-        <svg class="slider-article__icon icon">
-          <use xlink:href="img/sprite.svg#arrow"></use>
-        </svg>
-      </a>
-
-    </div>
-  </article>
-</div>
-
-      </li>
-
-      <li class="swiper-slide">
-        <div class="swiper-slide__inner container">
-
-  <h2 class="swiper-slide__title">Denim collection in privilege</h2>
-
-  <p class="swiper-slide__text">Free delivery from £30 and free returns - Returns extended to 60 days</p>
-
-  <a class="swiper-slide__btn btn-shop" href="#">
-    Shop now
-  </a>
-
-   <div class="swiper-btns">
-
-   <div class="swiper-btn swiper-button-next">
-
-     <span class="sr-only">Next</span>
-
-     <svg class="swiper-btn__icon icon">
-       <use xlink:href="img/sprite.svg#arrow"></use>
-     </svg>
-
-   </div>
-
-   <div class="swiper-btn swiper-button-prev">
-
-     <span class="sr-only">Prev</span>
-
-     <svg class="swiper-btn__icon icon">
-       <use xlink:href="img/sprite.svg#arrow"></use>
-     </svg>
-
-   </div>
- </div>
-</div>
-
-<div class="swiper-slide__inner ">
-  <article class="slider-article">
-
-    <picture>
-      <source media="(max-width: 576px)" srcset="img/hero/girls-jacket-576w.jpg">
-      <source media="(min-width: 577px)" srcset="img/hero/girls-jacket.jpg">
-      <img class="slider-article__img" src="img/hero/girls-jacket.jpg" alt="High-waisted culottes jeans & jacket" width="644" height="725">
-    </picture>
-
-    <div class="slider-article__content">
-      <h3 class="slider-article__title">
-        High-waisted culottes jeans & jacket
-      </h3>
-
-      <span class="slider-article__price">
-        $149.99
-      </span>
-
-      <a class="slider-article__link" href="#">
-        buy now
-        <svg class="slider-article__icon icon">
-          <use xlink:href="img/sprite.svg#arrow"></use>
-        </svg>
-      </a>
-
-    </div>
-  </article>
-</div>
-
-      </li>
-
-      <li class="swiper-slide">
-
-        <div class="swiper-slide__inner container">
-
-  <h2 class="swiper-slide__title">Skinny Jeans</h2>
-
-  <p class="swiper-slide__text"></p>
-
-  <a class="swiper-slide__btn btn-shop" href="#">
-    Shop now
-  </a>
-
-   <div class="swiper-btns">
-
-   <div class="swiper-btn swiper-button-next">
-
-     <span class="sr-only">Next</span>
-
-     <svg class="swiper-btn__icon icon">
-       <use xlink:href="img/sprite.svg#arrow"></use>
-     </svg>
-
-   </div>
-
-   <div class="swiper-btn swiper-button-prev">
-
-     <span class="sr-only">Prev</span>
-
-     <svg class="swiper-btn__icon icon">
-       <use xlink:href="img/sprite.svg#arrow"></use>
-     </svg>
-
-   </div>
- </div>
-</div>
-
-<div class="swiper-slide__inner ">
-  <article class="slider-article">
-
-    <picture>
-      <source media="(max-width: 576px)" srcset="img/hero/girl-black-576w.jpg">
-      <source media="(min-width: 577px)" srcset="img/hero/girl-black.jpg">
-      <img class="slider-article__img" src="img/hero/girl-black.jpg" alt="High-waisted culottes jeans & jacket" width="644" height="725">
-    </picture>
-
-    <div class="slider-article__content">
-      <h3 class="slider-article__title">
-        High-waisted culottes jeans & jacket
-      </h3>
-
-      <span class="slider-article__price">
-        $49.99
-      </span>
-
-      <a class="slider-article__link" href="#">
-        buy now
-        <svg class="slider-article__icon icon">
-          <use xlink:href="img/sprite.svg#arrow"></use>
-        </svg>
-      </a>
-
-    </div>
-  </article>
-</div>
-
-      </li> 
-
-    </ul>
+    <main class="main">
+      <div class="wrapper">
+        <section class="story">
+  <div class="swiper-pagination">
+  </div>
+
+  <ul class="story__list swiper-wrapper">
+
+    <li class="story__item banner banner--first swiper-slide">
+
+  <div class="banner__content" data-aos="fade-right">
+    <h2>
+      Инвестиционная недвижимость
+      <span>в Польше</span>
+    </h2>
+
+    <p>
+      Помогаем подобрать инвестиционную недвижимость в Польше и берём её в комплексное сопровождение
+    </p>
 
 
   </div>
+  
+  <span class="banner__next">
+    Листай дальше
+  </span>
+
+  <div class="banner__picture " data-aos="flip-up">
+    <img src="img/home-slider/story-builder.png" alt="Недвижимость в Польше" width="790">
+  </div>
+</li>
+
+    <li class="story__item banner swiper-slide">
+
+  <div class="banner__content banner__list banner__list--colored">
+    <h2>
+      Проблемы с которыми сталкивается инвестор при самостоятельной покупке
+    </h2>
+
+    <p>
+      Покупка неликвидного объекта недвижимости
+    </p>
+
+    <p>
+      Продажа объекта инвестиции позже срока
+    </p>
+
+    <p>
+      Ориентация только на рекламу, а не на аналитику
+    </p>
+
+    <p>
+      Анализ документов, а не истории застройщика
+    </p>
+
+
+    <span class="banner__next">
+      Листай дальше
+    </span>
+  </div>
+
+  <div class="banner__picture">
+    <img src="img/home-slider/man-ask.png" alt="Проблемы инвестора" width="325">
+  </div>
+</li>
+
+    <li class="story__item banner swiper-slide">
+
+  <div class="banner__content  banner__list banner__list--video" data-aos="flip-down">
+    <h2>
+      Но Вы можете быть спокойны. Мы поможем выбрать лучший объект недвижимости
+    </h2>
+
+    <p>
+      Индивидуальный выбор объекта инвестирования
+    </p>
+
+    <p>
+      Вам не придется беспокоится о наличии всех документов
+    </p>
+
+    <p>
+      Поможем инвестировать только в самых надежных и проверенных Застройщиков
+    </p>
+
+    <p>
+      Окажем информационную поддержку после инвестирования </p>
+
+
+    <span class="banner__next">
+      Листай дальше
+    </span>
+  </div>
+
+  <div class="banner__picture">
+    <video autoplay loop muted width="390">
+      <source type="video/mp4" src="animation.mp4">
+    </video>
+  </div>
+</li>
+    
+    <li class="story__item banner swiper-slide">
+
+  <div class="banner__content  banner__content--last">
+    <h2>
+      Мы уже решили все проблемы за вас и знаем, куда лучше инвестировать
+    </h2>
+
+    <p>
+      С нами Вы приобретёте любой объект от Застройщика и получите доход в 2 раза больше, чем при класической сдаче в
+      аренду.
+    </p>
+
+    <button class="btn btn--reverse" type="button">
+      Написать
+    </button>
+
+    <span class="banner__next">
+      Листай дальше
+    </span>
+  </div>
+
+  <div class="banner__picture">
+    <img src="img/home-slider/holding.png" alt="Недвижимость в Польше" width="790">
+  </div>
+</li>
+
+  </ul>
 
 </section>
+      </div>
 
-    <section class="purpose">
+      <div class="container">
+        <section class="services">
 
-  <div class="container">
+  <h2>
+    Услуги
+  </h2>
 
+  <p>
+    Мы готовы вам помочь с любым типом объекта
+  </p>
 
-    <ul class="purpose__list">
-      <li class="purpose__item purpose__item--text">
-
-        <p class="purpose__text">
-          Since 1991, Privilege has been based on a simple idea: to create a wardrobe that is accessible, chic and
-          sportswear, casual and urban. To accompany men on a daily basis.
-        </p>
-
-        <a class="purpose__link-title" href="#">
-          <h2 class="purpose__title title">
-            Our Purpose
-          </h2>
-        </a>
-
-      </li>
-      <li class="purpose__item purpose__item--first">
-        <a class="purpose__link " href="#">
-          <span class="sr-only">
-            Clothing link
-          </span>
-        </a>
-
-        <span class="purpose__link-text">
-          Clothing
-        </span>
-
-        <img class="purpose__img" src="img/purpose-ron.jpg" alt="Clothing" width="300" height="400">
-
-      </li>
-
-
-      <li class="purpose__item purpose__item--second">
-        <a class="purpose__link " href="#">
-          <span class="sr-only">
-            Accessories link
-          </span>
-        </a>
-        <span class="purpose__link-text">
-          Accessories
-        </span>
-
-        <img class="purpose__img" src="img/purpose-whatch.jpg" alt="Accessories" width="300" height="400">
-      </li>
-
-
-      <li class="purpose__item purpose__item--third">
-        <a class="purpose__link " href="#">
-          <span class="sr-only">
-            Grooming link
-          </span>
-        </a>
-
-        <span class="purpose__link-text">
-          Grooming
-        </span>
-
-        <img class="purpose__img" src="img/purpose-shave.jpg" alt="Grooming" width="300" height="400">
-      </li>
-
-      <li class="purpose__item purpose__item--fourth">
-        <a class="purpose__link " href="#">
-          <span class="sr-only">
-            Shoes link
-          </span>
-        </a>
-
-        <span class="purpose__link-text">
-          Shoes
-        </span>
-
-        <img class="purpose__img" src="img/purpose-shoes.jpg" alt="Shoes" width="300" height="400">
-      </li>
-
-      <li class="purpose__item purpose__item--fifth">
-        <a class="purpose__link " href="#">
-          <span class="sr-only">
-            Gift link
-          </span>
-        </a>
-
-        <span class="purpose__link-text">
-          Gift
-        </span>
-
-        <img class="purpose__img" src="img/purpose-lamp.jpg" alt="Gift" width="300" height="400">
-
-      </li>
-
-    </ul>
-
-
-  </div>
-</section>
-
-    <section class="designers">
-  <div class="container">
-
-    <div class="designers__wrap tabs">
-
-      <ul class="tabs-content">
-
-        <li class="tabs-content__item tabs-content__item--active" data-tabs-target="burberryz">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
+  <ul class="services__list items">
+    <li class="background">
+  <div class="items__icon items__icon--flat">
+    <h3>
+      Квартира
     </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
   </div>
 
-</article>
+  <p>
+    Доступный и быстрый способ превратить свои активы в пассивный доход.
+  </p>
 
-          <article class="product">
+  <a href="#">
+    Подробнее
+  </a>
 
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
+</li><li class="background">
+  <div class="items__icon items__icon--house">
+    <h3>
+      Дом
     </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
   </div>
 
-</article>
+  <p>
+    Владение целым зданием дает вам больше контроля и независимости.
+  </p>
 
-          <article class="product">
+  <a href="#">
+    Подробнее
+  </a>
 
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
+</li><li class="background">
+  <div class="items__icon items__icon--project">
+    <h3>
+      Проект
     </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
   </div>
 
-</article>
-        </li>
+  <p>
+    Покупка недвижимости на этапе котлована быстрее окупит ваши вложения.
+  </p>
 
-        <li class="tabs-content__item" data-tabs-target="gucci">
-          <article class="product">
+  <a href="#">
+    Подробнее
+  </a>
 
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-        <li class="tabs-content__item " data-tabs-target="mr.p">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-        <li class="tabs-content__item " data-tabs-target="balenciaga">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-        <li class="tabs-content__item " data-tabs-target="nike">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-        <li class="tabs-content__item " data-tabs-target="givenchy">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-        <li class="tabs-content__item " data-tabs-target="celine">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-        <li class="tabs-content__item " data-tabs-target="incotex">
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guys.jpg" alt="" width="424" height="697">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-guy.jpg" alt="" width="332" height="337">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-
-          <article class="product">
-
-  <img class="product__image" src="img/home-designers/runner-shoes.jpg" alt="" width="332" height="263">
-
-  <div class="product__box">
-    <h3 class="product__title">
-      <a class="product__link" href="#">
-        
-      </a>
-    </h3>
-
-    <p class="product__text">
-      B-Runner asymmetrical sneakers      
-    </p>
-
-    <span class="product__text">
-      
-    </span>
-
-    <span class="product__price">$250.00</span>
-  </div>
-
-</article>
-        </li>
-
-      </ul>
-
-      <aside class="designers__sidebar">
-  <h2 class="title">designers</h2>
-  <ul class="designers__list tabs">
-    <li class="tabs__item">
-  <button class="tabs__btn tabs__btn--active" type='button' data-tabs-path='burberryz'>
-    Burberryz
-  </button>
-</li><li class="tabs__item">
-  <button class="tabs__btn " type='button' data-tabs-path='gucci'>
-    Gucci
-  </button>
-</li><li class="tabs__item">
-  <button class="tabs__btn " type='button' data-tabs-path='mr.p'>
-    Mr. p
-  </button>
-</li><li class="tabs__item">
-  <button class="tabs__btn " type='button' data-tabs-path='balenciaga'>
-    Balenciaga
-  </button>
-</li><li class="tabs__item">
-  <button class="tabs__btn " type='button' data-tabs-path='nike'>
-    Nike
-  </button>
-</li><li class="tabs__item">
-  <button class="tabs__btn " type='button' data-tabs-path='givenchy'>
-    Givenchy
-  </button>
-</li><li class="tabs__item">
-  <button class="tabs__btn " type='button' data-tabs-path='incotex'>
-    Incotex
-  </button>
 </li>
   </ul>
-  <a class="designers__link" href="#">
-    view all
-  </a>
 
-</aside>
+</section>
+
+        <section class="about">
+  <div class="about__inner">
+    <h2>
+      О нас
+    </h2>
+
+    <p>
+      Мы компания, которая готова позаботиться не только о ваших инвестициях, но в первую очередь о вас. Благодаря опыту
+      и
+      налаженной модели, мы можем снять с вам сложности оформлений и выбора подходящего объекта.
+    </p>
+
+    <ul class="numbers">
+  <li class="numbers__item">
+    <span>
+      100+
+    </span>
+    Объектов
+  </li>
+
+  <li class="numbers__item">
+    <span>
+      6-8%
+    </span>
+    Годовых
+  </li>
+
+  <li class="numbers__item">
+    <span>
+      4-5
+    </span>
+    Дней оформление
+  </li>
+
+</ul>
+
+
+    <div class="about__ceo">
+      <img src="img/founder.jpg" alt="CEO компании" height="60" width="60">
+
+      <div class="about__ceo-content">
+        <h3>
+          Евгений Кириченко
+        </h3>
+
+        <span>
+          Founder, CEO
+        </span>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="about__picture">
+    <img src="img/build-about.png" alt="Проект компании" width="530">
+  </div>
+
+</section>
+
+        <section class="clients ">
+
+  <h2>
+    Наши клиенты
+  </h2>
+
+
+  <ul class="clients__list items background">
+    <li>
+  <p>
+    Благодаря Gremi Invest я смог увеличить свой доход. При этом не отвлекаясь от моего основного бизнеса. Но главное на сколько проще это было с вами. 
+  </p>
+
+  <h3>
+    Сергей Лагутин
+  </h3>
+
+  <span>
+    Основатель сети кондитерских
+  </span>
+
+</li><li>
+  <p>
+    Спасибо вам за доступность и понимание. Я рада что есть такой сервис, вы упростили этот процесс для меня и его почти не заметила.
+  </p>
+
+  <h3>
+    Юлия Сергиенко
+  </h3>
+
+  <span>
+    Топ менеджер IT компании
+  </span>
+
+</li><li>
+  <p>
+    Мне было проще купить недвижимость в Польше с вами, чем в Украине, Спасибо за то что сэкономили мне время и продолжаете экономить его.
+  </p>
+
+  <h3>
+    Борис Ильченко
+  </h3>
+
+  <span>
+    Продажа недвижимости
+  </span>
+
+</li>
+  </ul>
+
+</section>
+
+        <section class="news">
+
+  <div class="news__nav">
+    <h2>
+      О Польше
+    </h2>
+
+    <div class="news__slider-btns">
+
+      <button class="news__prev news__btn" type="button">
+        <svg class="icon icon--rotate">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+
+      <button class="news__next news__btn" type="button">
+        <svg class="icon ">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
 
     </div>
   </div>
-</section>
+  <div class="news__slider">
 
-    <div class="additional">
-  <div class="container">
+    <ul class="news__list swiper-wrapper">
 
-    <ul class="additional__list">
+      <li class="news__item swiper-slide">
 
-      <li class="additional__item" style="background-image: url('../img/icons/track.png');">
+  <article class="article">
+    <img src="img/news/wood-house.jpg" alt="news/wood-house.jpgDesc" height="@height">
 
-        <div class="additional__inner">
-          <p class="additional__title">
-            Free Delivery
-          </p>
+    <h3>
+      <a href="#">
+        Как выбрать доходный объект в Польше
+      </a>
+    </h3>
 
-          <span class="additional__text">
-            On all orders ofer AED 2,000
-          </span>
-        </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendu non. Ultricies dui, diam aliquet volutpat viverra amet.
+    </p>
+  </article>
+</li><li class="news__item swiper-slide">
 
-        <a class="additional__link" href="#">
-          learn more
-        </a>
-      </li>
+  <article class="article">
+    <img src="img/news/peoples.jpg" alt="news/peoples.jpgDesc" height="@height">
 
-      <li class="additional__item" style="background-image: url('../img/icons/shirt.png');">
-        <div class="additional__inner">
+    <h3>
+      <a href="#">
+        Почему купить недвижимость сложно
+      </a>
+    </h3>
 
-          <p class="additional__title">
-            For Him
-          </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non. Ultricies dui, diam aliquet volutpat viverra amet. Lorem ipsum dolor...
+    </p>
+  </article>
+</li><li class="news__item swiper-slide">
 
-          <span class="additional__text">
-            Discover Privilege
-          </span>
-        </div>
+  <article class="article">
+    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc" height="@height">
 
-        <a class="additional__link" href="#">
-          learn more
-        </a>
-      </li>
+    <h3>
+      <a href="#">
+        Уникальность польской экономики
+      </a>
+    </h3>
 
-      <li class="additional__item" style="background-image: url('../img/icons/like.png');">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non.
+    </p>
+  </article>
+</li><li class="news__item swiper-slide">
 
-        <div class="additional__inner">
+  <article class="article">
+    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc" height="@height">
 
-          <p class="additional__title">
-            The Privilege App
-          </p>
+    <h3>
+      <a href="#">
+        Уникальность польской экономики
+      </a>
+    </h3>
 
-          <span class="additional__text">
-            Seamless on-the-go Shopping
-          </span>
-        </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non.
+    </p>
+  </article>
+</li><li class="news__item swiper-slide">
 
-        <a class="additional__link" href="#">
-          learn more
-        </a>
-      </li>
+  <article class="article">
+    <img src="img/news/river-boat.jpg" alt="news/river-boat.jpgDesc" height="@height">
+
+    <h3>
+      <a href="#">
+        Уникальность польской экономики
+      </a>
+    </h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non.
+    </p>
+  </article>
+</li>
     </ul>
 
-  </div>
-</div>
-
-    <div class="banner">
-  <img class="banner__img" src="img/baner-home.jpeg" alt="PRIVILEGE banner" height="600">
-</div>
-
-
-    <section class="blog">
-  <div class="container">
-    <div class="blog__wrap">
-
-      <div class="blog__inner">
-        <h2 class="title">
-          Want to keep researching?
-        </h2>
-        <p class="blog__text">
-          Check out our information hub to get all of the facts about our products for men.
-        </p>
-        <a class="btn-shop blog__btn-shop" href="#">Shop now</a>
-      </div>
-
-      <ul class="blog__inner">
-        <li class="blog__item">
-          <atricle class="blog-article">
-
-            <img class="blog-article__img" src="img/researching/shoes.jpg" alt="The best dressed men of November 2020"
-              width="300" height="400">
-
-            <span class="blog-article__date">
-              March 12, 2021
-            </span>
-
-            <h3 class="blog-article__title">
-              <a class="blog-article__link" href="#">
-                The best dressed men of November 2020
-              </a>
-            </h3>
-          </atricle>
-        </li>
-
-        <li class="blog__item">
-          <atricle class="blog-article">
-
-            <img class="blog-article__img" src="img/researching/guy-glasses.jpg"
-              alt="The stylish man’s guide to wearing a turtleneck" width="300" height="400">
-
-            <span class="blog-article__date">
-              March 12, 2021
-            </span>
-
-            <h3 class="blog-article__title">
-              <a class="blog-article__link" href="#">
-                The stylish man’s guide to wearing a turtleneck
-              </a>
-            </h3>
-          </atricle>
-        </li>
-
-      </ul>
-
-    </div>
-
-    <a class="btn-shop blog__btn-all" href="#">See all</a>
-
-  </div>
-</section>
-
-  </main>
-
-  <div class="popup">
-  <div class="popup__box">
-    <img class="popup__img" src="img/popup.jpg" alt="Man popup">
-
-    <form class="subscribe" action="#">
-
-    <label class="subscribe__text">
-        Sing up for style news
-        <input class="subscribe__field" name="subscription" type="email" required
-            placeholder="Email address">
-    </label>
-
-    <button class="subscribe__btn" type="submit">
-        <span class="sr-only">
-            Send email address
-        </span>
-    </button>
-</form>
-
-    <button class="popup__btn" type="button">
-
-      <span class="sr-only">
-        Close popup
-      </span>
-
-      <svg class="subscribe__close">
-        <use xlink:href="img/sprite.svg#close"></use>
-      </svg>
-
-    </button>
-  </div>
-</div>
-
-  <footer class="footer">
-  <div class="container">
-
-    <a class="logo" href="#">
-      <img class="logo__img" src="img/logo.svg" alt="Privilege designers website" width="163" height="26">
+    <a class="news__more btn" href="#">
+      Больше статей
     </a>
 
-    <div class="footer__wrap">
-      <div class="footer__inner">
+  </div>
+</section>
 
-        <form class="subscribe" action="#">
+        <section class="contacts">
 
-    <label class="subscribe__text">
-        Sing up for style news
-        <input class="subscribe__field" name="subscription" type="email" required
-            placeholder="Email address">
+  <div class="contacts__images">
+    <img src="img/arm-key.png" alt="Открой ключем" height="420" width="275">
+    <img src="img/hand.png" alt="Лодонь" height="420" width="380">
+  </div>
+
+
+    <div class="contact-form">
+  <h2>
+    Свяжитесь с нами
+  </h2>
+
+  <p>
+    Мы готовы ответить на все ваши вопросы или сразу предложить вам объект, который вас заинтересует.
+  </p>
+
+  <form class="form" action="#">
+
+    <label class="form__label" for="name">
+      <span class="sr-only">
+        Имя
+      </span>
+
+      <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
     </label>
 
-    <button class="subscribe__btn" type="submit">
-        <span class="sr-only">
-            Send email address
-        </span>
+    <label class="form__label" for="email">
+      <span class="sr-only">
+        Електронная почта
+      </span>
+      <input class="form__area" name="email" id="email" type="text" placeholder="Email">
+    </label>
+
+    <label class="form__label" for="phone">
+      <span class="sr-only">
+        Телефон
+      </span>
+      <input class="form__area" name="phone" id="phone" type="text" placeholder="Телефон">
+    </label>
+
+    <label class="form__label" for="message">
+      <span class="sr-only">
+        Сообщение
+      </span>
+
+      <textarea class="form__area form__area--text" name="message" id="message" placeholder="Сообщение"></textarea>
+    </label>
+
+    <button class="form__btn btn" type="submit">
+      Отправить
     </button>
-</form>
+
+  </form>
+</div>
 
 
-        <label class="custom-checkbox">
-          <input type="checkbox" class="custom-checkbox__field" checked>
+</section>
 
-          <span class="custom-checkbox__content">
-            I agree with your
-            <a class="custom-checkbox__link" href="#">
-              terms & conditions
-            </a>
-          </span>
 
-        </label>
+      </div>
 
-        <ul class="footer__socials">
+    </main>
 
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+    <footer class="footer">
 
-              <span class="sr-only">
-                facebook
-              </span>
+  <div class="container">
 
-              <svg class="footer__icon">
-                <use xlink:href="img/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
+    <div class="footer__inner">
+      <a class="logo" href="#">
+        <img src="img/logo.svg" alt="Gremi Invest" width="150" height="35">
+      </a>
 
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-
-              <span class="sr-only">
-                twitter
-              </span>
-
-              <svg class="footer__icon">
-                <use xlink:href="img/sprite.svg#twitter"></use>
-              </svg>
+      <div class="footer__wrapper">
+        <ul class="footer__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              О нас
             </a>
           </li>
 
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-
-              <span class="sr-only">
-                instagram
-              </span>
-
-              <svg class="footer__icon">
-                <use xlink:href="img/sprite.svg#instagram"></use>
-              </svg>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              Услуги
             </a>
           </li>
 
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              блог
+            </a>
+          </li>
 
-              <span class="sr-only">
-                youtube
-              </span>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              Контакты
+            </a>
+          </li>
 
-              <svg class="footer__icon">
-                <use xlink:href="img/sprite.svg#youtube"></use>
-              </svg>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">
+              FAQ
             </a>
           </li>
 
         </ul>
+
+        <address class="address">
+
+          <ul class="address__list">
+
+            <li class="address__item address__item--phone">
+              <span class="slogan ">
+                Телефон
+              </span>
+              <a class="address__text" href="tel:+43634564537">
+                +43634564537
+              </a>
+            </li>
+
+            <li class="address__item address__item--location">
+              <span class="slogan">
+                Локация
+              </span>
+
+              <p class="address__text">
+                43/A Spooner Street,
+                St laurence, Virginia,
+                Texas
+              </p>
+            </li>
+          </ul>
+        </address>
       </div>
+    </div>
+  </div>
 
-      <div class="footer__inner language">
-
-        <div class="language__choose">
-
-          <label class="language__choose-name" for="language">
-            Language:
-          </label>
-
-          <select class="language__choose-item js-choice" name="language" id="language">
-            <option class="language__choose-value" value=" Eng">Eng</option>
-            <option class="language__choose-value" value=" Rus">Rus</option>
-            <option class="language__choose-value" value="Arab">Arab</option>
-          </select>
-        </div>
-
-        <div class="language__choose">
-          <label class="language__choose-name" for="currency">
-            Currency:
-          </label>
-
-          <select class="language__choose-item js-choice" name="currency" id="currency">
-            <option class="language__choose-value" value="$">$</option>
-            <option class="language__choose-value" value=" &#8381;"> &#8381;</option>
-            <option class="language__choose-value" value="&#1583;"> &#1583;</option>
-          </select>
-
-        </div>
-
-      </div>
-
-      <div class="footer__inner">
-        <p class="footer__inner-text">
-          Customer Services
-        </p>
-
+  <div class="footer__inner footer__inner--bottom">
+    <div class="container">
+      <div class="footer__rights">
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link" href="#">
-              Payment
-            </a>
+            2021
           </li>
 
           <li class="footer__item">
-            <a class="footer__link" href="#">
-              Delivery
-            </a>
+            All rights Reserved
           </li>
 
           <li class="footer__item">
-            <a class="footer__link" href="#">
-              Returns
-            </a>
+            &#169; Gremi Invest
           </li>
 
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              FAQs
-            </a>
-          </li>
         </ul>
-      </div>
 
-      <div class="footer__inner">
-        <p class="footer__inner-text">
-          Company
-        </p>
-
-        <ul class="footer__list">
+        <ul class="footer__list messangers">
           <li class="footer__item">
             <a class="footer__link" href="#">
-              About Us
+              viber
             </a>
           </li>
 
           <li class="footer__item">
             <a class="footer__link" href="#">
-              Contact Us
+              telegram
             </a>
           </li>
 
           <li class="footer__item">
             <a class="footer__link" href="#">
-              Affiliates
+              Whatsapp
             </a>
           </li>
 
-          <li class="footer__item">
-            <a class="footer__link" href="#">
-              Partnerships
-            </a>
-          </li>
         </ul>
       </div>
     </div>
-
-    <ul class="footer__terms">
-
-      <li class="footer__item">
-        <a class="footer__link" href="#">
-          Privacy Policy
-        </a>
-      </li>
-
-      <li class="footer__item">
-        <a class="footer__link" href="#">
-          Terms of Servise
-        </a>
-      </li>
-
-    </ul>
-
   </div>
 
 </footer>
 
+  </div>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
 
-  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 

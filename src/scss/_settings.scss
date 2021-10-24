@@ -4,9 +4,12 @@ html {
 }
 
 body {
-  font: $font-body;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--color-white);
-  color: var(--color-white);
+  color: var(--color-black);
+  line-height: 1.3;
+  font-size: $font-body;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -14,27 +17,12 @@ body {
 }
 
 
-.container {
-  margin: 0 auto;
-  padding: 0 22px;
-  max-width: 1284px;
-  width: 100%;
-}
-
-.for-mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
-}
-
 .error {
   border: 2px #ff4019 solid;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
-  outline: transparent;
+  outline: var(--color-orange-200);
 }
 
 .sr-only {
@@ -50,96 +38,263 @@ body {
   overflow: hidden;
 }
 
-.disabled {
-  background-color: var(--color-disabled) !important;
-  color: var(--color-disabled) !important;
-  pointer-events: all !important;
-
+.error {
+  border: 2px #ff4019 solid; // stylelint-disable-line declaration-no-important
 }
 
-.error {
-  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+.site-container {
+  overflow-x: hidden;
 }
 
 .main {
   flex-grow: 1;
-  margin-top: 136px;
-
-  @include desktop {
-    margin-top: 160px;
-  }
-
-  @include tablet {
-    margin-top: 150px;
-  }
-
-  @include mobile-m {
-    margin-top: 140px;
-  }
+  position: relative;
 }
 
-button {
-  border: none;
-  background-color: transparent;
+.container,
+.wrapper {
+  max-width: 1130px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
+.wrapper {
+  max-width: 1290px;
+}
 
 .logo {
-  max-width: 163px;
-  z-index: 5;
+  display: block;
+}
 
-  @include desktop {
-    margin-right: 70px;
+.btn {
+  display: block;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: $border-radius-10px;
+  padding: 15px 30px;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  transition: background-color 0.6s ease;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &::before {
+    background-color: var(--color-orange);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: $border-radius;
+    transition: all 0.4s ease;
+    width: 0;
+    height: 100%;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &--reverse {
+    background-color: var(--color-orange);
+
+    &:hover {
+      background-color: transparent;
+      color: var(--color-orange);
+      border-color: var(--color-orange);
+    }
+
+    &::before {
+      background-color: transparent;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &.disable {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--color-white);
+  }
+}
+
+section {
+  margin-bottom: 150px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile-l {
+    margin-bottom: 70px;
   }
 
   @include mobile {
-    margin-right: auto;
-  }
-
-  @include mobile-m {
-    max-width: 144px;
-  }
-
-  &__img {
-    @include mobile-s {
-      height: 18px;
-
-    }
+    margin-bottom: 50px;
   }
 }
 
-.overflow {
-  overflow: hidden;
+h1,
+h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 15px;
+
+  @include mobile-l {
+    font-size: 30px;
+  }
+
+  @include mobile {
+    font-size: 26px;
+  }
 }
 
-.all-link {
+h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--color-black-800)
+}
+
+p,
+span {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-gray-800);
+}
+
+span {
+  font-size: 16px;
+}
+
+.background {
   position: relative;
-  padding-right: 25px;
-  @include body-sec;
-  @include hover-bl;
-  white-space: nowrap;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: $border-radius-20px;
+    bottom: 0;
+    right: 0;
+    background: var(--color-orange-linear);
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s linear;
+  }
+}
+
+.video {
+  max-width: 750px;
+  width: 100%;
+  position: relative;
+
+  @include tablet {
+    min-width: 400px;
+  }
+
+  @include mobile {
+    min-width: auto;
+  }
+}
+
+.play {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+  @include flex-all-center;
 
   &::after {
     content: "";
     position: absolute;
-    background-color: var(--color-black);
-    mask-image: url('../img/sprite.svg#arrow-footer');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 8px;
-    width: 14px;
+    top: 0;
+    left: 0;
+    bottom: 0;
     right: 0;
-    bottom: 50%;
-    transition: background-color 0.3s linear;
-    transform: rotate(-90deg) translateX(-30%);
+    background-image: url("../img/sprite.svg#ellipce");
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
   }
 
-  &:hover {
-    @include hover-full;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    background-color: var(--color-orange);
+    z-index: 2;
+  }
 
-    &::after {
-      background-color: var(--color-golden);
+  &:active {
+    &:before {
+      background-color: var(--color-orange-100);
     }
+
+    .icon {
+      fill: var(--color-orange);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    max-width: 15px;
+    width: 100%;
+    height: 15px;
+    z-index: 2;
+    stroke: var(--color-white);
+    fill: var(--color-white);
+
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-black);
+  transition: all 0.3s linear;
+  fill: transparent;
+  stroke-width: 2px;
+
+  &--rotate {
+    transform: rotate(180deg)
+  }
+}
+
+.burger {
+  --burger-width: 30px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+  display: none;
+  position: absolute;
+  right: 10px;
+
+  @include burger;
+
+  @include mobile-l {
+    display: block;
   }
 }

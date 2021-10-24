@@ -1,0 +1,125 @@
+.work {
+  border: 2px solid var(--color-border);
+  border-radius: $border-radius-20px;
+  padding: 45px 40px;
+
+  @include desktop {
+    padding: 35px 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/petals.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    height: 100%;
+    width: 65%;
+    opacity: .3;
+    z-index: -1;
+    right: 0;
+    transform: scale(-1, 1);
+    bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &__inner {
+    @include flex-s-sb;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__list {
+    @include flex-s-sb;
+    flex-wrap: wrap;
+    max-width: 650px;
+    width: 100%;
+    list-style-type: none;
+    padding-top: 30px;
+    margin: 0 auto;
+
+    @include mobile-s {
+      display: block;
+    }
+  }
+
+  &__item {
+    counter-increment: list;
+    width: 100%;
+    position: relative;
+
+    &:not(:last-child) {
+      @include mobile-l {
+        margin-bottom: 35px;
+      }
+    }
+
+    &:nth-child(odd) {
+      margin-right: 10px;
+    }
+
+    &:nth-child(-n+2) {
+      margin-bottom: 35px;
+    }
+
+    &:nth-child(odd) {
+      max-width: 225px;
+
+      @include tablet {
+        max-width: 45%
+      }
+
+      @include mobile-s {
+        max-width: 100%;
+      }
+    }
+
+    &:nth-child(even) {
+      max-width: 200px;
+
+      @include tablet {
+        max-width: 45%
+      }
+
+      @include mobile-s {
+        max-width: 100%;
+      }
+    }
+
+    &::before {
+      content: counter(list);
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 56px;
+      color: var(--color-orange);
+      opacity: 0.2;
+      position: absolute;
+      z-index: 0;
+      top: -15px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  &__video {
+    margin-right: 30px;
+    min-width: auto;
+
+    @include tablet {
+      margin: 0 auto 40px;
+    }
+  }
+}

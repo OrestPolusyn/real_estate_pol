@@ -1,0 +1,148 @@
+.services {
+
+  &__wrapper {
+    @include flex-all-sb;
+
+    &--num {
+      align-items: baseline;
+      margin-bottom: 40px;
+    }
+
+    @include mobile-l {
+      display: block;
+    }
+  }
+
+  &__project {
+
+    &.background {
+      border: 1px solid var(--color-border);
+      border-radius: $border-radius-20px;
+      padding: 45px;
+
+      @include mobile {
+        padding: 20px;
+      }
+
+      h2 {
+        max-width: 250px;
+        width: 100%;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/petals.png);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: cover;
+        height: 100%;
+        width: 75%;
+        opacity: 0.3;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+  }
+
+  &__inner {
+    max-width: 400px;
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  .adv {
+    &__content {
+      max-width: 540px;
+
+      p {
+        letter-spacing: 0.02em;
+        line-height: 1.6;
+
+        @include mobile-l {
+          width: 75%;
+          padding-right: 20px;
+        }
+
+        @include mobile-s {
+          width: 80%;
+        }
+      }
+    }
+
+    &__picture {
+      max-width: 450px;
+      margin-right: 50px;
+      padding-top: 0;
+
+      @include tablet {
+        margin-right: 0;
+        transform: translateY(50px);
+      }
+
+      @include mobile-l {
+        right: -15%;
+      }
+    }
+
+  }
+
+  &__counts {
+    max-width: 635px;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid var(--color-gray-100);
+    border-radius: $border-radius-20px;
+
+    .numbers {
+      margin-bottom: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__items {
+    left: 0;
+    top: 0;
+    @include flex-all-sb;
+    text-align: center;
+    position: relative;
+  }
+
+  &__item {
+    max-width: 350px;
+    width: 100%;
+
+  }
+
+  &__slider {
+    padding: 0 15px;
+    cursor: none;
+
+    &:before {
+      content: "";
+      max-width: 170px;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      height: 355px;
+      background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: 10;
+
+      @include mobile-s {
+        display: none;
+      }
+    }
+  }
+
+  .article {
+    h3 {
+      max-width: 100%;
+    }
+
+    a {
+      cursor: none;
+    }
+  }
+}

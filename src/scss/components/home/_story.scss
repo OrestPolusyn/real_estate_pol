@@ -1,0 +1,54 @@
+.story {
+  overflow: hidden;
+  background-color: var(--color-orange-100);
+
+  &__item {
+    height: 530px !important;
+    align-items: flex-start;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: var(--color-orange);
+      border-radius: 5px 5px 0 0;
+      width: 2px;
+      left: 80px;
+      bottom: 0;
+
+      @include mobile-l {
+        left: 40px;
+      }
+
+      @include mobile {
+        left: 20px;
+      }
+    }
+
+    &:after {
+      height: 80px;
+      background-color: var(--color-orange);
+      opacity: 0.2;
+
+      @include mobile-l {
+        height: 50px;
+      }
+    }
+
+    &:before {
+      height: 40px;
+
+      @include mobile-l {
+        height: 25px;
+      }
+    }
+  }
+
+  .swiper-pagination-progressbar {
+    background-color: transparent;
+  }
+
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: linear-gradient(270deg, #F9AF31 0%, rgba(249, 175, 49, 0) 100%);
+  }
+}

@@ -1,0 +1,63 @@
+<section class="news">
+
+  <div class="news__nav">
+    <h2>
+      О Польше
+    </h2>
+
+    <div class="news__slider-btns">
+
+      <button class="news__prev news__btn" type="button">
+        <svg class="icon icon--rotate">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+
+      <button class="news__next news__btn" type="button">
+        <svg class="icon ">
+          <use xlink:href="img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+  <div class="news__slider">
+
+    <ul class="news__list swiper-wrapper">
+
+      @loop("../_article.html",[{
+      class:"news__item swiper-slide",
+      image:"news/wood-house.jpg",
+      title:"Как выбрать доходный объект в Польше",
+      text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendu non. Ultricies dui, diam aliquet volutpat viverra amet.",
+      },
+      {
+      class:"news__item swiper-slide",
+      image:"news/peoples.jpg",
+      title:"Почему купить недвижимость сложно",
+      text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non. Ultricies dui, diam aliquet volutpat viverra amet. Lorem ipsum dolor...",
+      },
+      {
+      class:"news__item swiper-slide",
+      image:"news/river-boat.jpg",
+      title:"Уникальность польской экономики",
+      text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non.",
+      },{
+      class:"news__item swiper-slide",
+      image:"news/river-boat.jpg",
+      title:"Уникальность польской экономики",
+      text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non.",
+      },{
+      class:"news__item swiper-slide",
+      image:"news/river-boat.jpg",
+      title:"Уникальность польской экономики",
+      text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam facilisi lacus, imperdiet bibendum non.",
+      }])
+    </ul>
+
+    <a class="news__more btn" href="#">
+      Больше статей
+    </a>
+
+  </div>
+</section>

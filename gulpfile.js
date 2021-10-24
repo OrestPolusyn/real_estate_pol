@@ -1,40 +1,30 @@
-const {
-  src,
-  dest,
-  series,
-  watch
-} = require('gulp');
+const {src, dest, parallel, series, watch} = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
 const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify-es').default;
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-const svgSprite = require('gulp-svg-sprite');
-const fileInclude = require('gulp-file-include');
+const rename = require('gulp-rename');
+const fileinclude = require('gulp-file-include');
+const gutil = require('gulp-util');
+const ftp = require('vinyl-ftp');
 const sourcemaps = require('gulp-sourcemaps');
-const rev = require('gulp-rev');
-const revRewrite = require('gulp-rev-rewrite');
-const revDel = require('gulp-rev-delete-original');
-const htmlmin = require('gulp-htmlmin');
-const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
-const image = require('gulp-image');
-const {
-  readFileSync
-} = require('fs');
-const concat = require('gulp-concat');
+const svgSprite = require('gulp-svg-sprite');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const fs = require('fs');
+const tiny = require('gulp-tinypng-compress');
 
-let isProd = false; // dev by default
 
-const clean = () => {
-  return del(['app/*'])
-}
 
+// DEV
 //svg sprite
 const svgSprites = () => {
-  return src('./src/img/svg/**.svg')
+  return src('./src/img/icons/**.svg')
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -45,80 +35,19 @@ const svgSprites = () => {
     .pipe(dest('./app/img'));
 }
 
-const styles = () => {
-  return src('./src/scss/**/*.scss')
-    .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(sass().on("error", notify.onError()))
-    .pipe(autoprefixer({
-      cascade: false,
-    }))
-    .pipe(gulpif(isProd, cleanCSS({
-      level: 2
-    })))
-    .pipe(gulpif(!isProd, sourcemaps.write('.')))
-    .pipe(dest('./app/css/'))
-    .pipe(browserSync.stream());
-};
-
-const stylesBackend = () => {
-  return src('./src/scss/**/*.scss')
-    .pipe(sass().on("error", notify.onError()))
-    .pipe(autoprefixer({
-      cascade: false,
-    }))
-    .pipe(dest('./app/css/'))
-};
-
-const scripts = () => {
-  src('./src/js/vendor/**.js')
-    .pipe(concat('vendor.js'))
-    .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-    .pipe(dest('./app/js/'))
-  return src(
-      ['./src/js/config.js', './src/js/components/**.js', './src/js/main.js'])
-    .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(concat('main.js'))
-    .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-    .pipe(gulpif(!isProd, sourcemaps.write('.')))
-    .pipe(dest('./app/js'))
-    .pipe(browserSync.stream());
-}
-
-const scriptsBackend = () => {
-  src('./src/js/vendor/**.js')
-    .pipe(concat('vendor.js'))
-    .pipe(concat('./node_modules/swiper/swiper-bundle.js'))
-    .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-    .pipe(dest('./app/js/'))
-  return src(['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
-    .pipe(dest('./app/js'))
-};
-
 const resources = () => {
   return src('./src/resources/**')
     .pipe(dest('./app'))
 }
 
-const images = () => {
-  return src([
-      './src/img/**.jpg',
-      './src/img/**.png',
-      './src/img/**.jpeg',
-      './src/img/*.svg',
-      './src/img/**/*.jpg',
-      './src/img/**/*.png',
-      './src/img/**/*.jpeg'
-    ])
-    .pipe(gulpif(isProd, image()))
+const imgToApp = () => {
+  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.svg', './src/img/**.jpeg', './src/img/*/**.jpg', './src/img/*/**.png', './src/img/*/**.jpeg','./src/img/*/**.svg'])
     .pipe(dest('./app/img'))
-};
+}
 
 const htmlInclude = () => {
   return src(['./src/*.html'])
-    .pipe(fileInclude({
+    .pipe(fileinclude({
       prefix: '@',
       basepath: '@file'
     }))
@@ -126,7 +55,94 @@ const htmlInclude = () => {
     .pipe(browserSync.stream());
 }
 
+const fonts = () => {
+  src('./src/fonts/**.ttf')
+    .pipe(ttf2woff())
+    .pipe(dest('./app/fonts/'));
+  return src('./src/fonts/**.ttf')
+    .pipe(ttf2woff2())
+    .pipe(dest('./app/fonts/'));
+}
 
+const cb = () => {}
+
+let srcFonts = './src/scss/_fonts.scss';
+let appFonts = './app/fonts/';
+
+const fontsStyle = (done) => {
+  let file_content = fs.readFileSync(srcFonts);
+
+  fs.writeFile(srcFonts, '', cb);
+  fs.readdir(appFonts, function (err, items) {
+    if (items) {
+      let c_fontname;
+      for (var i = 0; i < items.length; i++) {
+        let fontname = items[i].split('.');
+        fontname = fontname[0];
+        if (c_fontname != fontname) {
+          fs.appendFile(srcFonts, '@include font-face("' + fontname + '", "' + fontname + '", 400);\r\n', cb);
+        }
+        c_fontname = fontname;
+      }
+    }
+  })
+
+  done();
+}
+
+const styles = () => {
+  return src('./src/scss/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on("error", notify.onError()))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(autoprefixer({
+      cascade: false,
+    }))
+    .pipe(cleanCSS({
+      level: 2
+    }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('./app/css/'))
+    .pipe(browserSync.stream());
+}
+
+const scripts = () => {
+  return src('./src/js/main.js')
+    .pipe(webpackStream(
+      {
+        mode: 'development',
+        output: {
+          filename: 'main.js',
+        },
+        module: {
+          rules: [{
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
+            }
+          }]
+        },
+      }
+    ))
+    .on('error', function (err) {
+      console.error('WEBPACK ERROR', err);
+      this.emit('end'); // Don't stop the rest of the task
+    })
+
+    .pipe(sourcemaps.init())
+    .pipe(uglify().on("error", notify.onError()))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('./app/js'))
+    .pipe(browserSync.stream());
+}
 
 const watchFiles = () => {
   browserSync.init({
@@ -137,57 +153,115 @@ const watchFiles = () => {
 
   watch('./src/scss/**/*.scss', styles);
   watch('./src/js/**/*.js', scripts);
-  watch('./src/parts/*.html', htmlInclude);
   watch('./src/html/**/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
-  watch('./src/img/*.{jpg,jpeg,png,svg}', images);
-  watch('./src/img/**/*.{jpg,jpeg,png}', images);
-  watch('./src/img/svg/**.svg', svgSprites);
+  watch('./src/img/**.jpg', imgToApp);
+  watch('./src/img/**.jpeg', imgToApp);
+  watch('./src/img/**.png', imgToApp);
+  watch('./src/img/**.svg', svgSprites);
+  watch('./src/fonts/**', fonts);
+  watch('./src/fonts/**', fontsStyle);
 }
 
-const cache = () => {
-  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
-      base: 'app'
+const clean = () => {
+	return del(['app/*'])
+}
+
+exports.fileinclude = htmlInclude;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.watchFiles = watchFiles;
+exports.fonts = fonts;
+exports.fontsStyle = fontsStyle;
+
+exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites), fontsStyle, styles, watchFiles);
+
+// BUILD
+const tinypng = () => {
+  return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg'])
+    .pipe(tiny({
+      key: '9JGFXhzcvJn1G7PvGRBmZMspkDDtGpwV',
+      sigFile: './app/img/.tinypng-sigs',
+      log: true,
+      parallel: true,
+      parallelMax: 100,
+    }))
+    .pipe(dest('./app/img'))
+}
+
+const stylesBuild = () => {
+  return src('./src/scss/**/*.scss')
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on("error", notify.onError()))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(autoprefixer({
+      cascade: false,
+    }))
+    .pipe(cleanCSS({
+      level: 2
+    }))
+    .pipe(dest('./app/css/'))
+}
+
+const scriptsBuild = () => {
+  return src('./src/js/main.js')
+    .pipe(webpackStream(
+
+        {
+          mode: 'development',
+          output: {
+            filename: 'main.js',
+          },
+          module: {
+            rules: [{
+              test: /\.m?js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['@babel/preset-env']
+                }
+              }
+            }]
+          },
+        }))
+      .on('error', function (err) {
+        console.error('WEBPACK ERROR', err);
+        this.emit('end'); // Don't stop the rest of the task
+      })
+    .pipe(uglify().on("error", notify.onError()))
+    .pipe(dest('./app/js'))
+}
+
+exports.tinypng = tinypng;
+
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild, tinypng);
+
+
+// deploy
+const deploy = () => {
+  let conn = ftp.create({
+    host: '',
+    user: '',
+    password: '',
+    parallel: 10,
+    log: gutil.log
+  });
+
+  let globs = [
+    'app/**',
+  ];
+
+  return src(globs, {
+      base: './app',
+      buffer: false
     })
-    .pipe(rev())
-    .pipe(revDel())
-    .pipe(dest('app'))
-    .pipe(rev.manifest('rev.json'))
-    .pipe(dest('app'));
-};
-
-const rewrite = () => {
-  const manifest = readFileSync('app/rev.json');
-  src('app/css/*.css')
-    .pipe(revRewrite({
-      manifest
-    }))
-    .pipe(dest('app/css'));
-  return src('app/**/*.html')
-    .pipe(revRewrite({
-      manifest
-    }))
-    .pipe(dest('app'));
+    .pipe(conn.newer('')) // only upload newer files
+    .pipe(conn.dest(''));
 }
 
-const htmlMinify = () => {
-  return src('app/**/*.html')
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
-    .pipe(dest('app'));
-}
-
-const toProd = (done) => {
-  isProd = true;
-  done();
-};
-
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, svgSprites, watchFiles);
-
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, svgSprites, htmlMinify);
-
-exports.cache = series(cache, rewrite);
-
-exports.backend = series(toProd, clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, svgSprites);
+exports.deploy = deploy;

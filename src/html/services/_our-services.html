@@ -1,0 +1,63 @@
+<section class="services__project">
+  <div class="container">
+
+    <div class="services__wrapper services__wrapper--num">
+      <div class="services__inner">
+        <h2>
+          Наши услуги
+        </h2>
+
+        <p>
+          Мы готовы помочь вам с любым типом объекта
+        </p>
+
+      </div>
+
+      <div class="services__counts">
+        @include("../_about-numbers.html")
+      </div>
+    </div>
+
+  </div>
+
+  <div class="services__slider container">
+    <div class="cursor">
+      <span class="sr-only">
+        Slider cursor
+      </span>
+      <div class="cursor-click">
+      </div>
+    </div>
+
+
+
+    <ul class="services__items swiper-wrapper">
+
+      @loop("../_article.html",[{
+      class:"services__item swiper-slide",
+      image:"services/flat.jpg",
+      title:"Квартира",
+      text:"Находим для вас наиболее привлекательное предложение"
+      },
+      {
+      class:"services__item swiper-slide",
+      image:"services/house.jpg",
+      title:"Дом",
+      text:"Подбираем для вас дом, оформляем и обслуживаем"
+      },
+      {
+      class:"services__item swiper-slide",
+      image:"services/project.jpg",
+      title:"Проект",
+      text:"Предлагаем вам подходящий объект на этапе строительства"
+      },
+      {
+      class:"services__item swiper-slide",
+      image:"news/wood-house.jpg",
+      title:"Проект",
+      text:"Предлагаем вам подходящий объект на этапе строительства"
+      }])
+    </ul>
+  </div>
+
+</section>
