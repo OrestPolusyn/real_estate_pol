@@ -1,232 +1,188 @@
 .footer {
-  padding-top: 40px;
+  background-color: var(--color-black);
+  padding: 48px 0 30px;
 
   .logo {
-    margin-right: 20px;
-
-    @include tablet {
-      margin-bottom: 30px;
-    }
+    display: inline-block;
+    margin-bottom: 20px;
   }
 
-  &__wrapper {
+  &__wrap {
     @include flex-s-sb;
+    margin-bottom: 40px;
 
-    @include tablet {
-      display: block;
+    @include mobile-m {
+      justify-content: start;
+      flex-wrap: wrap-reverse;
     }
 
-    @include mobile-l {
-      display: flex;
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
+    @include mobile-s {
+      margin-bottom: 0;
     }
   }
 
   &__inner {
-    @include flex-s-sb;
-    margin-bottom: 20px;
+    color: #fff;
 
     @include tablet {
-      display: block;
+      margin-right: 30px;
     }
 
-    &--bottom {
-      border-top: 1px solid var(--color-gray-100);
-      padding-top: 40px;
-    }
-  }
-
-  .nav-list {
-    display: block;
-    column-count: 2;
-
-    @include tablet {
-      max-width: 500px;
+    &:first-child {
+      max-width: 350px;
       width: 100%;
-      margin: 0 auto 30px;
-      display: flex;
-    }
-
-    @include mobile-l {
-      display: block;
-      column-count: 1;
-      max-width: 120px;
-    }
-
-    &__item {
-      margin-bottom: 30px;
 
       @include tablet {
-        margin-bottom: 0;
+        max-width: 210px;
       }
 
-      &:not(:last-child) {
-        @include mobile-l {
-          margin-bottom: 20px;
-        }
+      @include mobile {
+        max-width: 300px;
+        margin-right: 50px;
+      }
+
+      @include mobile-m {
+        max-width: 100%;
+        margin-right: 0;
       }
     }
 
-    &__link {
-      &:before {
+    &:nth-child(2) {
+      max-width: 210px;
+      width: 100%;
+      transform: translateX(-10px);
+
+      @include tablet {
+        transform: translateX(0);
+      }
+
+      @include mobile-m {
+        margin-bottom: 24px;
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-right: 40px;
+
+      @include mobile {
         display: none;
       }
     }
+
+    &:last-child {
+      margin-right: 30px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+  }
+
+  &__inner-text {
+    margin-bottom: 12px;
+    font-size: 16px;
   }
 
   &__link {
-    transition: color 0.3s linear;
+    font-size: 13px;
+    line-height: 1.7;
+    @include hover-wh;
 
     &:hover {
-      color: var(--color-orange);
+      @include hover-full;
+
+      svg {
+        fill: var(--color-golden);
+      }
     }
   }
 
-  &__rights {
-    @include flex-s-sb;
+  &__icon {
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+    transition: fill 0.3s ease-in-out;
+  }
 
-    @include mobile {
-      flex-wrap: wrap-reverse;
-      max-width: 300px;
-      width: 100%;
-      margin: 0 auto;
-      justify-content: center;
-    }
+  &__socials {
+    @include flex-s;
 
-    .footer__list {
-      @include flex-s-sb;
-      font-size: 12px;
-      color: var(--color-gray-500);
-
-      @include mobile {
-        justify-content: center;
+    .footer__link {
+      &:first-child {
+        margin-right: 22px;
       }
     }
+  }
 
-    .footer__item {
-      position: relative;
+  &__terms {
+    @include flex-s;
+    color: #fff;
 
-      &:not(:last-child) {
-        margin-right: 20px;
+    @include mobile-s {
+      display: none;
+    }
 
-        &:before {
-          content: "";
-          position: absolute;
-          right: -10px;
-          height: 100%;
-          width: 1px;
-          background-color: var(--color-gray-500);
+    .footer__link {
+      &:first-child {
+        margin-right: 43px;
+
+        @include mobile-m {
+          margin-right: 20px;
         }
       }
     }
   }
 
-  .messangers {
-    font-size: 14px;
-    color: var(--color-black);
-    font-weight: 600;
-    text-transform: capitalize;
+  
 
-    @include mobile {
-      margin-bottom: 20px;
-    }
+  .custom-checkbox {
+    display: none;
+    text-transform: none;
+    font-size: 12px;
+    margin-bottom: 24px;
 
-    .footer__item {
-      &:not(:last-child) {
-        &:before {
-          content: "";
-          position: absolute;
-          right: -10px;
-          height: 6px;
-          width: 6px;
-          border-radius: 50%;
-          background-color: var(--color-black);
-          transform: translateY(100%);
-        }
-      }
-
-    }
-  }
-}
-
-.address {
-  &__list {
-    @include flex-s-sb;
-
-    @include tablet {
-      max-width: 600px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    @include mobile-l {
+    @include mobile-s {
       display: block;
     }
-  }
 
-  span {
-    display: block;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  &__item {
-    padding-left: 65px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 50px;
-      width: 50px;
-      background-position: center;
-      background-repeat: no-repeat;
-      border: 1px solid var(--color-border);
-      border-radius: $border-radius;
+    &__link {
+      color: var(--color-golden);
     }
 
-    &:not(:last-child) {
-      margin-right: 90px;
-
-      @include desktop {
-        margin-right: 30px;
+    &__content {
+      &::before {
+        top: 2px;
       }
 
-      @include mobile-l {
-        margin: 0 0 20px 0;
+      &::after {
+        background-color: var(--color-golden);
+        mask-image: url('../img/sprite.svg#arrow-footer');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 6px;
+        width: 11px;
+        background-image: none;
+        transform: translate(2px, 7px);
       }
     }
 
-    &--phone {
-      &:before {
-        background-image: url('../img/sprite.svg#phone');
-      }
-    }
-
-    &--location {
-      max-width: 255px;
-      width: 100%;
-
-      @include tablet {
-        max-width: 300px;
-        width: 100%;
-      }
-
-      &:before {
-        background-image: url('../img/sprite.svg#map-pin');
-      }
+    &:hover {
+      color: var(--color-white);
     }
   }
 
-  &__text {
-    color: var(--color-black);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
+  & .subscribe__btn {
+    @include mobile-s {
+      mask-image: url('../img/sprite.svg#check');
+      background-color: var(--color-golden);
+    }
+  }
+
+  .subscribe__field {
+    margin-top: 16px;
   }
 }

@@ -1,11 +1,17 @@
-import vars from '../_vars';
+const burger = document.querySelector('.burger'),
+  menuMobile = document.querySelector('.header__menu');
 
-if (vars.$burger) {
-  vars.$burger.addEventListener('click', () => {
-    vars.$nav.classList.toggle('header__list--open');
-  });
 
-  vars.$burger.addEventListener('click', () => {
-    vars.$burger.classList.toggle('burger--active');
-  });
-}
+burger.addEventListener('click', function (e) {
+  burgerClick(e)
+})
+
+const burgerClick = (e) => {
+  e.currentTarget[_classList][_toggleClass]('burger--open');
+  menuMobile[_classList][_toggleClass]('header__menu--open');
+  console.log();
+  if (!e.currentTarget[_classList].contains('burger--open')) {
+  dropdownMenu[_classList][_removeClass]('header__dropdown--show');
+
+  }
+};

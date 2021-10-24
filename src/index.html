@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,42 +7,42 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Gremi Invest | Главная страница</title>
-  <link rel="stylesheet" href="css/vendor.min.css">
-  <link rel="stylesheet" href="css/main.min.css">
+  <title>P R I V I L E G E | Home page</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div class="site-container">
 
-    @include('html/_header.html')
+  @include('html/_header.html')
 
-    <main class="main">
-      <div class="wrapper">
-        @include('html/home/_story.html')
-      </div>
+  <main class="main">
 
-      <div class="container">
-        @include('html/home/_services.html')
+    <h1 class="sr-only main-title">PRIVILEGE -
+      premium designer items</h1>
 
-        @include('html/home/_about.html')
+    @include('html/home/_hero.html')
 
-        @include('html/home/_clients.html')
+    @include('html/home/_purpose.html')
 
-        @include('html/home/_news.html')
+    @include('html/home/designers/_designers.html')
 
-        @include('html/home/_contacts.html')
+    @include('html/home/_additional.html')
+
+    @include('html/home/_banner-home.html')
 
 
-      </div>
+    @include('html/home/_home-blog.html')
 
-    </main>
+  </main>
 
-    @include('html/_footer.html')
+  @include('html/_popup.html')
 
-  </div>
-  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  @include('html/_footer.html')
 
+
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 
