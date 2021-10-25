@@ -4,7 +4,6 @@
     @include flex-all-sb;
 
     &--num {
-      align-items: baseline;
       margin-bottom: 40px;
     }
 
@@ -62,12 +61,8 @@
         line-height: 1.6;
 
         @include mobile-l {
-          width: 75%;
-          padding-right: 20px;
-        }
-
-        @include mobile-s {
-          width: 80%;
+          width: 100%;
+          margin-bottom: 0;
         }
       }
     }
@@ -83,7 +78,7 @@
       }
 
       @include mobile-l {
-        right: -15%;
+        margin: 0 auto;
       }
     }
 
@@ -96,9 +91,32 @@
     border: 1px solid var(--color-gray-100);
     border-radius: $border-radius-20px;
 
+    @include mobile-l {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      padding: 20px 10px;
+    }
+
     .numbers {
       margin-bottom: 0;
       justify-content: space-between;
+
+      li {
+        &:not(:last-child) {
+          &:before {
+
+            @include mobile-l {
+              right: -40%;
+            }
+
+            @include mobile {
+              right: -20px;
+            }
+          }
+        }
+      }
     }
   }
 

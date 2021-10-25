@@ -1,6 +1,6 @@
 .contact-page {
   @include flex-all-sb;
-  border-radius: $border-radius-20px $border-radius-20px 0 0;
+  border-radius: 0 0 $border-radius-20px $border-radius-20px;
   padding: 60px;
 
   @include tablet {
@@ -21,6 +21,8 @@
     &:before {
       transform: scale(-1, -1);
       opacity: 0.8;
+      border-radius: $border-radius-20px $border-radius-20px 0 0;
+
     }
   }
 

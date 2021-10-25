@@ -13,6 +13,7 @@
 
     @include mobile {
       max-width: 100%;
+      margin-right: 0;
     }
   }
 
@@ -23,7 +24,7 @@
     margin-bottom: 60px;
 
     @include mobile-l {
-     padding-right: 0;
+      padding-right: 0;
     }
   }
 
@@ -37,12 +38,25 @@
     border: 2px solid var(--color-border);
 
     @include mobile-l {
+      position: absolute;
+      max-width: 340px;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+    }
+
+    @include mobile {
       display: none;
     }
   }
 
   &__ceo {
     @include flex-v-center;
+
+    @include mobile-l {
+      max-width: 45%;
+
+    }
 
     img {
       max-width: 60px;
@@ -56,6 +70,71 @@
 
     span {
       font-size: 14px;
+    }
+  }
+
+  .numbers {
+    @include mobile-l {
+      display: block;
+      max-width: 35%;
+    }
+
+    li {
+      @include mobile-l {
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+          margin-right: 0;
+
+          &:before {
+            width: 100%;
+            left: 0;
+            top: auto;
+            bottom: -10px;
+            height: 1px;
+          }
+        }
+      }
+
+    }
+
+    @include mobile {
+      max-width: 100%;
+      @include flex-all-sb;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 10px;
+
+          &:before {
+            width: 1px;
+            top: 0;
+            left: auto;
+            right: -20%;
+            height: 80px;
+          }
+        }
+      }
+    }
+
+    @include mobile-s {
+      display: block;
+
+      li {
+        &:not(:last-child) {
+          margin: 0 0 30px 0;
+
+          &:before {
+            width: 100%;
+            left: 0;
+            top: auto;
+            bottom: -10px;
+            height: 1px;
+          }
+        }
+      }
     }
   }
 }

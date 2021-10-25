@@ -15,6 +15,10 @@
     position: relative;
     white-space: nowrap;
 
+    @include mobile-s {
+      text-align: center;
+    }
+
     &:not(:last-child) {
       margin-right: 90px;
 
@@ -27,8 +31,7 @@
       }
 
       @include mobile-s {
-        margin: 0 0 20px 0;
-        text-align: center;
+        margin: 0 0 30px 0;
       }
 
       &:before {
@@ -36,7 +39,7 @@
         position: absolute;
         width: 1px;
         right: -45px;
-        top: 10px;
+        top: 0;
         height: 80px;
         background-color: var(--color-gray-100);
 
@@ -51,21 +54,10 @@
         @include mobile-s {
           width: 100%;
           height: 1px;
-          bottom: -10px;
+          bottom: -15px;
           top: auto;
           left: 0;
         }
-
-      }
-    }
-
-    &:first-child {
-      text-align: left;
-    }
-
-    &:last-child {
-      @include mobile-s {
-        text-align: right;
 
       }
     }

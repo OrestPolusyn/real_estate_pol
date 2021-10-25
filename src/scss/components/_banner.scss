@@ -6,11 +6,11 @@
   position: relative;
   align-items: flex-start;
 
-  @include mobile-l {
+  @include tablet {
     padding: 50px 40px;
   }
 
-  @include mobile {
+  @include mobile-l {
     padding: 40px 20px;
   }
 
@@ -28,8 +28,6 @@
         padding: 0;
       }
     }
-
-    
 
     &--last {
       max-width: 630px;
@@ -63,6 +61,25 @@
 
   }
 
+  &__picture {
+    z-index: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+
+    @include desktop {
+      max-width: 570px;
+    }
+
+    @include tablet {
+      max-width: 430px;
+    }
+
+    @include mobile-l {
+      bottom: 50px;
+    }
+  }
+
   &__next {
     padding-left: 15px;
     position: absolute;
@@ -76,6 +93,14 @@
   &__list {
     max-width: 560px;
     z-index: 1;
+
+    @include mobile-l {
+      max-width: 520px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
 
     h2 {
       font-size: 24px;
@@ -148,6 +173,12 @@
       }
 
       @include tablet {
+        max-width: 35%;
+        right: -50px;
+        bottom: -20px;
+      }
+
+      @include mobile {
         display: none;
       }
     }
@@ -185,26 +216,11 @@
           max-width: 292px;
           height: 401px;
         }
+
+        @include tablet {
+          display: none;
+        }
       }
-    }
-  }
-
-  &__picture {
-    z-index: 0;
-    bottom: 0;
-    position: absolute;
-    right: 0;
-
-    @include desktop {
-      max-width: 570px;
-    }
-
-    @include tablet {
-      max-width: 430px;
-    }
-
-    @include mobile-l {
-      bottom: 50px;
     }
   }
 

@@ -2,6 +2,10 @@
   @include flex-v-center;
   margin-bottom: 150px;
 
+  @include tablet{
+    justify-content: center;
+  }
+
   &__item {
     &:not(:last-child) {
       margin-right: 15px;

@@ -1,7 +1,7 @@
 .filter {
   @include flex-v-center;
   margin-bottom: 40px;
-  overflow: scroll;
+  overflow-x: auto;
 
   &__item {
     &:not(:last-child) {

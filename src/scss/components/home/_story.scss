@@ -16,11 +16,11 @@
       left: 80px;
       bottom: 0;
 
-      @include mobile-l {
+      @include tablet {
         left: 40px;
       }
 
-      @include mobile {
+      @include mobile-l {
         left: 20px;
       }
     }
@@ -42,6 +42,7 @@
         height: 25px;
       }
     }
+
   }
 
   .swiper-pagination-progressbar {

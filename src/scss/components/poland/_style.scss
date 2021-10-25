@@ -14,44 +14,24 @@
       padding: 50px 0 0;
     }
 
-    .adv__content {
-      max-width: 485px;
-      padding: 0 0 25px 50px;
-
-      @include tablet {
-        padding-top: 0;
-      }
-
-      @include mobile-l {
-        max-width: 55%;
-      }
-
-      @include mobile {
-        max-width: 100%;
-        padding: 0 20px;
-      }
-    }
-
     .adv__picture {
       max-width: 430px;
-      margin-right: 75px;
+      margin-right: 70px;
+
+      @include tablet {
+         transform: translateY(50px);
+      }
 
       @include mobile-l {
-        max-width: 230px;
-        position: absolute;
-        right: 30px;
-        bottom: 0;
-        margin-right: 0;
+        margin: 0 auto;
       }
 
       @include mobile {
-        position: relative;
-        margin-left: auto;
-        max-width: 160px;
+        transform: translateY(0);
       }
     }
 
-    P {
+    p {
       @include mobile {
         margin: 0;
       }
