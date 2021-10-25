@@ -3,7 +3,9 @@ import vars from '../_vars';
 import AOS from 'aos';
 
 
-
+AOS.init({
+  duration: 1200,
+});
 const storySlider = new Swiper(vars.$storySlider, {
   direction: "vertical",
   mousewheel: true,
@@ -16,18 +18,4 @@ const storySlider = new Swiper(vars.$storySlider, {
     el: '.swiper-pagination',
     type: 'progressbar',
   },
-  on: {
-    slideChangeTransitionStart: function () {
-      document.querySelector('.banner__content').classList.remove('aos-init').remove('aos-animate');
-    },
-    slideChangeTransitionEnd: function () {
-      AOS.init({
-        duration: 1200,
-      });
-    },
-  }
-});
-
-AOS.init({
-  duration: 1200,
 });
