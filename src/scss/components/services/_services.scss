@@ -123,7 +123,7 @@
   &__items {
     left: 0;
     top: 0;
-    @include flex-all-sb;
+    @include flex-s-sb;
     text-align: center;
     position: relative;
   }
@@ -148,7 +148,7 @@
       background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
       z-index: 10;
 
-      @include mobile-s {
+      @include mobile-l {
         display: none;
       }
     }

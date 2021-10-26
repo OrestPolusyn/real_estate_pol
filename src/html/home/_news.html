@@ -1,6 +1,6 @@
-<section class="news" data-aos="flip-down">
+<section class="news">
 
-  <div class="news__nav">
+  <div class="news__nav" data-aos="fade-up">
     <h2>
       О Польше
     </h2>
@@ -21,9 +21,9 @@
 
     </div>
   </div>
-  <div class="news__slider">
+  <div class="news__slider" >
 
-    <ul class="news__list swiper-wrapper">
+    <ul class="news__list swiper-wrapper" data-aos="fade-up" data-aos-delay="400">
 
       @loop("../_article.html",[{
       class:"news__item swiper-slide",
@@ -55,7 +55,7 @@
       }])
     </ul>
 
-    <a class="news__more btn" href="#">
+    <a class="news__more btn" href="#" data-aos="fade-up">
       Больше статей
     </a>
 

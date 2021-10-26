@@ -46,8 +46,6 @@
     }
 
     &.nav-list {
-      margin-right: 30px;
-
       @include mobile-l {
         display: block;
         margin-right: 0;
@@ -77,12 +75,11 @@
 
 .nav-list {
   @include flex-all-sb;
-  margin-right: 55px;
   margin-left: auto;
 
   &__item {
     &:not(:last-child) {
-      margin-right: 50px;
+      margin-right: 45px;
 
       @include tablet {
         margin-right: 25px;
@@ -108,12 +105,11 @@
 
       &:before {
         opacity: 1;
-        transform: translateY(-1px);
+        height: 5px;
         visibility: visible;
 
         @include mobile-l {
           transform: translateX(0) rotate(90deg);
-
         }
       }
     }
@@ -122,20 +118,22 @@
       content: "";
       position: absolute;
       width: 30px;
-      height: 5px;
+      height: 0;
       background-color: var(--color-orange);
       bottom: -38px;
       border-radius: 10px 10px 0 0;
       margin: 0 auto;
-      transform: translateY(10px);
+      transform: translateY(-1px);
       left: 0;
       right: 0;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s linear, visibility 0.3s linear, transform 0.2s linear;
+      transition: opacity 0.3s linear,
+        visibility 0.3s linear,
+        height 0.1s linear;
 
       @include mobile-l {
-        transform: translateX(-10px) rotate(90deg);
+        transform: translateX(0) rotate(90deg);
         top: 20px;
         margin: 0;
         left: -13px;

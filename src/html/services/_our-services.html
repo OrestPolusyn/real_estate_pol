@@ -3,17 +3,17 @@
 
     <div class="services__wrapper services__wrapper--num">
       <div class="services__inner">
-        <h2>
+        <h2 data-aos="fade-up">
           Наши услуги
         </h2>
 
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           Мы готовы помочь вам с любым типом объекта
         </p>
 
       </div>
 
-      <div class="services__counts">
+      <div class="services__counts" data-aos="fade-up" data-aos-delay="400">
         @include("../_about-numbers.html")
       </div>
     </div>
@@ -31,7 +31,7 @@
 
 
 
-    <ul class="services__items swiper-wrapper">
+    <ul class="services__items swiper-wrapper" data-aos="fade-up" data-aos-delay="400">
 
       @loop("../_article.html",[{
       class:"services__item swiper-slide",

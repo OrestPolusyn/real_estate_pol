@@ -1,6 +1,7 @@
 .single {
-  padding-top: 60px;
+  padding-top: 150px;
   margin-bottom: 150px;
+
 
   @include mobile {
     margin-bottom: 80px;
@@ -21,7 +22,7 @@
     left: 0;
 
     @include mobile-l {
-      top: -50px;
+      top: -65px;
     }
 
     .icon {

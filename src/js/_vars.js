@@ -15,5 +15,5 @@ export default {
   $cursorInner: document.querySelector('.cursor-click'),
   $serviseSlider: document.querySelector('.services__items'),
   $serviseSliderItem: document.querySelector('.services__item'),
-
+  
 }
