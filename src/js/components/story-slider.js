@@ -7,7 +7,7 @@ import SwiperAnimation from '@cycjimmy/swiper-animation';
 const swiperAnimation = new SwiperAnimation();
 
 AOS.init({
-  duration: 500,
+  duration: 900,
 });
 
 const storySlider = new Swiper(vars.$storySlider, {
@@ -19,11 +19,8 @@ const storySlider = new Swiper(vars.$storySlider, {
   preventInteractionOnTransition: true,
   mousewheelSensitivity: 1,
   effect: "slide",
-    noSwiping: true,
-
-  scrollbar: {
-    draggable: true,
-  },
+  onlyExternal: true,
+  noSwiping: true,
   mousewheel: {
     releaseOnEdges: true,
 
@@ -43,5 +40,3 @@ const storySlider = new Swiper(vars.$storySlider, {
     }
   }
 });
-
-storySlider.swiper;

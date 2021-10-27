@@ -9,12 +9,11 @@
 
   @include mobile-l {
     padding: 30px;
-    display: block;
+    flex-wrap: wrap-reverse;
   }
 
   @include mobile {
     padding: 15px;
-    display: block;
   }
 
   &.background {
@@ -79,5 +78,20 @@
 
   .contact-form {
     margin: 0 auto;
+
+    @include mobile-l {
+      margin-bottom: 50px;
+    }
+
+    .form__btn.btn {
+      &:hover {
+        background-color: var(--color-orange);
+
+      }
+
+      &::before {
+        display: none;
+      }
+    }
   }
 }
