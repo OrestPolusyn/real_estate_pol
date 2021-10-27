@@ -7,7 +7,7 @@ import SwiperAnimation from '@cycjimmy/swiper-animation';
 const swiperAnimation = new SwiperAnimation();
 
 AOS.init({
-  duration: 1000,
+  duration: 500,
 });
 
 const storySlider = new Swiper(vars.$storySlider, {

@@ -37,8 +37,10 @@
       border: 1px solid var(--color-border);
       border-right: transparent;
       overflow: hidden;
-      transform: translateY(-200%);
-      transition: transform 1s linear;
+      transform: translateY(200%);
+      overflow-y: auto;
+      transition: transform 0.5s linear;
+      padding-bottom: 90px;
     }
 
     &--open {
