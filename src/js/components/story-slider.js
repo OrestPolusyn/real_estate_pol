@@ -19,12 +19,13 @@ const storySlider = new Swiper(vars.$storySlider, {
   preventInteractionOnTransition: true,
   mousewheelSensitivity: 1,
   effect: "slide",
+    noSwiping: true,
 
   scrollbar: {
     draggable: true,
   },
   mousewheel: {
-    releaseOnEdges: true, noSwiping: true,
+    releaseOnEdges: true,
 
   },
   pagination: {
