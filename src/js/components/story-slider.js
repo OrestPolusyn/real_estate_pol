@@ -13,15 +13,19 @@ AOS.init({
 const storySlider = new Swiper(vars.$storySlider, {
   direction: "vertical",
   autoHeight: true,
-  spaceBetween: 50,
-  speed: 800,
   touchRatio: 1,
+  grabCursor: true,
+  speed: 1000,
+  preventInteractionOnTransition: true,
+  mousewheelSensitivity: 1,
+  effect: "slide",
+
   scrollbar: {
     draggable: true,
   },
   mousewheel: {
-    releaseOnEdges: true,
-    touchReleaseOnEdges: true,
+    releaseOnEdges: true, noSwiping: true,
+
   },
   pagination: {
     progressbarOpposite: true,
@@ -38,3 +42,5 @@ const storySlider = new Swiper(vars.$storySlider, {
     }
   }
 });
+
+storySlider.swiper;
