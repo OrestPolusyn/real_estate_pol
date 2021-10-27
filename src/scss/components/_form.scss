@@ -29,7 +29,16 @@
     }
   }
 
-  &__btn {
+  &__btn.btn {
     width: 100%;
+
+    &:hover {
+      background-color: var(--color-orange);
+
+    }
+
+    &::before {
+      display: none;
+    }
   }
 }
