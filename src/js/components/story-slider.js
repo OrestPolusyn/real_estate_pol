@@ -1,35 +1,28 @@
 import Swiper from '../vendor/swiper-bundle.js';
 import vars from '../_vars';
+
 import AOS from 'aos';
+
+
 import SwiperAnimation from '@cycjimmy/swiper-animation';
 
 
 const swiperAnimation = new SwiperAnimation();
 
 AOS.init({
-  duration: 900,
+  duration: 800,
 });
 
 const storySlider = new Swiper(vars.$storySlider, {
   direction: "vertical",
   autoHeight: true,
-  touchRatio: 1,
-  grabCursor: true,
-  speed: 1000,
-  preventInteractionOnTransition: true,
-  mousewheelSensitivity: 1,
+  speed: 800,
   effect: "slide",
-  onlyExternal: true,
-  noSwiping: true,
-  mousewheel: {
-    releaseOnEdges: true,
-
-  },
+  mousewheel: true,
   pagination: {
     progressbarOpposite: true,
     el: '.swiper-pagination',
     type: 'progressbar',
-    clickable: true,
   },
   on: {
     init: function () {
@@ -37,6 +30,15 @@ const storySlider = new Swiper(vars.$storySlider, {
     },
     slideChange: function () {
       swiperAnimation.init(this).animate();
+
+      setTimeout(function () {
+        storySlider.params.mousewheel.releaseOnEdges = false;
+      }, 900);
+    },
+    reachEnd: function () {
+      setTimeout(function () {
+        storySlider.params.mousewheel.releaseOnEdges = true;
+      }, 1200);
     }
-  }
+  },
 });

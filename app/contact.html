@@ -139,29 +139,35 @@
 
   <form class="form" action="#" data-aos="fade-up">
 
-    <label class="form__label" for="name">
+    <label class="form__label">
       <span class="sr-only">
         Имя
       </span>
 
       <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+
+      <span class="form__error">Введите Имя</span>
     </label>
 
-    <label class="form__label" for="email">
+    <label class="form__label">
       <span class="sr-only">
         Електронная почта
       </span>
-      <input class="form__area" name="email" id="email" type="text" placeholder="Email">
+      <input class="form__area" name="email" id="email" type="email" placeholder="Email">
+
+      <span class="form__error">Введите Email</span>
     </label>
 
-    <label class="form__label" for="phone">
+    <label class="form__label">
       <span class="sr-only">
         Телефон
       </span>
-      <input class="form__area" name="phone" id="phone" type="text" placeholder="Телефон">
+      <input class="form__area" name="phone" id="phone" type="tel" placeholder="Телефон">
+
+      <span class="form__error">Введите телефон</span>
     </label>
 
-    <label class="form__label" for="message">
+    <label class="form__label">
       <span class="sr-only">
         Сообщение
       </span>

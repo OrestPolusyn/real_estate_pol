@@ -11,7 +11,8 @@
   }
 
   &__list {
-    @include flex-s-sb;
+    @include flex;
+    justify-content: space-around;
 
     @include tablet {
       display: block;

@@ -18,12 +18,8 @@ body {
 }
 
 
-.error {
-  border: 2px #ff4019 solid;
-}
-
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: var(--color-orange-200);
+.js-focus-visible:focus:not(.focus-visible) {
+  outline-color: var(--color-orange-200);
 }
 
 .sr-only {
@@ -39,16 +35,12 @@ body {
   overflow: hidden;
 }
 
-.error {
-  border: 2px #ff4019 solid; // stylelint-disable-line declaration-no-important
-}
-
-
 .main {
   flex-grow: 1;
   position: relative;
   padding-top: 90px;
-overflow: hidden;
+  overflow: hidden;
+
   @include mobile-l {
     padding-top: 60px;
   }

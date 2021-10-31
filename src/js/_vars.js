@@ -15,5 +15,9 @@ export default {
   $cursorInner: document.querySelector('.cursor-click'),
   $serviseSlider: document.querySelector('.services__items'),
   $serviseSliderItem: document.querySelector('.services__item'),
-  
+  $formSend: document.querySelector('.form'),
+  $formInputs: document.querySelectorAll('.form__area'),
+  $formName: document.querySelector('#name'),
+  $formEmail: document.querySelector('#email'),
+  $formPhone: document.querySelector('#phone'),
 }
