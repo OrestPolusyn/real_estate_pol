@@ -30,6 +30,7 @@
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-util": "^3.0.8",
+    "intl-tel-input": "^17.0.13",
     "stylelint": "^13.3.2",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.0.0",
