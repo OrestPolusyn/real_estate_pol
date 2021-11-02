@@ -15,9 +15,11 @@ export default {
   $cursorInner: document.querySelector('.cursor-click'),
   $serviseSlider: document.querySelector('.services__items'),
   $serviseSliderItem: document.querySelector('.services__item'),
-  $formSend: document.querySelector('.form'),
+  $formSend: document.querySelectorAll('.form'),
   $formInputs: document.querySelectorAll('.form__area'),
   $formName: document.querySelector('#name'),
   $formEmail: document.querySelector('#email'),
   $formPhone: document.querySelector('#phone'),
+  $formPhoneLabel: document.querySelector('.js-tel'),
+  $inputCheked: document.querySelector('.custom-checkbox__field')
 }

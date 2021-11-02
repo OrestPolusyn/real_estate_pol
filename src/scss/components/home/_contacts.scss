@@ -53,6 +53,14 @@
         max-width: 570px;
         bottom: -30px;
         left: 0;
+
+        @include tablet {
+          bottom: -15%;
+        }
+
+        @include mobile-s {
+          display: none;
+        }
       }
     }
   }

@@ -56,7 +56,7 @@
         </li>
 
         <li class="nav-list__item">
-          <button class="nav-list__btn btn" type="button">
+          <button class="nav-list__btn btn js-btn-modal" type="button">
             Связаться
           </button>
         </li>
@@ -74,6 +74,9 @@
 </header>
 
     <main class="main">
+      <h1 class="sr-only">
+        Gremi Invest - недвижимость в Польше
+      </h1>
       <div class="wrapper">
         <section class="story">
   <div class="swiper-pagination">
@@ -425,7 +428,7 @@
     Мы готовы ответить на все ваши вопросы или сразу предложить вам объект, который вас заинтересует.
   </p>
 
-  <form class="form" action="#" data-aos="fade-up">
+  <form class="form" action="#" method="get" data-aos="fade-up">
 
     <label class="form__label">
       <span class="sr-only">
@@ -446,11 +449,11 @@
       <span class="form__error">Введите Email</span>
     </label>
 
-    <label class="form__label">
+    <label class="form__label js-tel">
       <span class="sr-only">
         Телефон
       </span>
-      <input class="form__area" name="phone" id="phone" type="tel" placeholder="Телефон">
+      <input class="form__area" name="phone" id="phone" type="tel">
 
       <span class="form__error">Введите телефон</span>
     </label>
@@ -461,6 +464,17 @@
       </span>
 
       <textarea class="form__area form__area--text" name="message" id="message" placeholder="Сообщение"></textarea>
+    </label>
+
+    <label class="form__label custom-checkbox">
+      <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox">
+
+      <span class="custom-checkbox__content">Я соглашаюсь с обработкой моих персональных данных</span>
+
+      <span class="form__error custom-checkbox__error">
+        Вы не согласились на обработку персональных данных
+      </span>
+
     </label>
 
     <button class="form__btn btn " type="submit">
@@ -591,6 +605,75 @@
     </div>
   </div>
 
+  <div class="modal">
+  <div class="modal__content modal-form">
+
+    <p>
+      Мы готовы ответить на все ваши вопросы или сразу предложить вам объект, который вас заинтересует.
+    </p>
+
+    <form class="form" action="#" method="get">
+
+      <label class="form__label">
+        <span class="sr-only">
+          Имя
+        </span>
+
+        <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+
+        <span class="form__error">Введите Имя</span>
+      </label>
+
+      <label class="form__label js-tel">
+        <span class="sr-only">
+          Телефон
+        </span>
+        <input class="form__area" name="phone" id="phone" type="tel">
+        <span class="form__error">Введите телефон</span>
+      </label>
+
+      <label class="form__label custom-checkbox">
+        <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox">
+
+        <span class="custom-checkbox__content">Я соглашаюсь с обработкой моих персональных данных</span>
+
+        <span class="form__error">
+          Вы не согласились на обработку персональных данных
+        </span>
+
+      </label>
+
+      <button class="form__btn btn " type="submit">
+        Отправить
+      </button>
+
+    </form>
+  </div>
+
+
+  <div class="modal__content modal-finish">
+     <button class="modal-finish__btn" type="button">
+       <span class="sr-only">
+         Show/hide text
+       </span>
+
+       <svg class="icon ">
+         <use xlink:href="img/sprite.svg#plus-circle"></use>
+       </svg>
+     </button>
+    <p>
+      Спасибо!
+    </p>
+
+    <p>
+      Мы обязательно с вами свяжемся!
+    </p>
+
+    <button class="btn" type="button">
+      Вернуться к сайту
+    </button>
+  </div>
+</div>
 </footer>
 
   </div>

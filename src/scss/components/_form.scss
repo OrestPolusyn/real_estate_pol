@@ -17,6 +17,13 @@
     position: relative;
     margin-bottom: 18px;
     transition: margin-bottom 0.3s linear;
+
+    &.error {
+      span {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 
   &__area {
@@ -31,13 +38,21 @@
     &--text {
       min-height: 150px;
       resize: none;
-      margin-bottom: 12px;
     }
 
     &.error {
-      &+span {
+      &+.form__error {
         visibility: visible;
         opacity: 1;
+      }
+
+      &~.custom-checkbox__error {
+        visibility: visible;
+        opacity: 1;
+
+        @include mobile-s {
+          bottom: -40px;
+        }
       }
     }
   }
@@ -65,7 +80,7 @@
     left: 0;
   }
 
-  .iti{
+  .iti {
     width: 100%;
   }
 
@@ -82,5 +97,14 @@
 
   .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
     background-color: transparent;
+  }
+
+  .custom-checkbox {
+    @include checkbox;
+    margin-bottom: 30px;
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
   }
 }
