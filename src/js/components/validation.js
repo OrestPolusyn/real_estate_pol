@@ -4,11 +4,13 @@ import intlTelInput from 'intl-tel-input';
 
 const formInputs = Array.from(vars.$formInputs);
 
-const iti = intlTelInput(document.querySelector('#phone'), {
-  onlyCountries: ["ua", "pl"]
-});
+
 
 if (formInputs.length > 0) {
+
+  const iti = intlTelInput(document.querySelector('#phone'), {
+    onlyCountries: ["ua", "pl"]
+  });
 
   vars.$formSend.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -24,8 +26,6 @@ if (formInputs.length > 0) {
     } else {
       vars.$formEmail.classList.remove('error');
     }
-
-
 
     var num = iti.getNumber(),
       valid = iti.isValidNumber();
