@@ -3,9 +3,9 @@
   width: 100%;
   z-index: 5;
 
-    @include mobile-l {
-      max-width: 100%;
-    }
+  @include mobile-l {
+    max-width: 100%;
+  }
 
   p {
     margin-bottom: 45px;
@@ -38,6 +38,10 @@
     font-size: 14px;
     line-height: 1.7;
     color: var(--color-gray-800);
+    box-shadow: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &--text {
       min-height: 150px;

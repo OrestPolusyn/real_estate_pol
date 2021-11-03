@@ -22,10 +22,27 @@
       top: 20px;
     }
 
-    .icon {
-      stroke: var(--color-black);
-      transform: rotate(0);
+    &::before{
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      mask-image: url('../img/sprite.svg#plus-circle');
+      background-color: black;
+      mask-position: center;
+      mask-size: 15px 15px;
+      height: 15px;
+      width: 15px;
+      mask-repeat: no-repeat;
     }
+
+    // .icon {
+    //   stroke: var(--color-black);
+    //   transform: rotate(0);
+    //   path{
+    //     stroke: aqua;
+    //   }
+    // }
   }
 
   &__tab {
