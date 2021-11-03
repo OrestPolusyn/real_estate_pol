@@ -80,6 +80,10 @@
     margin: 0 auto;
 
     @include mobile-l {
+      max-width: 450px;
+    }
+
+    @include mobile-l {
       margin-bottom: 50px;
     }
 

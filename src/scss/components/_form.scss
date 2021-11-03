@@ -3,6 +3,10 @@
   width: 100%;
   z-index: 5;
 
+    @include mobile-l {
+      max-width: 100%;
+    }
+
   p {
     margin-bottom: 45px;
     font-size: 14px;
@@ -82,17 +86,6 @@
 
   .iti {
     width: 100%;
-  }
-
-  .iti__flag {
-    background-image: url("../img/flags.png");
-  }
-
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-    .iti__flag {
-      background-image: url("../img/flags@2x.png");
-    }
   }
 
   .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {

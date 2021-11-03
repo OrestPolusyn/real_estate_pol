@@ -9,7 +9,7 @@ const formInputs = Array.from(vars.$formInputs),
 if (formInputs.length > 0) {
 
   const iti = intlTelInput(document.querySelector('#phone'), {
-    onlyCountries: ["ua", "pl"],
+    preferredCountries:["ua"],
     utilsScript: "utils",
   });
 

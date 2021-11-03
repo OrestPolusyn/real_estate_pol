@@ -30,14 +30,14 @@ const storySlider = new Swiper(vars.$storySlider, {
 
       setTimeout(function () {
         storySlider.params.mousewheel.releaseOnEdges = false;
-        storySlider.params.touchReleaseOnEdges = falseж
+        storySlider.params.touchReleaseOnEdges = false;
 
       }, 900);
     },
     reachEnd: function () {
       setTimeout(function () {
         storySlider.params.mousewheel.releaseOnEdges = true;
-        storySlider.params.touchReleaseOnEdges = trueж
+        storySlider.params.touchReleaseOnEdges = true;
       }, 1200);
     }
   },

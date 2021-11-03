@@ -43,10 +43,18 @@
     img {
       position: absolute;
 
+      @include mobile-l {
+        display: none;
+      }
+
       &:first-child {
         max-width: 324px;
         top: 65px;
         left: 0;
+
+        @include tablet {
+          left: -90px;
+        }
       }
 
       &:last-child {
@@ -58,9 +66,6 @@
           bottom: -15%;
         }
 
-        @include mobile-s {
-          display: none;
-        }
       }
     }
   }
