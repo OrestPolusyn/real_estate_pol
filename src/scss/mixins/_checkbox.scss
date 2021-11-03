@@ -1,5 +1,6 @@
 @mixin checkbox {
   position: relative;
+  cursor: pointer;
 
   &__field {
     appearance: none;

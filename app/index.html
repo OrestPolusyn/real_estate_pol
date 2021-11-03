@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>Gremi Invest | Главная страница</title>
-  <link rel="stylesheet" href="css/vendor.min.css">
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/vendor.min.css" rel="preload">
+  <link rel="stylesheet" href="css/main.min.css" rel="preload">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
         </li>
 
         <li class="nav-list__item">
-          <button class="nav-list__btn btn js-btn-modal" type="button">
+          <button class="nav-list__btn btn" type="button" data-path="modal-form">
             Связаться
           </button>
         </li>
@@ -189,7 +189,7 @@
       аренду.
     </p>
 
-    <button class="btn btn--reverse" type="button" data-swiper-animation="animate__fadeInUp" data-duration="1s">
+    <button class="btn btn--reverse story__btn" type="button" data-swiper-animation="animate__fadeInUp" data-duration="1s">
       Заказать консультацию
     </button>
   </div>
@@ -231,6 +231,10 @@
   <p>
     Доступный и быстрый способ превратить свои активы в пассивный доход.
   </p>
+
+  <a href="#">
+    Подробнее
+  </a>
 </li><li class="background">
   <div class="items__icon items__icon--house">
     <h3>
@@ -241,6 +245,10 @@
   <p>
     Владение целым зданием дает вам больше контроля и независимости.
   </p>
+
+  <a href="#">
+    Подробнее
+  </a>
 </li><li class="background">
   <div class="items__icon items__icon--project">
     <h3>
@@ -251,6 +259,10 @@
   <p>
     Покупка недвижимости на этапе котлована быстрее окупит ваши вложения.
   </p>
+
+  <a href="#">
+    Подробнее
+  </a>
 </li>
   </ul>
 
@@ -411,7 +423,7 @@
   </div>
 </section>
 
-        <section class="contacts" >
+        <section class="contacts">
 
   <div class="contacts__images" >
     <img src="img/arm-key.png" alt="Открой ключем" height="420" width="275" data-aos="fade-right" data-aos-delay="400">
@@ -435,7 +447,7 @@
         Имя
       </span>
 
-      <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+      <input class="form__area" name="name" data-target="name" type="text" placeholder="Имя">
 
       <span class="form__error">Введите Имя</span>
     </label>
@@ -444,16 +456,16 @@
       <span class="sr-only">
         Електронная почта
       </span>
-      <input class="form__area" name="email" id="email" type="email" placeholder="Email">
+      <input class="form__area" name="email" data-target="email" type="email" placeholder="Email">
 
       <span class="form__error">Введите Email</span>
     </label>
 
-    <label class="form__label js-tel">
+    <label class="form__label">
       <span class="sr-only">
         Телефон
       </span>
-      <input class="form__area" name="phone" id="phone" type="tel">
+      <input class="form__area" name="phone" data-target="tel" type="tel">
 
       <span class="form__error">Введите телефон</span>
     </label>
@@ -463,11 +475,11 @@
         Сообщение
       </span>
 
-      <textarea class="form__area form__area--text" name="message" id="message" placeholder="Сообщение"></textarea>
+      <textarea class="form__area form__area--text" name="message" placeholder="Сообщение"></textarea>
     </label>
 
     <label class="form__label custom-checkbox">
-      <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox">
+      <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox" data-target="ckeck">
 
       <span class="custom-checkbox__content">Я соглашаюсь с обработкой моих персональных данных</span>
 
@@ -477,7 +489,7 @@
 
     </label>
 
-    <button class="form__btn btn " type="submit">
+    <button class="form__btn btn " type="submit" data-path="modal-finish">
       Отправить
     </button>
 
@@ -605,7 +617,16 @@
   </div>
 
   <div class="modal">
-  <div class="modal__content modal-form">
+  <div class="modal__content modal__content--form" data-target="modal-form">
+    <button class="modal__close" type="button" data-close="modal">
+      <span class="sr-only">
+        Show/hide text
+      </span>
+
+      <svg class="icon ">
+        <use xlink:href="img/sprite.svg#plus-circle"></use>
+      </svg>
+    </button>
 
     <p>
       Мы готовы ответить на все ваши вопросы или сразу предложить вам объект, который вас заинтересует.
@@ -618,21 +639,21 @@
           Имя
         </span>
 
-        <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+        <input class="form__area" name="name" data-target="name" type="text" placeholder="Имя">
 
         <span class="form__error">Введите Имя</span>
       </label>
 
-      <label class="form__label js-tel">
+      <label class="form__label">
         <span class="sr-only">
           Телефон
         </span>
-        <input class="form__area" name="phone" id="phone" type="tel">
+        <input class="form__area" name="phone" data-target="tel" type="tel">
         <span class="form__error">Введите телефон</span>
       </label>
 
       <label class="form__label custom-checkbox">
-        <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox">
+        <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox" data-target="ckeck">
 
         <span class="custom-checkbox__content">Я соглашаюсь с обработкой моих персональных данных</span>
 
@@ -642,7 +663,7 @@
 
       </label>
 
-      <button class="form__btn btn " type="submit">
+      <button class="form__btn btn " type="submit" data-path="modal-finish">
         Отправить
       </button>
 
@@ -650,16 +671,17 @@
   </div>
 
 
-  <div class="modal__content modal-finish">
-     <button class="modal-finish__btn" type="button">
-       <span class="sr-only">
-         Show/hide text
-       </span>
+  <div class="modal__content modal__content--finish" data-target="modal-finish">
+    <button class="modal__close" type="button" data-close="modal">
+      <span class="sr-only">
+        Show/hide text
+      </span>
 
-       <svg class="icon ">
-         <use xlink:href="img/sprite.svg#plus-circle"></use>
-       </svg>
-     </button>
+      <svg class="icon ">
+        <use xlink:href="img/sprite.svg#plus-circle"></use>
+      </svg>
+    </button>
+
     <p>
       Спасибо!
     </p>
@@ -668,7 +690,7 @@
       Мы обязательно с вами свяжемся!
     </p>
 
-    <button class="btn" type="button">
+    <button class="btn" type="button" data-close="modal">
       Вернуться к сайту
     </button>
   </div>
@@ -676,7 +698,7 @@
 </footer>
 
   </div>
-  <script src="js/main.js"></script> 
+  <script src="js/main.js" async></script>
 </body>
 
 </html>

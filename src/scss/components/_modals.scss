@@ -4,10 +4,10 @@
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 20;
+  z-index: -1;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.2s ease-in;
 
   &:before {
     content: "";
@@ -19,9 +19,10 @@
     left: 0;
   }
 
-  &--open{
+  &--open {
     visibility: visible;
     opacity: 1;
+    z-index: 20;
   }
 
   &__content {
@@ -48,54 +49,61 @@
       margin-bottom: 30px;
     }
 
+
+    &--form {
+      p {
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+
+    &--finish {
+      text-align: center;
+      padding-top: 125px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-orange);
+        background-image: url('../img/sprite.svg#check');
+        border: 2px solid rgba(249, 175, 49, 0.3);
+        height: 40px;
+        width: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 55px;
+        border-radius: 50%;
+      }
+
+      p {
+        font-weight: 700;
+        color: var(--color-black);
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 18px;
+
+        &:last-of-type {
+          margin-bottom: 35px;
+        }
+      }
+
+      .btn {
+        margin: 0 auto;
+      }
+    }
   }
 
-  .modal-finish {
-    text-align: center;
-    padding-top: 125px;
+  &__close {
+    transform: rotate(45deg);
+    position: absolute;
+    right: 25px;
+    top: 25px;
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 70px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--color-orange);
-      background-image: url('../img/sprite.svg#check');
-      border: 2px solid rgba(249, 175, 49, 0.3);
-      height: 40px;
-      width: 40px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 55px;
-      border-radius: 50%;
-    }
-
-    p {
-      font-weight: 700;
-      color: var(--color-black);
-      margin-bottom: 10px;
-      font-size: 16px;
-      line-height: 18px;
-
-      &:last-of-type {
-        margin-bottom: 35px;
-      }
-    }
-
-    &__btn {
-      transform: rotate(45deg);
-      position: absolute;
-      right: 25px;
-      top: 25px;
-
-      svg {
-        stroke: var(--color-orange);
-      }
-    }
-
-    .btn {
-      margin: 0 auto;
+    svg {
+      stroke: var(--color-orange);
     }
   }
 }

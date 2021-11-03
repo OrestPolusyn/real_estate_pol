@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>Gremi Invest | О Польше</title>
-  <link rel="stylesheet" href="css/vendor.min.css">
+  <link rel="stylesheet" href="css/vendor.min.css" rel="preload">
 
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.min.css" rel="preload">
 </head>
 
 <body>
@@ -57,7 +57,7 @@
         </li>
 
         <li class="nav-list__item">
-          <button class="nav-list__btn btn js-btn-modal" type="button">
+          <button class="nav-list__btn btn" type="button" data-path="modal-form">
             Связаться
           </button>
         </li>
@@ -102,8 +102,8 @@
 </li>
           </ul>
 
-          <ul class="faq__tabs">
-            <li class="faq__tab " data-aos="fade-up">
+          <ul class="faq__tabs" data-aos="fade-up">
+            <li class="faq__tab ">
   <h2 class="faq__title" >
     Какие документы вам понадобятся?
   </h2>
@@ -117,7 +117,7 @@
   <p class="faq__text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget.
   </p>
-</li><li class="faq__tab faq__tab--active" data-aos="fade-up">
+</li><li class="faq__tab faq__tab--active">
   <h2 class="faq__title" >
     С чего начать выбор недвижимости?
   </h2>
@@ -131,7 +131,7 @@
   <p class="faq__text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget.
   </p>
-</li><li class="faq__tab " data-aos="fade-up">
+</li><li class="faq__tab ">
   <h2 class="faq__title" >
     Как долго займет процесс оформления?
   </h2>
@@ -145,7 +145,7 @@
   <p class="faq__text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget.
   </p>
-</li><li class="faq__tab " data-aos="fade-up">
+</li><li class="faq__tab ">
   <h2 class="faq__title" >
     Через какой период времени мой объект окупится?
   </h2>
@@ -159,7 +159,7 @@
   <p class="faq__text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget.
   </p>
-</li><li class="faq__tab " data-aos="fade-up">
+</li><li class="faq__tab ">
   <h2 class="faq__title" >
     Сколько будет стоить оформление?
   </h2>
@@ -173,7 +173,7 @@
   <p class="faq__text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget.
   </p>
-</li><li class="faq__tab " data-aos="fade-up">
+</li><li class="faq__tab ">
   <h2 class="faq__title" >
     Какое право собственности у меня будет на объект?
   </h2>
@@ -307,7 +307,16 @@
   </div>
 
   <div class="modal">
-  <div class="modal__content modal-form">
+  <div class="modal__content modal__content--form" data-target="modal-form">
+    <button class="modal__close" type="button" data-close="modal">
+      <span class="sr-only">
+        Show/hide text
+      </span>
+
+      <svg class="icon ">
+        <use xlink:href="img/sprite.svg#plus-circle"></use>
+      </svg>
+    </button>
 
     <p>
       Мы готовы ответить на все ваши вопросы или сразу предложить вам объект, который вас заинтересует.
@@ -320,21 +329,21 @@
           Имя
         </span>
 
-        <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+        <input class="form__area" name="name" data-target="name" type="text" placeholder="Имя">
 
         <span class="form__error">Введите Имя</span>
       </label>
 
-      <label class="form__label js-tel">
+      <label class="form__label">
         <span class="sr-only">
           Телефон
         </span>
-        <input class="form__area" name="phone" id="phone" type="tel">
+        <input class="form__area" name="phone" data-target="tel" type="tel">
         <span class="form__error">Введите телефон</span>
       </label>
 
       <label class="form__label custom-checkbox">
-        <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox">
+        <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox" data-target="ckeck">
 
         <span class="custom-checkbox__content">Я соглашаюсь с обработкой моих персональных данных</span>
 
@@ -344,7 +353,7 @@
 
       </label>
 
-      <button class="form__btn btn " type="submit">
+      <button class="form__btn btn " type="submit" data-path="modal-finish">
         Отправить
       </button>
 
@@ -352,16 +361,17 @@
   </div>
 
 
-  <div class="modal__content modal-finish">
-     <button class="modal-finish__btn" type="button">
-       <span class="sr-only">
-         Show/hide text
-       </span>
+  <div class="modal__content modal__content--finish" data-target="modal-finish">
+    <button class="modal__close" type="button" data-close="modal">
+      <span class="sr-only">
+        Show/hide text
+      </span>
 
-       <svg class="icon ">
-         <use xlink:href="img/sprite.svg#plus-circle"></use>
-       </svg>
-     </button>
+      <svg class="icon ">
+        <use xlink:href="img/sprite.svg#plus-circle"></use>
+      </svg>
+    </button>
+
     <p>
       Спасибо!
     </p>
@@ -370,7 +380,7 @@
       Мы обязательно с вами свяжемся!
     </p>
 
-    <button class="btn" type="button">
+    <button class="btn" type="button" data-close="modal">
       Вернуться к сайту
     </button>
   </div>
@@ -378,7 +388,7 @@
 </footer>
 
   </div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" async></script>
 </body>
 
 </html>

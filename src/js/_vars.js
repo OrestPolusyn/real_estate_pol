@@ -16,10 +16,10 @@ export default {
   $serviseSlider: document.querySelector('.services__items'),
   $serviseSliderItem: document.querySelector('.services__item'),
   $formSend: document.querySelectorAll('.form'),
-  $formInputs: document.querySelectorAll('.form__area'),
-  $formName: document.querySelector('#name'),
-  $formEmail: document.querySelector('#email'),
-  $formPhone: document.querySelector('#phone'),
-  $formPhoneLabel: document.querySelector('.js-tel'),
-  $inputCheked: document.querySelector('.custom-checkbox__field')
+  $formName: document.querySelectorAll('[data-target=name]'),
+  $formEmail: document.querySelectorAll('[data-target=email]'),
+  $formTel: document.querySelectorAll('[data-target=tel]'),
+  $formCheck: document.querySelectorAll('[data-target=ckeck]'),
+  $closeModal: document.querySelectorAll('[data-close=modal]'),
+  $openModals: document.querySelectorAll('[data-path=modal-form],[data-path=modal-finish]')
 }

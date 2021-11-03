@@ -14,7 +14,7 @@
         Имя
       </span>
 
-      <input class="form__area" name="name" id="name" type="text" placeholder="Имя">
+      <input class="form__area" name="name" data-target="name" type="text" placeholder="Имя">
 
       <span class="form__error">Введите Имя</span>
     </label>
@@ -23,16 +23,16 @@
       <span class="sr-only">
         Електронная почта
       </span>
-      <input class="form__area" name="email" id="email" type="email" placeholder="Email">
+      <input class="form__area" name="email" data-target="email" type="email" placeholder="Email">
 
       <span class="form__error">Введите Email</span>
     </label>
 
-    <label class="form__label js-tel">
+    <label class="form__label">
       <span class="sr-only">
         Телефон
       </span>
-      <input class="form__area" name="phone" id="phone" type="tel">
+      <input class="form__area" name="phone" data-target="tel" type="tel">
 
       <span class="form__error">Введите телефон</span>
     </label>
@@ -42,11 +42,11 @@
         Сообщение
       </span>
 
-      <textarea class="form__area form__area--text" name="message" id="message" placeholder="Сообщение"></textarea>
+      <textarea class="form__area form__area--text" name="message" placeholder="Сообщение"></textarea>
     </label>
 
     <label class="form__label custom-checkbox">
-      <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox">
+      <input class="form__area custom-checkbox__field" name="checkbox" type="checkbox" data-target="ckeck">
 
       <span class="custom-checkbox__content">Я соглашаюсь с обработкой моих персональных данных</span>
 
@@ -56,7 +56,7 @@
 
     </label>
 
-    <button class="form__btn btn " type="submit">
+    <button class="form__btn btn " type="submit" data-path="modal-finish">
       Отправить
     </button>
 
