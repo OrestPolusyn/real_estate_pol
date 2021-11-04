@@ -2,19 +2,22 @@ import vars from '../_vars';
 import intlTelInput from 'intl-tel-input';
 import utils from '../vendor/utils'
 
-const formContact = Array.from(vars.$formSend),
-  formName = Array.from(vars.$formName),
+const formName = Array.from(vars.$formName),
   formMail = Array.from(vars.$formEmail),
   formTel = Array.from(vars.$formTel),
   formCkeck = Array.from(vars.$formCheck),
   modalClose = Array.from(vars.$closeModal),
   openModalsBtn = Array.from(vars.$openModals);
 
-formTel.forEach(element => {
-  const iti = intlTelInput(element, {
-    preferredCountries: ["ua"],
-    utilsScript: "utils",
-  });
+
+const iti = intlTelInput(vars.$formTel, {
+  preferredCountries: ["ua"],
+  utilsScript: "utils",
+});
+
+const itiModal = intlTelInput(vars.$formTelModal, {
+  preferredCountries: ["ua"],
+  utilsScript: "utils",
 });
 
 if (modalClose.length > 0) {
@@ -28,7 +31,7 @@ if (modalClose.length > 0) {
   });
 };
 
-if (openModalsBtn.length > 0) {
+if (openModalsBtn) {
   openModalsBtn.forEach(item => {
     item.addEventListener('click', function (e) {
 
@@ -41,61 +44,28 @@ if (openModalsBtn.length > 0) {
       if (e.currentTarget.getAttribute('data-path') === 'modal-finish') {
         document.querySelector('[data-target=modal-form]').classList.remove('modal__content--open');
       }
+
     });
   });
 };
 
-if (formContact.length > 0) {
+vars.$formSend.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-  formContact.forEach(item => {
-    item.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-    });
-  });
-}
-
-
-// if (formInputs.length > 0) {
-
-//   const iti = intlTelInput(document.querySelector('#phone'), {
-//     preferredCountries:["ua"],
-//     utilsScript: "utils",
-//   });
-
-//   // formSend.forEach(element => {
-//   //   element.addEventListener('submit', function (e) {
-//   //     e.preventDefault();
-
-//   //     if (vars.$formName.value.length === 0) {
-//   //       vars.$formName.classList.add('error');
-//   //     } else {
-//   //       vars.$formName.classList.remove('error');
-//   //     }
-
-//   //     if (!vars.$formEmail.value.includes('@')) {
-//   //       vars.$formEmail.classList.add('error');
-
-//   //     } else {
-//   //       vars.$formEmail.classList.remove('error');
-//   //     }
-
-//   //     if (!iti.isValidNumber()) {
-//   //       vars.$formPhoneLabel.classList.add('error');
-//   //     } else {
-//   //       vars.$formPhoneLabel.classList.remove('error');
-//   //     }
-
-//   //     if (!vars.$inputCheked.checked) {
-//   //       vars.$inputCheked.classList.add('error');
-//   //     } else {
-//   //       vars.$inputCheked.classList.remove('error');
-//   //     }
-//   //   })
-//   // });
-// };
+  if (!iti.isValidNumber()) {
+    document.querySelector(`[data-target="tel"]`).parentNode.classList.add('error');
+  } else {
+    document.querySelector(`[data-target="tel"]`).parentNode.classList.remove('error');
+  }
+});
 
 
-// vars.$formTel.addEventListener('countrychange', function () {
-//   vars.$formTel.value = "";
-// });
+vars.$formSendModal.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  if (!itiModal.isValidNumber()) {
+    document.querySelector(`[data-target="tel-mob"]`).parentNode.classList.add('error');
+  } else {
+    document.querySelector(`[data-target="tel-mob"]`).parentNode.classList.remove('error');
+  }
+});

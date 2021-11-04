@@ -86,10 +86,18 @@
     color: var(--color-red);
     bottom: -20px;
     left: 0;
+    
   }
 
   .iti {
     width: 100%;
+
+    &.error {
+      &+.form__error {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 
   .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
