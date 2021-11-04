@@ -86,7 +86,7 @@
     color: var(--color-red);
     bottom: -20px;
     left: 0;
-    
+
   }
 
   .iti {
@@ -110,6 +110,12 @@
 
     @include mobile {
       margin-bottom: 60px;
+    }
+
+    &__error {
+      @include mobile-s {
+        bottom: -40px;
+      }
     }
   }
 }

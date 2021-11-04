@@ -3,6 +3,8 @@
 	height: var(--burger-height);
 	position: relative;
 	color: #000;
+  osition: absolute;
+  right: 20 px;
 
 	&__line {
 		position: absolute;
@@ -45,13 +47,13 @@
 			transform: rotate(45deg);
 			top: 50%;
 			transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-      background-color: var(--color-orange);
+      background-color: var(--color-black);
 		}
 
 		&::after {
 			transform: rotate(-45deg);
 			top: 50%;
-      background-color: var(--color-orange);
+      background-color: var(--color-black);
       transition: transform 0.3s ease-in-out,
       top 0.3s ease-in-out;
 		}

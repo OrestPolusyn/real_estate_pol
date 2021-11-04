@@ -6,43 +6,69 @@
     height: 530px !important;
     align-items: flex-start;
 
-    &:after,
-    &:before {
-      content: "";
-      position: absolute;
-      background-color: var(--color-orange);
-      border-radius: 5px 5px 0 0;
-      width: 2px;
-      left: 80px;
-      bottom: 0;
+    &.swiper-slide-active {
 
-      @include tablet {
-        left: 40px;
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: var(--color-orange);
+        border-radius: 5px 5px 0 0;
+        width: 2px;
+        left: 80px;
+        bottom: 0;
+
+        @include tablet {
+          left: 40px;
+        }
+
+        @include mobile-l {
+          left: 20px;
+        }
       }
 
-      @include mobile-l {
-        left: 20px;
+      &:after {
+        height: 80px;
+        background-color: var(--color-orange);
+        opacity: 0.2;
+
+        @include mobile-l {
+          height: 50px;
+        }
       }
+
+      &:before {
+        height: 40px;
+        animation: height 3s ease-in-out infinite;
+
+        @keyframes height {
+          0% {
+            height: 0;
+          }
+
+          100% {
+            height: 80px;
+          }
+        }
+
+        @include mobile-l {
+          height: 25px;
+          animation: height-mob 3s ease-in-out infinite;
+
+
+          @keyframes height-mob {
+            0% {
+              height: 0;
+            }
+
+            100% {
+              height: 25px;
+            }
+          }
+        }
+      }
+
     }
-
-    &:after {
-      height: 80px;
-      background-color: var(--color-orange);
-      opacity: 0.2;
-
-      @include mobile-l {
-        height: 50px;
-      }
-    }
-
-    &:before {
-      height: 40px;
-
-      @include mobile-l {
-        height: 25px;
-      }
-    }
-
   }
 
   .swiper-pagination-progressbar {

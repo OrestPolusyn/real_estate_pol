@@ -28,19 +28,19 @@
       position: absolute;
       top: 60px;
       height: 100vh;
-      background-color: #fff;
-      max-width: 270px;
       width: 100%;
-      right: -20px;
+      right: 0;
       z-index: 1;
       padding: 30px 0;
       border: 1px solid var(--color-border);
       border-right: transparent;
       overflow: hidden;
-      transform: translateY(200%);
+      transform: translateX(-200%);
       overflow-y: auto;
       transition: transform 0.5s linear;
       padding-bottom: 90px;
+      background: var(--color-orange-linear);
+      text-align: center;
     }
 
     &--open {
@@ -51,6 +51,8 @@
       @include mobile-l {
         display: block;
         margin-right: 0;
+        padding-top: 40px;
+        overflow-y: scroll;
       }
     }
 
@@ -60,15 +62,22 @@
         &:not(:last-child) {
           @include mobile-l {
             margin-right: 0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+          }
+        }
+
+        &--btn {
+          @include mobile-l {
+            padding-top: 20px;
           }
         }
       }
 
       &__link {
         @include mobile-l {
-          padding: 15px 30px;
+          padding: 12px 30px;
           display: block;
+          font-size: 18px;
         }
       }
     }
@@ -95,6 +104,14 @@
 
   &__item {
     font-weight: 600;
+
+    &--mobile {
+      display: none;
+
+      @include mobile-l {
+        display: block;
+      }
+    }
   }
 
   &__link {
@@ -111,7 +128,7 @@
         visibility: visible;
 
         @include mobile-l {
-          transform: translateX(0) rotate(90deg);
+          transform: translateX(0);
         }
       }
     }
@@ -135,10 +152,11 @@
         height 0.1s linear;
 
       @include mobile-l {
-        transform: translateX(0) rotate(90deg);
-        top: 20px;
+        bottom: 0;
         margin: 0;
-        left: -13px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
       }
     }
   }

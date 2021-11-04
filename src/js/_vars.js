@@ -17,11 +17,14 @@ export default {
   $serviseSliderItem: document.querySelector('.services__item'),
   $formSend: document.querySelector('.form'),
   $formSendModal: document.querySelector('.modal .form'),
-  $formName: document.querySelectorAll('[data-target=name]'),
-  $formEmail: document.querySelectorAll('[data-target=email]'),
+  $formName: document.querySelector('[data-target=name]'),
+  $formNameModal: document.querySelector('.modal [data-target=name]'),
+  $formEmail: document.querySelector('[data-target=email]'),
   $formTel: document.querySelector('[data-target=tel]'),
   $formTelModal: document.querySelector('.modal [data-target=tel-mob]'),
-  $formCheck: document.querySelectorAll('[data-target=ckeck]'),
+  $formCheck: document.querySelector('[data-target=ckeck]'),
+  $formCheckModal: document.querySelector('.modal [data-target=ckeck]'),
   $closeModal: document.querySelectorAll('[data-close=modal]'),
-  $openModals: document.querySelectorAll('[data-path=modal-form],[data-path=modal-finish]')
+  $openModals: document.querySelectorAll('[data-path=modal-form],[data-path=modal-finish]'),
+  $headerBtnModal: document.querySelector('.nav-list__btn.btn'),
 }
