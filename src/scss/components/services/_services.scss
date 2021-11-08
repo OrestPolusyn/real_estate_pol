@@ -166,7 +166,7 @@
 
     @include tablet {
       @include flex-v-center;
-      justify-content: end;
+      justify-content: center;
     }
   }
 }
