@@ -17,32 +17,7 @@
     margin-bottom: 40px;
   }
 
-  &__btn {
-    border: 1px solid var(--color-black);
-    height: 44px;
-    width: 44px;
-    border-radius: $border-radius;
-    transition: all 0.3s linear;
-    @include flex-all-center;
-
-    &:hover {
-      border-color: var(--color-orange);
-
-      .icon {
-        stroke: var(--color-orange);
-      }
-    }
-
-    &.swiper-button-disabled {
-      border-color: var(--color-disabled);
-
-      .icon {
-        stroke: var(--color-disabled);
-      }
-    }
-  }
-
-  &__slider-btns {
+   &__slider-btns {
     @include flex-v-center;
   }
 

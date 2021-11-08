@@ -40,8 +40,8 @@
     visibility: hidden;
     opacity: 0;
 
-    @include mobile{
-      padding: 50px 20px;
+    @include mobile {
+      padding: 40px 20px;
     }
 
     &--open {
@@ -51,6 +51,10 @@
 
     p {
       margin-bottom: 30px;
+
+      @include mobile {
+       font-size: 14px;
+      }
     }
 
 
@@ -103,8 +107,8 @@
   &__close {
     transform: rotate(45deg);
     position: absolute;
-    right: 25px;
-    top: 25px;
+    right: 20px;
+    top: 15px;
 
     svg {
       stroke: var(--color-orange);

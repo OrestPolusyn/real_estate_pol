@@ -3,6 +3,7 @@ import './components/burger';
 import './components/news';
 import './components/story-slider';
 import './components/accordion';
+import './components/servise-slider';
 import './components/validation';
 
 import AOS from 'aos';
@@ -33,9 +34,6 @@ if (blogUp) {
 
 if (storyBtn || homeContact) {
   storyBtn.addEventListener('click', () => {
-    homeContact.scrollIntoView({
-      block: "center",
-      behavior: "smooth"
-    });
+    window.scrollTo(0, document.querySelector('.contacts').offsetTop - 100);
   });
 }

@@ -19,13 +19,17 @@
   &__label {
     display: block;
     position: relative;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
     transition: margin-bottom 0.3s linear;
 
     &.error {
+      line-height: 1;
+
       span {
         visibility: visible;
         opacity: 1;
+        line-height: 1;
+
       }
     }
   }
@@ -52,14 +56,17 @@
       &+.form__error {
         visibility: visible;
         opacity: 1;
+
       }
 
       &~.custom-checkbox__error {
         visibility: visible;
         opacity: 1;
+        line-height: 1;
+
 
         @include mobile-s {
-          bottom: -40px;
+          bottom: -20px;
         }
       }
     }
@@ -70,7 +77,6 @@
 
     &:hover {
       background-color: var(--color-orange);
-
     }
 
     &::before {
@@ -109,12 +115,12 @@
     margin-bottom: 30px;
 
     @include mobile {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
 
     &__error {
       @include mobile-s {
-        bottom: -40px;
+        bottom: -30px;
       }
     }
   }

@@ -62,7 +62,7 @@
         &:not(:last-child) {
           @include mobile-l {
             margin-right: 0;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
           }
         }
 
@@ -75,10 +75,67 @@
 
       &__link {
         @include mobile-l {
-          padding: 12px 30px;
+          padding: 10px 30px;
           display: block;
           font-size: 18px;
         }
+      }
+    }
+  }
+
+  &__messangers {
+    display: none;
+
+    @include mobile-l {
+      @include flex-all-center;
+    }
+  }
+
+  &__messanger {
+    position: relative;
+    height: 30px;
+    width: 30px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__messanger-link {
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      mask-image: url('../img/sprite.svg#viber');
+      background-color: var(--color-orange);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      top: 0;
+      left: 0;
+    }
+
+    &--viber {
+      &::before {
+        mask-image: url('../img/sprite.svg#viber');
+
+      }
+    }
+
+    &--telegram {
+      &::before {
+        mask-image: url('../img/sprite.svg#telegram');
+
+      }
+    }
+
+    &--whatsapp {
+      &::before {
+        mask-image: url('../img/sprite.svg#whatsapp');
+
       }
     }
   }
@@ -166,4 +223,5 @@
       margin: 0 auto;
     }
   }
+
 }

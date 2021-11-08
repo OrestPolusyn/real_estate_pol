@@ -124,8 +124,6 @@
     @include flex-s-sb;
     text-align: center;
     position: relative;
-    overflow-x: auto;
-    overflow-y: hidden;
     scrollbar-color: var(--color-orange);
 
     &::-webkit-scrollbar-track {
@@ -159,6 +157,16 @@
     h3 {
       max-width: 100%;
     }
-  
+
+  }
+
+  &__slider-btns {
+    display: none;
+
+
+    @include tablet {
+      @include flex-v-center;
+      justify-content: end;
+    }
   }
 }
