@@ -66,6 +66,17 @@
           }
         }
 
+        &--btn {
+          @include mobile-l {
+            padding-top: 20px;
+          }
+        }
+
+        &--mobile {
+          @include mobile-l {
+            padding-top: 20px;
+          }
+        }
       }
 
       &__link {
@@ -82,6 +93,7 @@
     display: none;
 
     @include mobile-l {
+      padding-top: 20px;
       @include flex-all-center;
     }
   }
