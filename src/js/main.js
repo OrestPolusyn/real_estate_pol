@@ -37,3 +37,7 @@ if (storyBtn || homeContact) {
     window.scrollTo(0, document.querySelector('.contacts').offsetTop - 100);
   });
 }
+
+document.addEventListener('touchmove', function (event) {
+  if (event.scale !== 1) { event.preventDefault(); }
+}, { passive: false });
