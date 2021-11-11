@@ -12,11 +12,6 @@
     padding: 15px 0 10px;
   }
 
-  .logo {
-    @include mobile-l {
-      margin: 0 auto;
-    }
-  }
 
   &__nav {
     @include flex-all-sb;
