@@ -1,11 +1,10 @@
 .numbers {
-  @include flex-v-center;
+  @include flex-s-sb;
   margin-bottom: 60px;
 
   @include mobile-s {
     display: block;
   }
-
 
   li {
     font-weight: 600;
@@ -13,7 +12,8 @@
     line-height: 22px;
     color: var(--color-black);
     position: relative;
-    white-space: nowrap;
+    width: 100%;
+   
 
     @include mobile-s {
       text-align: center;
