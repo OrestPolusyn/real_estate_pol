@@ -14,6 +14,8 @@ const notify = require('gulp-notify');
 const svgSprite = require('gulp-svg-sprite');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
 const fs = require('fs');
 const tiny = require('gulp-tinypng-compress');
 
@@ -57,7 +59,14 @@ const htmlInclude = () => {
 
 const cb = () => {}
 
-
+const fonts = () => {
+  src('./src/fonts/**.ttf')
+    .pipe(ttf2woff())
+    .pipe(dest('./app/fonts/'));
+  return src('./src/fonts/**.ttf')
+    .pipe(ttf2woff2())
+    .pipe(dest('./app/fonts/'));
+}
 
 const styles = () => {
   return src('./src/scss/**/*.scss')
@@ -129,6 +138,8 @@ const watchFiles = () => {
   watch('./src/img/**.jpeg', imgToApp);
   watch('./src/img/**.png', imgToApp);
   watch('./src/img/**.svg', svgSprites);
+  watch('./src/fonts/**', fonts);
+
 }
 
 const clean = () => {
@@ -139,8 +150,10 @@ exports.fileinclude = htmlInclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watchFiles = watchFiles;
+exports.fonts = fonts;
 
-exports.default = series(clean, parallel(htmlInclude, scripts,  resources, imgToApp, svgSprites), styles, watchFiles);
+
+exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites), styles, watchFiles);
 
 // BUILD
 const tinypng = () => {
@@ -204,7 +217,7 @@ const scriptsBuild = () => {
 
 exports.tinypng = tinypng;
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild,  resources, imgToApp, svgSprites), stylesBuild, tinypng);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), stylesBuild, tinypng);
 
 
 // deploy

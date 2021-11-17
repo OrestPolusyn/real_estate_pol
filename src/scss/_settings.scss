@@ -60,6 +60,10 @@ body {
 
 .logo {
   display: block;
+
+  img {
+    max-width: 150px;
+  }
 }
 
 .btn {
@@ -231,9 +235,10 @@ span {
 }
 
 .video {
-  max-width: 750px;
+  max-width: 470px;
   width: 100%;
   position: relative;
+  border-radius: 20px;
 
   @include tablet {
     min-width: 400px;
@@ -327,11 +332,12 @@ span {
   --burger-line-height: 2px;
   display: none;
   position: absolute;
-  right: 10px;
+  right: 20px;
 
   @include burger;
 
   @include mobile-l {
+    margin-left: auto;
     display: block;
   }
 }
@@ -383,5 +389,42 @@ input {
   textarea,
   input {
     font-size: 16px !important;
+  }
+}
+
+.lang {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+
+  span {
+    color: var(--color-black);
+    padding: 10px 35px 10px 10px;
+    border: 1px solid var(--color-disabled);
+    border-radius: 5px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-40%) rotate(-90deg);
+      mask-image: url('../img/sprite.svg#arrow-up');
+      width: 20px;
+      height: 13px;
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: var(--color-black);
+    }
+  }
+
+  ul {
+    display: none;
   }
 }
