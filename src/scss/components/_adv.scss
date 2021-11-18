@@ -15,6 +15,26 @@
     height: 550px;
   }
 
+  &--auto {
+    height: 650px;
+
+    .adv__picture {
+      @include tablet {
+        width: 40%;
+      }
+
+      @include mobile-l {
+        width: 50%;
+        margin: 0 auto;
+        left: 0;
+      }
+
+      @include mobile {
+        width: 65%;
+      }
+    }
+  }
+
   &.background {
 
     &:before {

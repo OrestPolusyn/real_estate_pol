@@ -399,6 +399,7 @@ input {
   line-height: 18px;
   letter-spacing: 0.2px;
   cursor: pointer;
+  position: relative;
 
   span {
     color: var(--color-black);
@@ -425,6 +426,45 @@ input {
   }
 
   ul {
-    display: none;
+    position: absolute;
+    top: 40px;
+    visibility: hidden;
+    width: 100%;
+    opacity: 0;
+    transform: opacity 0.3s linear, visibility 0.3s ease;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-disabled);
+  }
+
+  li {
+    font-size: 16px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s linear, color 0.3s linear;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:hover {
+      background-color: var(--color-orange);
+      color: var(--color-white);
+    }
+  }
+
+  &.open {
+    transition: all 0.3s;
+
+    ul {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    span {
+      &:after {
+        transform: translateY(-40%) rotate(90deg);
+      }
+    }
   }
 }

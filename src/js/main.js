@@ -5,6 +5,8 @@ import './components/story-slider';
 import './components/accordion';
 import './components/servise-slider';
 import './components/validation';
+import './components/dropdown';
+
 
 import AOS from 'aos';
 import _vars from './_vars.js';

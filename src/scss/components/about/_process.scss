@@ -44,6 +44,16 @@
         width: 60px;
         transform: translateY(-65px);
       }
+
+      &--drawing {
+        &:before {
+          top: -30%;
+
+          @include tablet {
+            top: -50%;
+          }
+        }
+      }
     }
 
     li {
@@ -51,7 +61,7 @@
       position: relative;
       padding: 55px 10px 20px;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         @include mobile-l {
           margin-bottom: 50px;
         }
