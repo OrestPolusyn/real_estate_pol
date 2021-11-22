@@ -22,6 +22,12 @@
         width: 100%;
       }
     }
+
+    .adv__picture {
+      @include mobile-l {
+        width: 90%;
+      }
+    }
   }
 }
 

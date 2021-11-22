@@ -95,6 +95,10 @@
       margin: 0 auto;
       transform: translateY(50px);
     }
+
+    @include mobile-s {
+      width: 100%;
+    }
   }
 
   &.contact-page {
@@ -117,7 +121,11 @@
     }
 
     @include mobile-s {
-      height: 960px;
+      height: 980px;
+    }
+
+    @include mobile-ss {
+      height: 1100px;
     }
 
     .adv__content {
