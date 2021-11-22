@@ -58,7 +58,6 @@ vars.$formSendModal.addEventListener('submit', function (e) {
   if (vars.$formNameModal.value.length === 0) {
     document.querySelector('.modal [data-target="name"]').parentNode.classList.add('error');
   } else {
-    console.log('elsr');
     document.querySelector('.modal [data-target="name"]').parentNode.classList.remove('error');
   }
 
