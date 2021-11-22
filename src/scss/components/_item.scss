@@ -1,5 +1,14 @@
 .items {
-  @include flex-s-sb;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+
+  grid-gap: 25px;
+
+  @include tablet {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @include mobile-l {
     display: block;
@@ -7,18 +16,18 @@
 
   li {
     position: relative;
-    max-width: 350px;
     width: 100%;
     border: 1px solid var(--color-gray-100);
     border-radius: 20px;
     background-color: var(--color-gray-200);
-    padding: 30px;
+    padding: 30px 20px;
     position: relative;
     z-index: 0;
     cursor: default;
 
     @include tablet {
       padding: 20px;
+
     }
 
     @include mobile-l {
@@ -134,19 +143,25 @@
 
     &--location {
       &:before {
-        background-image: url("../img/sprite.svg#location-pin");
+        background-image: url("../img/sprite.svg#location");
       }
     }
 
     &--clipboard {
       &:before {
-        background-image: url("../img/sprite.svg#clipboard");
+        background-image: url("../img/sprite.svg#drawing");
       }
     }
 
     &--drawing {
       &:before {
-        background-image: url("../img/sprite.svg#drawing");
+        background-image: url("../img/sprite.svg#clipboard");
+      }
+    }
+
+    &--rent {
+      &:before {
+        background-image: url("../img/sprite.svg#rent");
       }
     }
   }

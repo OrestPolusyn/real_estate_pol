@@ -2,6 +2,7 @@
   @include flex-all-sb;
   border-radius: 0 0 $border-radius-20px $border-radius-20px;
   padding: 60px;
+  height: auto;
 
   @include tablet {
     padding: 40px;

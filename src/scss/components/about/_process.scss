@@ -12,10 +12,12 @@
     justify-content: center;
     padding-top: 60px;
     margin-bottom: 200px;
+    grid-gap: 70px 20px;
+
+    grid-template-columns: repeat(4, 1fr);
 
     @include tablet {
-      flex-wrap: wrap;
-      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
       margin-bottom: 140px;
     }
 
@@ -42,21 +44,26 @@
         width: 60px;
         transform: translateY(-65px);
       }
+
+      &--drawing {
+        &:before {
+          top: -30%;
+
+          @include tablet {
+            top: -50%;
+          }
+        }
+      }
     }
 
     li {
-      max-width: 315px;
       text-align: center;
       position: relative;
       padding: 55px 10px 20px;
 
-      @include mobile-l {
-        max-width: 450px;
-      }
-
       &:not(:last-child) {
-        @include tablet {
-          margin-bottom: 70px;
+        @include mobile-l {
+          margin-bottom: 50px;
         }
       }
 
@@ -72,8 +79,8 @@
       position: absolute;
       mask-image: url('../img/sprite.svg#wawe');
       background-color: var(--color-gray-100);
-      width: 90%;
-      height: 300px;
+      width: 100%;
+      height: 360px;
       top: 0;
       mask-position: center;
       mask-repeat: no-repeat;

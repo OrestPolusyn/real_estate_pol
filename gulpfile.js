@@ -55,6 +55,10 @@ const htmlInclude = () => {
     .pipe(browserSync.stream());
 }
 
+
+
+const cb = () => {}
+
 const fonts = () => {
   src('./src/fonts/**.ttf')
     .pipe(ttf2woff())
@@ -63,12 +67,6 @@ const fonts = () => {
     .pipe(ttf2woff2())
     .pipe(dest('./app/fonts/'));
 }
-
-const cb = () => {}
-
-let srcFonts = './src/scss/_fonts.scss';
-let appFonts = './app/fonts/';
-
 
 const styles = () => {
   return src('./src/scss/**/*.scss')
@@ -141,6 +139,7 @@ const watchFiles = () => {
   watch('./src/img/**.png', imgToApp);
   watch('./src/img/**.svg', svgSprites);
   watch('./src/fonts/**', fonts);
+
 }
 
 const clean = () => {
@@ -152,6 +151,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.watchFiles = watchFiles;
 exports.fonts = fonts;
+
 
 exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites), styles, watchFiles);
 

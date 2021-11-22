@@ -1,17 +1,28 @@
-.services {
+.services-home {
   p {
     margin-bottom: 35px;
+    max-width: 600px;
+    width: 100%;
   }
 
   &__list {
     p {
       font-size: 14px;
       line-height: 1.8;
-      min-height: 80px;
+      min-height: 125px;
       margin-bottom: 30px;
 
       @include tablet {
         margin-bottom: 15px;
+        min-height: 80px;
+      }
+    }
+
+    li {
+      &:last-child {
+        @include tablet {
+          grid-column: 1 / 3;
+        }
       }
     }
   }

@@ -76,11 +76,17 @@
     }
 
     @include tablet {
-      max-width: 430px;
+      max-width: 530px;
     }
 
     @include mobile-l {
-      bottom: 50px;
+      max-width: 420px;
+
+    }
+
+    @include mobile {
+      max-width: 450px;
+      bottom: 75px;
     }
   }
 
@@ -99,7 +105,7 @@
     z-index: 1;
 
     @include mobile-l {
-      max-width: 520px;
+      max-width: 470px;
     }
 
     @include mobile {
@@ -255,10 +261,6 @@
           max-width: 100%
         }
       }
-    }
-
-    & .banner__picture {
-      bottom: 30px;
     }
   }
 
