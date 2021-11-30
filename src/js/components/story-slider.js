@@ -32,13 +32,13 @@ const storySlider = new Swiper(vars.$storySlider, {
         storySlider.params.mousewheel.releaseOnEdges = false;
         storySlider.params.touchReleaseOnEdges = false;
 
-      }, 900);
+      }, 100);
     },
     reachEnd: function () {
       setTimeout(function () {
         storySlider.params.mousewheel.releaseOnEdges = true;
         storySlider.params.touchReleaseOnEdges = true;
-      }, 1200);
+      }, 500);
     }
   },
 });

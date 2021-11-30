@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
 }
 
+.hide-block {
+  display: none !important;
+}
+
 
 .js-focus-visible:focus:not(.focus-visible) {
   outline-color: var(--color-orange-200);

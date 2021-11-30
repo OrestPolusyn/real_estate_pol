@@ -79,7 +79,6 @@ vars.$formSendModal.addEventListener('submit', function (e) {
   };
 });
 
-
 vars.$headerBtnModal.addEventListener('click', function (e) {
   let btnPath = e.currentTarget.getAttribute('data-path');
 
