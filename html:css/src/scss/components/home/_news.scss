@@ -1,0 +1,56 @@
+.news {
+
+  &__nav {
+    @include flex-s-sb;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__list {
+    margin-bottom: 35px;
+  }
+
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  &__slider-btns {
+    @include flex-v-center;
+  }
+
+  &__prev {
+    margin-right: 15px;
+  }
+
+  &__more {
+    max-width: 180px;
+    border-radius: $border-radius-10px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    transition: background-color 0.3s linear;
+
+    &.btn {
+      width: 100%;
+
+      &:focus {
+        background-color: var(--color-orange);
+      }
+
+      &:hover {
+        background-color: var(--color-orange);
+      }
+
+      &:active {
+        background-color: var(--color-orange);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

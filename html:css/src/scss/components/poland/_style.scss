@@ -1,0 +1,49 @@
+.adv {
+  &--poland {
+    margin-bottom: 60px;
+
+    @include mobile {
+      display: block;
+    }
+
+    @include mobile-l {
+      padding: 50px 0;
+    }
+
+    @include mobile {
+      padding: 50px 0 0;
+    }
+
+    p {
+      width: 70%;
+
+      @include mobile {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    .adv__picture {
+      @include mobile-l {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.poland {
+  &__news {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 24px;
+
+    @include mobile-l {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+}

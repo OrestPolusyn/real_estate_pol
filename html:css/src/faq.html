@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1 initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Gremi Invest | FAQ</title>
+  <link rel="stylesheet" href="css/vendor.min.css" rel="preload">
+
+  <link rel="stylesheet" href="css/main.min.css" rel="preload">
+</head>
+
+<body>
+  <div class="site-container">
+
+    @include('html/_header.html')
+
+    <main class="main">
+      <div class="container">
+        <section class="faq">
+
+          <h1 data-aos="fade-up">
+            Ваши вопросы
+          </h1>
+
+          <ul class="filter" data-aos="fade-up">
+            <li class="filter__item">
+              <button class="filter__link filter__link--active filter__btn" type="button" data-filter="all">
+                все
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__link  filter__btn" type="button" data-filter="a">
+                Оформление
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__link  filter__btn" type="button" data-filter="b">
+                Объекты
+              </button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__link  filter__btn" type="button" data-filter="c">
+                Поддержка
+              </button>
+            </li>
+          </ul>
+          
+          <ul class="faq__tabs" data-aos="fade-up">
+            @loop('html/faq/_tab.html',[{
+            active:"",
+            dataTab:"a",
+            title:"Будет ли у меня право собственности на объект инвестиций?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"faq__tab--active",
+            dataTab:"b",
+            title:"Какие налоги мне нужно будет оплатить при покупке и сдаче в аренду недвижимости в Польше?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"c",
+            title:"Какие гарантии, что объект будет достроен и введен в эксплуатацию, если приобретение происходит на начальном этапе строительства объекта?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"a",
+            title:"Какие гарантии, что объект будет достроен и введен в эксплуатацию, если приобретение происходит на начальном этапе строительства объекта?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"b",
+            title:"Каковы финансовые условия сотрудничества с Arni Invest?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"c",
+            title:"С чего я буду получать доход? Кто будет арендовать недвижимость?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"a",
+            title:"В чем заключается операционное управление объектом после сдачи в аренду?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"b",
+            title:"Почему покупать инвестиционную недвижимость в Польше выгоднее, чем в Украине?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"c",
+            title:"Зачем нужен инвестиционный посредник, ведь можно сделать все самому?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            },
+            {
+            active:"",
+            dataTab:"a",
+            title:"Как получать арендные платежи, если я нахожусь не в Польше?",
+            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fa7cilisi cras fermentum odio eu. Auctor eu augue ut lectus arcu bibendum at. Accumsan sit amet nulla facilisi morbi tempus iaculis. Malesuada fames ac turpis egestas integer eget."
+            }])
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    @include('html/_footer.html')
+
+  </div>
+  <script src="js/main.js" async></script>
+</body>
+
+</html>
